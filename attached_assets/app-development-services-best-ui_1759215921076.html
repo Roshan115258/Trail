@@ -1,0 +1,2470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#15803d">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    <link rel="preload" href="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png" as="image">
+
+    <title>Mobile App Development Services India | Several Sustain</title>
+    <meta name="description" content="Expert mobile app development in India. Custom Flutter, React Native, iOS & Android solutions. Certified developers, transparent pricing. Get free consultation!">
+    <meta name="keywords" content="mobile app development India, Flutter development, React Native, iOS app development, Android app development">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+        /* Enhanced CSS Custom Properties */
+        :root {
+            /* Primary Colors */
+            --primary: #15803d;
+            --primary-light: #22c55e;
+            --primary-dark: #166534;
+            --primary-50: #f0fdf4;
+            --primary-100: #dcfce7;
+            --primary-500: #22c55e;
+            --primary-600: #16a34a;
+            --primary-700: #15803d;
+            --primary-900: #14532d;
+
+            /* Secondary Colors */
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --secondary-dark: #d97706;
+
+            /* Accent Colors */
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --accent-orange: #f97316;
+
+            /* Neutrals */
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --black: #000000;
+
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            --font-weight-black: 900;
+
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+
+            /* Borders */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-3xl: 2rem;
+            --radius-full: 9999px;
+
+            /* Enhanced Shadows */
+            --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-500) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+            --gradient-hero: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-500) 50%, var(--accent-blue) 100%);
+            --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            --gradient-glass: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+
+            /* Animation Variables */
+            --animation-fast: 0.15s;
+            --animation-base: 0.3s;
+            --animation-slow: 0.5s;
+            --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+            --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        /* Enhanced Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-weight: var(--font-weight-normal);
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Enhanced Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-md);
+            }
+        }
+
+        /* Enhanced Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+        }
+
+        .logo-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .logo-primary {
+            color: var(--gray-900);
+        }
+
+        .logo-secondary {
+            color: var(--primary-600);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+        }
+
+        .nav-link {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+            position: relative;
+            padding: var(--space-sm) 0;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-600);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--gray-700);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--gray-100);
+            color: var(--primary-600);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 4rem;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: var(--space-lg) 0;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: var(--space-md);
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: var(--font-weight-medium);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-sm);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .mobile-nav-link:hover {
+            background: var(--primary-50);
+            color: var(--primary-600);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        /* Enhanced Buttons */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: var(--gradient-primary);
+            color: white;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+            transition: all var(--animation-base) var(--ease-out-cubic);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: transparent;
+            color: var(--gray-700);
+            padding: var(--space-md) var(--space-xl);
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-50);
+            border-color: var(--primary-500);
+            color: var(--primary-600);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-full {
+            width: 100%;
+            justify-content: center;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-hero);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: var(--space-4xl) 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+                text-align: center;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-xl);
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: var(--font-weight-black);
+            line-height: 1.1;
+            color: white;
+            margin-bottom: var(--space-lg);
+            animation: slideInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+            animation: slideInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-3xl);
+            animation: slideInUp 0.8s ease-out 0.6s both;
+        }
+
+        @media (max-width: 768px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: slideInUp 0.8s ease-out 0.8s both;
+        }
+
+        .hero-main-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-2xl);
+            transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-main-image:hover {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+        }
+
+        /* Enhanced Floating Cards */
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            min-width: 200px;
+            animation: cardFloat 3s ease-in-out infinite;
+        }
+
+        .floating-card.top-left {
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .floating-card.top-right {
+            top: 20%;
+            right: -15%;
+            animation-delay: 1s;
+        }
+
+        .floating-card.bottom-right {
+            bottom: 15%;
+            right: -10%;
+            animation-delay: 2s;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .floating-card .card-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .floating-card .card-title {
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            font-size: 0.95rem;
+        }
+
+        .floating-card .card-subtitle {
+            color: var(--gray-600);
+            font-size: 0.85rem;
+        }
+
+        /* Enhanced Stats */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-xl);
+            margin-top: var(--space-3xl);
+            animation: slideInUp 0.8s ease-out 1s both;
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-lg);
+            }
+        }
+
+        .stat-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: var(--font-weight-black);
+            color: white;
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Enhanced Section Styles */
+        .section {
+            padding: var(--space-5xl) 0;
+            position: relative;
+        }
+
+        .section.alt {
+            background: var(--gray-50);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-4xl);
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            background: var(--primary-100);
+            color: var(--primary-700);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: var(--font-weight-black);
+            color: var(--gray-900);
+            margin-bottom: var(--space-lg);
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        /* Enhanced Service Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-2xl);
+            margin-top: var(--space-4xl);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--animation-slow) var(--ease-out-cubic);
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: translateX(-100%);
+            transition: transform var(--animation-slow) var(--ease-out-cubic);
+        }
+
+        .service-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-200);
+        }
+
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-icon i {
+            color: white;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+        }
+
+        .service-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-features {
+            list-style: none;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--gray-700);
+            margin-bottom: var(--space-sm);
+            font-size: 0.95rem;
+        }
+
+        .service-features i {
+            color: var(--primary-500);
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* Enhanced Process Timeline */
+        .process-section {
+            background: var(--gray-900);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .process-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-2xl);
+            margin-top: var(--space-4xl);
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            position: relative;
+            transition: all var(--animation-slow) var(--ease-out-cubic);
+        }
+
+        .process-step:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .process-number {
+            position: absolute;
+            top: -15px;
+            left: var(--space-xl);
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: var(--font-weight-bold);
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .process-title {
+            font-size: 1.3rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .process-description {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+
+        .process-features {
+            list-style: none;
+        }
+
+        .process-features li {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-sm);
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: var(--space-lg);
+        }
+
+        .process-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-400);
+            font-weight: var(--font-weight-bold);
+        }
+
+        /* Enhanced Technology Showcase */
+        .tech-showcase {
+            background: var(--gradient-hero);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.05)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>'),
+                radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
+        }
+
+        .tech-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-2xl);
+            margin-top: var(--space-4xl);
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            transition: all var(--animation-slow) var(--ease-out-cubic);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-glass);
+            opacity: 0;
+            transition: opacity var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .tech-card:hover::before {
+            opacity: 1;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .tech-card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 2;
+        }
+
+        .tech-icon {
+            width: 4rem;
+            height: 4rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .tech-card:hover .tech-icon {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .tech-title {
+            font-size: 1.3rem;
+            font-weight: var(--font-weight-bold);
+            position: relative;
+            z-index: 2;
+        }
+
+        .tech-description {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 2;
+        }
+
+        .tech-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            position: relative;
+            z-index: 2;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: var(--font-weight-medium);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .tech-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Enhanced Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-2xl);
+            margin-top: var(--space-4xl);
+        }
+
+        .portfolio-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--animation-slow) var(--ease-out-cubic);
+            border: 1px solid var(--gray-200);
+            position: relative;
+        }
+
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .portfolio-header {
+            padding: var(--space-2xl);
+            background: var(--gradient-hero);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-info {
+            position: relative;
+            z-index: 2;
+        }
+
+        .portfolio-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .portfolio-name {
+            font-size: 1.3rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-sm);
+        }
+
+        .portfolio-type {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .portfolio-content {
+            padding: var(--space-2xl);
+        }
+
+        .portfolio-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-xl);
+        }
+
+        .portfolio-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+
+        .metric {
+            text-align: center;
+            padding: var(--space-md);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .metric:hover {
+            background: var(--primary-50);
+            transform: translateY(-2px);
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-600);
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            font-weight: var(--font-weight-medium);
+        }
+
+        /* Enhanced Contact Section */
+        .contact-section {
+            background: var(--gray-900);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: start;
+            margin-top: var(--space-4xl);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+        .contact-info .section-title {
+            color: white;
+            text-align: left;
+        }
+
+        .contact-info .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            text-align: left;
+        }
+
+        .contact-features {
+            margin: var(--space-2xl) 0;
+        }
+
+        .contact-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+            padding: var(--space-lg);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .contact-feature:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 1.1rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-sm);
+        }
+
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Enhanced Contact Form */
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-label {
+            font-weight: var(--font-weight-semibold);
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            padding: var(--space-md) var(--space-lg);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-xl);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 0.95rem;
+            transition: all var(--animation-base) var(--ease-out-cubic);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-400);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            margin-top: var(--space-2xl);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-md);
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            color: var(--primary-400);
+        }
+
+        /* Enhanced Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-4xl) 0 var(--space-xl) 0;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-3xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-lg);
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all var(--animation-base) var(--ease-out-cubic);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-400);
+            padding-left: var(--space-sm);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+        }
+
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color var(--animation-base) var(--ease-out-cubic);
+        }
+
+        .footer-bottom a:hover {
+            color: var(--primary-400);
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s var(--ease-out-cubic);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        .hidden { display: none !important; }
+        .visible { display: block !important; }
+
+        .mt-0 { margin-top: 0 !important; }
+        .mb-0 { margin-bottom: 0 !important; }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 80vh;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: var(--space-3xl) 0;
+            }
+
+            .floating-card {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div>
+                        <span class="logo-primary">Several</span>
+                        <span class="logo-secondary">Sustain</span>
+                    </div>
+                </div>
+
+                <div class="nav-links">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#process" class="nav-link">Process</a>
+                    <a href="#technologies" class="nav-link">Technologies</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#contact" class="btn-primary">Get Free Consultation</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="container">
+                <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+                <a href="#process" class="mobile-nav-link" onclick="closeMobileMenu()">Process</a>
+                <a href="#technologies" class="mobile-nav-link" onclick="closeMobileMenu()">Technologies</a>
+                <a href="#portfolio" class="mobile-nav-link" onclick="closeMobileMenu()">Portfolio</a>
+                <a href="#contact" class="btn-primary" onclick="closeMobileMenu()">Get Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-badge">
+                            <i data-lucide="award"></i>
+                            <span>500+ Mobile Apps Delivered Successfully</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Transform Your Ideas Into 
+                            <span class="hero-gradient">Powerful Mobile Apps</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Expert mobile app development services in India. Custom Flutter, React Native, iOS & Android solutions by certified engineers. From MVP to enterprise-grade applications with transparent pricing and 98% client satisfaction.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn-primary">
+                                <i data-lucide="calendar"></i>
+                                Get Free Consultation
+                            </a>
+                            <a href="#portfolio" class="btn-secondary">
+                                <i data-lucide="play-circle"></i>
+                                View Portfolio
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png" 
+                             alt="Mobile app development team" 
+                             class="hero-main-image" />
+
+                        <!-- Enhanced Floating Cards -->
+                        <div class="floating-card top-left">
+                            <div class="card-icon">
+                                <i data-lucide="smartphone"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Flutter Development</div>
+                                <div class="card-subtitle">Cross-platform excellence</div>
+                            </div>
+                        </div>
+
+                        <div class="floating-card top-right">
+                            <div class="card-icon">
+                                <i data-lucide="code"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">Native iOS & Android</div>
+                                <div class="card-subtitle">Platform-optimized performance</div>
+                            </div>
+                        </div>
+
+                        <div class="floating-card bottom-right">
+                            <div class="card-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title">React Native</div>
+                                <div class="card-subtitle">Rapid development cycles</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Hero Stats -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Apps Delivered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Expert Developers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Services Section -->
+    <section class="section alt" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="grid"></i>
+                    <span>Our Services</span>
+                </div>
+                <h2 class="section-title">Complete Mobile App Development Services</h2>
+                <p class="section-subtitle">
+                    From concept to deployment, we deliver cutting-edge mobile solutions with modern frameworks, 
+                    scalable architecture, and industry best practices for businesses of all sizes.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3 class="service-title">Native iOS Development</h3>
+                    <p class="service-description">
+                        Swift and SwiftUI applications with optimal performance, platform-specific features, 
+                        and seamless App Store integration for exceptional user experiences.
+                    </p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i>Swift & SwiftUI expertise</li>
+                        <li><i data-lucide="check"></i>App Store optimization</li>
+                        <li><i data-lucide="check"></i>Core Data integration</li>
+                        <li><i data-lucide="check"></i>Apple Watch & iPad support</li>
+                        <li><i data-lucide="check"></i>Metal performance optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="android"></i>
+                    </div>
+                    <h3 class="service-title">Android App Development</h3>
+                    <p class="service-description">
+                        Kotlin-first Android applications with Material Design, Jetpack Compose, 
+                        and Google Play Store optimization for modern Android experiences.
+                    </p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i>Kotlin & Jetpack Compose</li>
+                        <li><i data-lucide="check"></i>Material Design 3</li>
+                        <li><i data-lucide="check"></i>Google Play optimization</li>
+                        <li><i data-lucide="check"></i>Android TV & Wear OS</li>
+                        <li><i data-lucide="check"></i>Battery optimization</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3 class="service-title">Cross-Platform Development</h3>
+                    <p class="service-description">
+                        Flutter and React Native solutions with 90%+ code reuse, native performance, 
+                        and faster time-to-market for multi-platform success.
+                    </p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i>Flutter & React Native</li>
+                        <li><i data-lucide="check"></i>90%+ code reuse</li>
+                        <li><i data-lucide="check"></i>Native performance</li>
+                        <li><i data-lucide="check"></i>Hot reload development</li>
+                        <li><i data-lucide="check"></i>Custom widget libraries</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3 class="service-title">Progressive Web Apps</h3>
+                    <p class="service-description">
+                        Modern PWAs with offline functionality, push notifications, 
+                        and app-like experiences that work seamlessly across all devices.
+                    </p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i>Offline-first architecture</li>
+                        <li><i data-lucide="check"></i>Push notifications</li>
+                        <li><i data-lucide="check"></i>Home screen installation</li>
+                        <li><i data-lucide="check"></i>Service worker optimization</li>
+                        <li><i data-lucide="check"></i>Lighthouse 95+ scores</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+                    <h3 class="service-title">App Modernization</h3>
+                    <p class="service-description">
+                        Legacy app migration and modernization with improved performance, 
+                        enhanced security, and modern user experience design.
+                    </p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i>Legacy system migration</li>
+                        <li><i data-lucide="check"></i>Performance optimization</li>
+                        <li><i data-lucide="check"></i>Security enhancements</li>
+                        <li><i data-lucide="check"></i>UI/UX redesign</li>
+                        <li><i data-lucide="check"></i>Cloud migration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3 class="service-title">MVP Development</h3>
+                    <p class="service-description">
+                        Rapid MVP development for startups with core features, 
+                        user feedback integration, and scalable architecture for future growth.
+                    </p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i>6-8 week delivery</li>
+                        <li><i data-lucide="check"></i>Core feature focus</li>
+                        <li><i data-lucide="check"></i>User feedback integration</li>
+                        <li><i data-lucide="check"></i>Scalable foundation</li>
+                        <li><i data-lucide="check"></i>Analytics integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Process Section -->
+    <section class="section process-section" id="process">
+        <div class="container process-content">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="workflow"></i>
+                    <span>Our Process</span>
+                </div>
+                <h2 class="section-title">Proven Development Methodology</h2>
+                <p class="section-subtitle">
+                    Our agile development process ensures transparent communication, regular delivery, 
+                    and exceptional quality at every stage of your mobile app journey.
+                </p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">01</div>
+                    <h3 class="process-title">Discovery & Strategy</h3>
+                    <p class="process-description">
+                        Comprehensive requirements analysis, market research, and technical architecture 
+                        planning to ensure your app meets business objectives.
+                    </p>
+                    <ul class="process-features">
+                        <li>Business requirements analysis</li>
+                        <li>Market research & competitor analysis</li>
+                        <li>Technical architecture design</li>
+                        <li>Project timeline & milestones</li>
+                        <li>Risk assessment & mitigation</li>
+                    </ul>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">02</div>
+                    <h3 class="process-title">UI/UX Design</h3>
+                    <p class="process-description">
+                        User-centered design approach with comprehensive wireframing, interactive prototypes, 
+                        and design system creation for consistent user experiences.
+                    </p>
+                    <ul class="process-features">
+                        <li>User research & persona development</li>
+                        <li>Wireframing & information architecture</li>
+                        <li>Interactive prototypes & user testing</li>
+                        <li>Design system & component library</li>
+                        <li>Accessibility compliance (WCAG 2.1)</li>
+                    </ul>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">03</div>
+                    <h3 class="process-title">Development & Testing</h3>
+                    <p class="process-description">
+                        Agile development sprints with continuous integration, automated testing, 
+                        and regular client feedback to ensure quality delivery.
+                    </p>
+                    <ul class="process-features">
+                        <li>Sprint-based agile development</li>
+                        <li>Automated testing pipeline</li>
+                        <li>Code reviews & quality assurance</li>
+                        <li>Performance optimization</li>
+                        <li>Security testing & compliance</li>
+                    </ul>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-number">04</div>
+                    <h3 class="process-title">Launch & Support</h3>
+                    <p class="process-description">
+                        Seamless app store submission, production deployment, performance monitoring, 
+                        and comprehensive ongoing maintenance support.
+                    </p>
+                    <ul class="process-features">
+                        <li>App store submission & approval</li>
+                        <li>Production deployment & monitoring</li>
+                        <li>User training & documentation</li>
+                        <li>24/7 technical support</li>
+                        <li>Regular updates & maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Technology Section -->
+    <section class="section tech-showcase" id="technologies">
+        <div class="container tech-content">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="cpu"></i>
+                    <span>Technology Stack</span>
+                </div>
+                <h2 class="section-title">Cutting-Edge Technologies We Master</h2>
+                <p class="section-subtitle">
+                    We leverage the latest technologies and frameworks to build scalable, 
+                    secure, and high-performance mobile applications that drive business success.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-card-header">
+                        <div class="tech-icon">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <h3 class="tech-title">Frontend Frameworks</h3>
+                    </div>
+                    <p class="tech-description">
+                        Modern frameworks for exceptional user interfaces and seamless experiences 
+                        across all platforms and devices.
+                    </p>
+                    <div class="tech-items">
+                        <span class="tech-item">Flutter</span>
+                        <span class="tech-item">React Native</span>
+                        <span class="tech-item">SwiftUI</span>
+                        <span class="tech-item">Jetpack Compose</span>
+                        <span class="tech-item">React.js</span>
+                        <span class="tech-item">Vue.js</span>
+                        <span class="tech-item">Angular</span>
+                    </div>
+                </div>
+
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-card-header">
+                        <div class="tech-icon">
+                            <i data-lucide="server"></i>
+                        </div>
+                        <h3 class="tech-title">Backend Technologies</h3>
+                    </div>
+                    <p class="tech-description">
+                        Robust server-side solutions for scalable and secure applications 
+                        with enterprise-grade performance.
+                    </p>
+                    <div class="tech-items">
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">PHP Laravel</span>
+                        <span class="tech-item">Express.js</span>
+                        <span class="tech-item">Django</span>
+                        <span class="tech-item">NestJS</span>
+                        <span class="tech-item">FastAPI</span>
+                    </div>
+                </div>
+
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-card-header">
+                        <div class="tech-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3 class="tech-title">Database Solutions</h3>
+                    </div>
+                    <p class="tech-description">
+                        Optimized data storage and management solutions for high-performance 
+                        applications with real-time capabilities.
+                    </p>
+                    <div class="tech-items">
+                        <span class="tech-item">PostgreSQL</span>
+                        <span class="tech-item">MongoDB</span>
+                        <span class="tech-item">Firebase</span>
+                        <span class="tech-item">MySQL</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">SQLite</span>
+                        <span class="tech-item">Supabase</span>
+                    </div>
+                </div>
+
+                <div class="tech-card animate-on-scroll">
+                    <div class="tech-card-header">
+                        <div class="tech-icon">
+                            <i data-lucide="cloud"></i>
+                        </div>
+                        <h3 class="tech-title">Cloud & DevOps</h3>
+                    </div>
+                    <p class="tech-description">
+                        Enterprise-grade cloud infrastructure and automated deployment pipelines 
+                        ensuring 99.9% uptime and seamless scalability.
+                    </p>
+                    <div class="tech-items">
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">Google Cloud</span>
+                        <span class="tech-item">Azure</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">Kubernetes</span>
+                        <span class="tech-item">CI/CD</span>
+                        <span class="tech-item">Terraform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Enhanced Portfolio Section -->
+    <section class="section alt" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="trophy"></i>
+                    <span>Success Stories</span>
+                </div>
+                <h2 class="section-title">Our Mobile App Development Success Stories</h2>
+                <p class="section-subtitle">
+                    Real results from innovative startups and demanding enterprises. 
+                    See how we've transformed ideas into successful mobile applications with measurable impact.
+                </p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-header">
+                        <div class="portfolio-info">
+                            <div class="portfolio-icon">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <h4 class="portfolio-name">HealthTech Startup</h4>
+                            <p class="portfolio-type">Telemedicine Platform</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="portfolio-description">
+                            HIPAA-compliant telemedicine platform built with Flutter, enabling remote consultations, 
+                            prescription management, and real-time health monitoring for rural communities.
+                        </p>
+                        <div class="portfolio-metrics">
+                            <div class="metric">
+                                <span class="metric-value">100K+</span>
+                                <span class="metric-label">Downloads</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">4.8★</span>
+                                <span class="metric-label">App Rating</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">99.2%</span>
+                                <span class="metric-label">Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-header">
+                        <div class="portfolio-info">
+                            <div class="portfolio-icon">
+                                <i data-lucide="shopping-cart"></i>
+                            </div>
+                            <h4 class="portfolio-name">E-commerce Platform</h4>
+                            <p class="portfolio-type">Mobile Commerce Solution</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="portfolio-description">
+                            React Native shopping app with AI-powered recommendations, seamless checkout, 
+                            and real-time inventory management driving significant revenue growth.
+                        </p>
+                        <div class="portfolio-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+300%</span>
+                                <span class="metric-label">Revenue Growth</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">500K+</span>
+                                <span class="metric-label">Active Users</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">2.5x</span>
+                                <span class="metric-label">Conversion Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-header">
+                        <div class="portfolio-info">
+                            <div class="portfolio-icon">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <h4 class="portfolio-name">EdTech Solution</h4>
+                            <p class="portfolio-type">Learning Management System</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="portfolio-description">
+                            Scalable Flutter-based education platform with live streaming capabilities, 
+                            interactive content delivery, and comprehensive progress tracking.
+                        </p>
+                        <div class="portfolio-metrics">
+                            <div class="metric">
+                                <span class="metric-value">50K+</span>
+                                <span class="metric-label">Daily Students</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Completion Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">99.5%</span>
+                                <span class="metric-label">Platform Uptime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card animate-on-scroll">
+                    <div class="portfolio-header">
+                        <div class="portfolio-info">
+                            <div class="portfolio-icon">
+                                <i data-lucide="credit-card"></i>
+                            </div>
+                            <h4 class="portfolio-name">Fintech Application</h4>
+                            <p class="portfolio-type">Digital Wallet & Payments</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="portfolio-description">
+                            Secure digital wallet with bank-grade security, UPI integration, 
+                            KYC automation, and advanced fraud detection capabilities.
+                        </p>
+                        <div class="portfolio-metrics">
+                            <div class="metric">
+                                <span class="metric-value">2M+</span>
+                                <span class="metric-label">Monthly Transactions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">99.8%</span>
+                                <span class="metric-label">Crash-Free Sessions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">0.001%</span>
+                                <span class="metric-label">Fraud Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container contact-content">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-badge">
+                        <i data-lucide="calendar"></i>
+                        <span>Get Started</span>
+                    </div>
+
+                    <h2 class="section-title">Ready to Build Your Next Mobile App?</h2>
+                    <p class="section-subtitle">
+                        Transform your ideas into powerful mobile applications that drive business growth. 
+                        Get a free consultation and detailed project proposal from our expert development team.
+                    </p>
+
+                    <div class="contact-features">
+                        <div class="contact-feature animate-on-scroll">
+                            <div class="feature-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Free Consultation Call</h4>
+                                <p>30-minute strategy session to discuss your project requirements, goals, and technical approach.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-feature animate-on-scroll">
+                            <div class="feature-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Detailed Project Proposal</h4>
+                                <p>Comprehensive proposal with timeline, technology recommendations, team structure, and transparent pricing.</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-feature animate-on-scroll">
+                            <div class="feature-icon">
+                                <i data-lucide="shield-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>No Obligation Commitment</h4>
+                                <p>Complete transparency with no hidden costs, pressure tactics, or long-term commitments required.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>info@severalsustain.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+91 XXXXX XXXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="clock"></i>
+                            <span>Monday to Friday, 9 AM - 6 PM IST</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>India - Serving clients nationwide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container animate-on-scroll">
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Enter your full name"
+                                required 
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="you@company.com"
+                                required 
+                            />
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="form-input" 
+                                    placeholder="+91 XXXXX XXXXX" 
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Estimated Budget</label>
+                                <select id="budget" name="budget" class="form-input">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-10l">Under ₹10 lakhs</option>
+                                    <option value="10-25l">₹10-25 lakhs</option>
+                                    <option value="25-50l">₹25-50 lakhs</option>
+                                    <option value="50l-plus">₹50+ lakhs</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service Required</label>
+                            <select id="service" name="service" class="form-input">
+                                <option value="">Select service type</option>
+                                <option value="ios">iOS App Development</option>
+                                <option value="android">Android App Development</option>
+                                <option value="flutter">Flutter Cross-Platform</option>
+                                <option value="react-native">React Native Cross-Platform</option>
+                                <option value="pwa">Progressive Web App</option>
+                                <option value="modernization">App Modernization</option>
+                                <option value="mvp">MVP Development</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Project Details *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-textarea" 
+                                rows="4"
+                                placeholder="Describe your project requirements, target audience, key features, timeline expectations, and any specific technical preferences..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">
+                            <i data-lucide="send"></i>
+                            Get Free Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--space-lg);">
+                        <div class="logo-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <div>
+                            <span class="logo-primary">Several</span>
+                            <span class="logo-secondary">Sustain</span>
+                        </div>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: var(--space-lg);">
+                        Premier mobile app development services in India. From concept to production, 
+                        we deliver cutting-edge mobile solutions for businesses worldwide.
+                    </p>
+                    <div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>info@severalsustain.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+91 XXXXX XXXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="clock"></i>
+                            <span>Monday to Friday, 9 AM - 6 PM IST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>App Development Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">iOS App Development</a></li>
+                        <li><a href="#services">Android App Development</a></li>
+                        <li><a href="#services">Cross-Platform Development</a></li>
+                        <li><a href="#services">Progressive Web Apps</a></li>
+                        <li><a href="#services">App Modernization</a></li>
+                        <li><a href="#services">MVP Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Technologies</h3>
+                    <ul class="footer-links">
+                        <li><a href="#technologies">Flutter Development</a></li>
+                        <li><a href="#technologies">React Native</a></li>
+                        <li><a href="#technologies">Swift & SwiftUI</a></li>
+                        <li><a href="#technologies">Kotlin & Compose</a></li>
+                        <li><a href="#technologies">Node.js Backend</a></li>
+                        <li><a href="#technologies">Cloud Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Get Started</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: var(--space-lg); line-height: 1.5;">
+                        Ready to transform your ideas into powerful mobile apps? Let's discuss your project requirements.
+                    </p>
+                    <a href="#contact" class="btn-primary">
+                        <i data-lucide="arrow-right"></i>
+                        Start Your Project
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Several Sustain. All rights reserved.</p>
+                <div style="display: flex; gap: var(--space-xl);">
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms-of-service">Terms of Service</a>
+                    <a href="/sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script>
+        // Initialize Lucide icons when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+            initializeAnimations();
+        });
+
+        // Enhanced Mobile Menu Functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const body = document.body;
+            const isVisible = mobileMenu.style.display === 'block';
+
+            if (isVisible) {
+                mobileMenu.style.display = 'none';
+                body.style.overflow = 'auto';
+            } else {
+                mobileMenu.style.display = 'block';
+                body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const body = document.body;
+            mobileMenu.style.display = 'none';
+            body.style.overflow = 'auto';
+        }
+
+        // Enhanced Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Enhanced Navbar Scroll Effect
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 100) {
+                navbar.classList.add('scrolled');
+
+                // Hide navbar on scroll down, show on scroll up
+                if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        // Enhanced Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            // Enhanced validation
+            const requiredFields = ['name', 'email', 'message'];
+            const missingFields = requiredFields.filter(field => !data[field] || !data[field].trim());
+
+            if (missingFields.length > 0) {
+                showNotification('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                showNotification('Please enter a valid email address.', 'error');
+                return;
+            }
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalHTML = submitButton.innerHTML;
+
+            // Loading state
+            submitButton.innerHTML = '<i data-lucide="loader-2" class="loading-spinner"></i> Sending...';
+            submitButton.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                showNotification('Thank you! We will contact you within 24 hours.', 'success');
+                form.reset();
+                submitButton.innerHTML = originalHTML;
+                submitButton.disabled = false;
+                lucide.createIcons();
+            }, 2000);
+        }
+
+        // Enhanced Notification System
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                border-radius: 0.75rem;
+                color: white;
+                font-weight: 500;
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: all 0.3s ease;
+                box-shadow: var(--shadow-xl);
+                max-width: 400px;
+            `;
+
+            // Set background color based on type
+            const colors = {
+                success: '#22c55e',
+                error: '#ef4444',
+                info: '#3b82f6',
+                warning: '#f59e0b'
+            };
+            notification.style.background = colors[type] || colors.info;
+
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            // Slide in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Auto remove
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
+        }
+
+        // Enhanced Scroll Animations
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        // Add stagger effect for multiple elements
+                        const siblings = Array.from(entry.target.parentNode.children);
+                        const index = siblings.indexOf(entry.target);
+                        entry.target.style.transitionDelay = `${index * 0.1}s`;
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animate-on-scroll class
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuButton = document.querySelector('.mobile-menu-btn');
+            const navbar = document.querySelector('.navbar');
+
+            if (mobileMenu.style.display === 'block' && 
+                !navbar.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        // Enhanced keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+
+        // Preload critical images for better performance
+        function preloadImages() {
+            const imageUrls = [
+                'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png'
+            ];
+
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        }
+
+        // Initialize preloading
+        preloadImages();
+    </script>
+</body>
+</html>

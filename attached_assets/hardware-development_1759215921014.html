@@ -1,0 +1,2808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#15803d">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+
+    <title>Hardware Development Services | Embedded Systems | Several Sustain</title>
+    <meta name="description" content="End-to-end hardware development including embedded systems, PCB design & FPGA programming. 14+ years expertise. Free consultation.">
+    <meta name="keywords" content="hardware development, embedded systems, PCB design, FPGA programming, microcontroller development, IoT hardware, electronics engineering">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hardware Development Services | Embedded Systems | Several Sustain">
+    <meta property="og:description" content="End-to-end hardware development including embedded systems, PCB design & FPGA programming. 14+ years expertise. Free consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://severalsustain.com/hardware-development">
+    <meta property="og:image" content="https://severalsustain.com/assets/hardware-development-og.jpg">
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://severalsustain.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://severalsustain.com/services"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Hardware Development",
+                "item": "https://severalsustain.com/hardware-development"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Embedded Systems Design"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Several Sustain",
+        "url": "https://severalsustain.com",
+        "logo": "https://severalsustain.com/assets/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-SUSTAIN",
+            "contactType": "customer service"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        }
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Hardware Development Services",
+        "description": "End-to-end hardware development including embedded systems, PCB design, FPGA programming, and IoT device development",
+        "provider": {
+            "@type": "Organization",
+            "name": "Several Sustain"
+        },
+        "serviceType": "Hardware Development",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What hardware development services do you offer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer complete hardware development services including embedded systems design, PCB design and layout, FPGA programming, microcontroller development, prototype testing, and manufacturing support."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does a typical hardware development project take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Project timelines vary based on complexity, but typical embedded hardware projects range from 8-24 weeks from concept to prototype, with an additional 4-8 weeks for manufacturing preparation."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            /* Colors */
+            --primary: #15803d;
+            --primary-light: #22c55e;
+            --primary-dark: #166534;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --secondary-dark: #d97706;
+            
+            /* Neutrals */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+            
+            /* Borders */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            
+            /* Layout */
+            --max-width-sm: 640px;
+            --max-width-md: 768px;
+            --max-width-lg: 1024px;
+            --max-width-xl: 1280px;
+            --max-width-2xl: 1536px;
+            --max-width-container: 1400px;
+        }
+        
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            font-weight: var(--font-weight-normal);
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography Scale */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-7xl { font-size: 4.5rem; line-height: 1; }
+        
+        /* Responsive Typography */
+        @media (min-width: 640px) {
+            .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:text-6xl { font-size: 3.75rem; line-height: 1; }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .lg\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .lg\:text-7xl { font-size: 4.5rem; line-height: 1; }
+            .lg\:text-8xl { font-size: 6rem; line-height: 1; }
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--max-width-container);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .container { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .container { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+        }
+        
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .block { display: block; }
+        .inline-flex { display: inline-flex; }
+        
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .font-light { font-weight: var(--font-weight-light); }
+        .font-normal { font-weight: var(--font-weight-normal); }
+        .font-medium { font-weight: var(--font-weight-medium); }
+        .font-semibold { font-weight: var(--font-weight-semibold); }
+        .font-bold { font-weight: var(--font-weight-bold); }
+        .font-extrabold { font-weight: var(--font-weight-extrabold); }
+        
+        .leading-tight { line-height: 1.25; }
+        .leading-snug { line-height: 1.375; }
+        .leading-normal { line-height: 1.5; }
+        .leading-relaxed { line-height: 1.625; }
+        
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-gray-500 { color: var(--gray-500); }
+        .text-gray-600 { color: var(--gray-600); }
+        .text-gray-700 { color: var(--gray-700); }
+        .text-gray-800 { color: var(--gray-800); }
+        .text-gray-900 { color: var(--gray-900); }
+        .text-white { color: white; }
+        
+        .bg-primary { background-color: var(--primary); }
+        .bg-primary-light { background-color: var(--primary-light); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-gray-50 { background-color: var(--gray-50); }
+        .bg-gray-100 { background-color: var(--gray-100); }
+        .bg-gray-900 { background-color: var(--gray-900); }
+        .bg-white { background-color: white; }
+        
+        .rounded { border-radius: var(--radius-md); }
+        .rounded-lg { border-radius: var(--radius-lg); }
+        .rounded-xl { border-radius: var(--radius-xl); }
+        .rounded-2xl { border-radius: var(--radius-2xl); }
+        .rounded-full { border-radius: var(--radius-full); }
+        
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+        .shadow-xl { box-shadow: var(--shadow-xl); }
+        .shadow-2xl { box-shadow: var(--shadow-2xl); }
+        
+        .transition-all { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .duration-200 { transition-duration: 200ms; }
+        .duration-300 { transition-duration: 300ms; }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.2s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: var(--gray-300);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-content { height: 5rem; }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-text { font-size: 1.5rem; }
+        }
+        
+        .logo-primary { color: var(--primary); }
+        .logo-secondary { color: var(--secondary); }
+        
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+        
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--gray-100);
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: var(--radius-lg);
+            padding: 0.625rem 1.25rem;
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-button { display: none; }
+        }
+        
+        .mobile-menu-button:hover {
+            background-color: var(--gray-100);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 4rem;
+            left: 0;
+            right: 0;
+            background: white;
+            border-bottom: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .mobile-menu.open {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .mobile-menu-content {
+            padding: var(--space-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .mobile-nav-link {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .mobile-nav-link:hover {
+            background-color: var(--gray-100);
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 6rem;
+            padding-bottom: var(--space-5xl);
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero {
+                padding-top: 8rem;
+                padding-bottom: var(--space-5xl);
+            }
+        }
+        
+        .hero-content {
+            display: grid;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-5xl);
+            }
+        }
+        
+        .hero-text {
+            text-align: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-text { text-align: left; }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-extrabold);
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--gray-900), var(--gray-700));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-title { font-size: 3.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-title { font-size: 4rem; }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-subtitle {
+                font-size: 1.25rem;
+                max-width: none;
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            align-items: center;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-buttons { justify-content: flex-start; }
+        }
+        
+        .primary-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: var(--radius-xl);
+            padding: 1rem 2rem;
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .secondary-button {
+            background: white;
+            color: var(--gray-700);
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-xl);
+            padding: 1rem 2rem;
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .secondary-button:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image-main {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-2xl);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-image-main:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: var(--space-5xl) 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-4xl);
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: var(--gray-100);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-lg);
+            color: var(--gray-900);
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title { font-size: 3rem; }
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Service Cards */
+        .services-grid {
+            display: grid;
+            gap: var(--space-xl);
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 768px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (min-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-light);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-md);
+            color: var(--gray-900);
+        }
+        
+        .service-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .service-link:hover {
+            gap: 0.75rem;
+        }
+        
+        /* Technology Grid */
+        .tech-grid {
+            display: grid;
+            gap: var(--space-xl);
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (min-width: 640px) {
+            .tech-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (min-width: 768px) {
+            .tech-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 1024px) {
+            .tech-grid { grid-template-columns: repeat(6, 1fr); }
+        }
+        
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-xl);
+            background: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .tech-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--gray-100);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .tech-name {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            color: var(--gray-700);
+            text-align: center;
+        }
+        
+        /* Process Timeline */
+        .process-timeline {
+            display: grid;
+            gap: var(--space-2xl);
+            position: relative;
+        }
+        
+        @media (min-width: 1024px) {
+            .process-timeline {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 0;
+            }
+        }
+        
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        @media (min-width: 1024px) {
+            .process-step {
+                padding: 0 var(--space-lg);
+            }
+        }
+        
+        .process-number {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-lg);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: calc(50% + 2rem);
+            width: calc(100% - 4rem);
+            height: 2px;
+            background: var(--gray-300);
+            z-index: 1;
+        }
+        
+        @media (max-width: 1023px) {
+            .process-step::after {
+                top: 4rem;
+                left: 50%;
+                width: 2px;
+                height: calc(100% + var(--space-2xl));
+                transform: translateX(-50%);
+            }
+            
+            .process-step:last-child::after {
+                display: none;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .process-step:last-child::after {
+                display: none;
+            }
+        }
+        
+        .process-title {
+            font-size: 1.125rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-900);
+        }
+        
+        .process-description {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Industry Cards */
+        .industry-grid {
+            display: grid;
+            gap: var(--space-lg);
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 640px) {
+            .industry-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (min-width: 1024px) {
+            .industry-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .industry-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .industry-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .industry-title {
+            font-size: 1.125rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-900);
+        }
+        
+        .industry-description {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            gap: var(--space-lg);
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (min-width: 768px) {
+            .cert-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        .cert-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-lg);
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+        
+        .cert-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .cert-badge {
+            width: 4rem;
+            height: 4rem;
+            background: var(--primary);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+        
+        .cert-name {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            color: var(--gray-700);
+            text-align: center;
+        }
+        
+        /* Case Studies Carousel */
+        .case-studies-carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-2xl);
+        }
+        
+        .case-studies-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .case-study {
+            min-width: 100%;
+            background: white;
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        
+        .case-study-content {
+            display: grid;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .case-study-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .case-study-text {
+            padding: var(--space-2xl);
+        }
+        
+        .case-study-image {
+            height: 300px;
+            background: var(--gray-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-500);
+        }
+        
+        @media (min-width: 1024px) {
+            .case-study-image {
+                height: 400px;
+            }
+        }
+        
+        .case-study-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-md);
+            color: var(--gray-900);
+        }
+        
+        .case-study-description {
+            color: var(--gray-600);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+        
+        .case-study-metrics {
+            display: grid;
+            gap: var(--space-lg);
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary);
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+        
+        .carousel-button {
+            width: 3rem;
+            height: 3rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--gray-300);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .carousel-button:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-top: var(--space-lg);
+        }
+        
+        .carousel-dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: var(--radius-full);
+            background: var(--gray-300);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .carousel-dot.active {
+            background: var(--primary);
+        }
+        
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            gap: var(--space-xl);
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 1024px) {
+            .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .pricing-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-900);
+        }
+        
+        .pricing-description {
+            color: var(--gray-600);
+            margin-bottom: var(--space-xl);
+            font-size: 0.875rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: var(--space-md);
+            color: var(--gray-600);
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .pricing-button {
+            width: 100%;
+            background: var(--gray-100);
+            color: var(--gray-700);
+            border: none;
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            font-weight: var(--font-weight-semibold);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .pricing-card.featured .pricing-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+        
+        .pricing-button:hover {
+            transform: translateY(-1px);
+        }
+        
+        /* Trust Indicators */
+        .trust-grid {
+            display: grid;
+            gap: var(--space-lg);
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 640px) {
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (min-width: 1024px) {
+            .trust-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-lg);
+            padding: var(--space-xl);
+            background: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s ease;
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .trust-icon {
+            width: 3rem;
+            height: 3rem;
+            background: var(--primary-light);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .trust-content h3 {
+            font-size: 1rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 0.25rem;
+            color: var(--gray-900);
+        }
+        
+        .trust-content p {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        /* FAQ Accordion */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-md);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            background: white;
+            border: none;
+            padding: var(--space-lg);
+            text-align: left;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+        
+        .faq-question.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .faq-icon {
+            transition: transform 0.2s ease;
+        }
+        
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 var(--space-lg) var(--space-lg);
+            color: var(--gray-600);
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .contact-text {
+            text-align: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-text { text-align: left; }
+        }
+        
+        .contact-title {
+            font-size: 2.25rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-title { font-size: 3rem; }
+        }
+        
+        .contact-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-2xl);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: var(--font-weight-medium);
+            color: var(--gray-700);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: var(--radius-lg);
+            padding: 1rem;
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-4xl) 0 var(--space-xl);
+        }
+        
+        .footer-content {
+            display: grid;
+            gap: var(--space-2xl);
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+        
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-section p {
+            color: var(--gray-400);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            margin-top: var(--space-2xl);
+            padding-top: var(--space-xl);
+            text-align: center;
+            color: var(--gray-400);
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: var(--space-lg) 0;
+            background: var(--gray-50);
+            margin-top: 4rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .breadcrumbs { margin-top: 5rem; }
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+            font-size: 0.875rem;
+        }
+        
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            color: var(--gray-400);
+        }
+        
+        .breadcrumb-link {
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .breadcrumb-link:hover {
+            color: var(--primary);
+        }
+        
+        .breadcrumb-current {
+            color: var(--gray-900);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        /* Responsive Utilities */
+        @media (max-width: 639px) {
+            .sm\:hidden { display: none; }
+        }
+        
+        @media (max-width: 767px) {
+            .md\:hidden { display: none; }
+        }
+        
+        @media (max-width: 1023px) {
+            .lg\:hidden { display: none; }
+        }
+        
+        @media (min-width: 640px) {
+            .sm\:block { display: block; }
+            .sm\:flex { display: flex; }
+            .sm\:grid { display: grid; }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:block { display: block; }
+            .md\:flex { display: flex; }
+            .md\:grid { display: grid; }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:block { display: block; }
+            .lg\:flex { display: flex; }
+            .lg\:grid { display: grid; }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+        
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.5s ease;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <a href="/" class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="cpu" width="20" height="20"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">Several</span>
+                        <span class="logo-secondary">Sustain</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#process" class="nav-link">Process</a>
+                    <a href="#case-studies" class="nav-link">Case Studies</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="cta-button">
+                    Get Consultation
+                    <i data-lucide="arrow-right" width="16" height="16"></i>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" id="mobile-menu-button">
+                    <i data-lucide="menu" width="24" height="24"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <div class="mobile-menu-content">
+                    <a href="#services" class="mobile-nav-link">Services</a>
+                    <a href="#process" class="mobile-nav-link">Process</a>
+                    <a href="#case-studies" class="mobile-nav-link">Case Studies</a>
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="breadcrumb-link">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/services" class="breadcrumb-link">Services</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/hardware-development" class="breadcrumb-link">Hardware Development</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="breadcrumb-current">Embedded Systems Design</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i data-lucide="zap" width="16" height="16"></i>
+                        14+ Years of Engineering Excellence
+                    </div>
+                    <h1 class="hero-title">Transform Your Ideas Into Market-Ready Hardware Solutions</h1>
+                    <p class="hero-subtitle">
+                        End-to-end embedded hardware development from concept to manufacturing with certified engineering team and proven methodologies
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="primary-button">
+                            Get Free Project Consultation
+                            <i data-lucide="arrow-right" width="20" height="20"></i>
+                        </a>
+                        <a href="#case-studies" class="secondary-button">
+                            View Our Portfolio
+                            <i data-lucide="external-link" width="20" height="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-main" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); display: flex; align-items: center; justify-content: center; color: var(--gray-500); font-size: 1.5rem;">
+                        <i data-lucide="cpu" width="80" height="80"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hardware Development Services -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title">Comprehensive Hardware Development Services</h2>
+                <p class="section-subtitle">
+                    From initial concept to mass production, we deliver end-to-end hardware solutions that meet your technical requirements and business objectives
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="cpu" width="24" height="24"></i>
+                    </div>
+                    <h3 class="service-title">Embedded Hardware Design & Architecture</h3>
+                    <p class="service-description">
+                        Complete embedded system design including microcontroller selection, peripheral integration, and system architecture optimization for performance and cost.
+                    </p>
+                    <ul class="service-features">
+                        <li>Microcontroller & processor selection</li>
+                        <li>System architecture design</li>
+                        <li>Hardware specification development</li>
+                        <li>Component sourcing & lifecycle management</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right" width="16" height="16"></i>
+                    </a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="circuit-board" width="24" height="24"></i>
+                    </div>
+                    <h3 class="service-title">PCB Design & Layout Services</h3>
+                    <p class="service-description">
+                        Professional PCB design from schematic capture to manufacturing-ready layouts, including signal integrity analysis and DFM optimization.
+                    </p>
+                    <ul class="service-features">
+                        <li>Schematic capture & design</li>
+                        <li>Multi-layer PCB layout</li>
+                        <li>Signal integrity analysis</li>
+                        <li>DFM & DFT optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right" width="16" height="16"></i>
+                    </a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="settings" width="24" height="24"></i>
+                    </div>
+                    <h3 class="service-title">FPGA & Microcontroller Programming</h3>
+                    <p class="service-description">
+                        Custom firmware development and FPGA programming for high-performance embedded applications with real-time requirements.
+                    </p>
+                    <ul class="service-features">
+                        <li>FPGA design & implementation</li>
+                        <li>Embedded firmware development</li>
+                        <li>RTOS integration</li>
+                        <li>Real-time system optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right" width="16" height="16"></i>
+                    </a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="flask-conical" width="24" height="24"></i>
+                    </div>
+                    <h3 class="service-title">Prototype Development & Testing</h3>
+                    <p class="service-description">
+                        Rapid prototyping and comprehensive testing services to validate your hardware design before mass production commitment.
+                    </p>
+                    <ul class="service-features">
+                        <li>Rapid prototyping</li>
+                        <li>Hardware validation testing</li>
+                        <li>Environmental testing</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right" width="16" height="16"></i>
+                    </a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i data-lucide="factory" width="24" height="24"></i>
+                    </div>
+                    <h3 class="service-title">Manufacturing Support & Quality Assurance</h3>
+                    <p class="service-description">
+                        Complete manufacturing support including supplier management, quality control, and production scaling assistance.
+                    </p>
+                    <ul class="service-features">
+                        <li>Manufacturing partner selection</li>
+                        <li>Quality control processes</li>
+                        <li>Production scaling support</li>
+                        <li>Supply chain management</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        Learn More <i data-lucide="arrow-right" width="16" height="16"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Technology Stack</div>
+                <h2 class="section-title">Advanced Tools & Platforms</h2>
+                <p class="section-subtitle">
+                    We leverage industry-leading tools and technologies to deliver cutting-edge hardware solutions
+                </p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-item scale-in">
+                    <div class="tech-icon">AD</div>
+                    <div class="tech-name">Altium Designer</div>
+                </div>
+                
+                <div class="tech-item scale-in">
+                    <div class="tech-icon">EG</div>
+                    <div class="tech-name">Eagle CAD</div>
+                </div>
+                
+                <div class="tech-item scale-in">
+                    <div class="tech-icon">KC</div>
+                    <div class="tech-name">KiCad</div>
+                </div>
+                
+                <div class="tech-item scale-in">
+                    <div class="tech-icon">ARM</div>
+                    <div class="tech-name">ARM Cortex</div>
+                </div>
+                
+                <div class="tech-item scale-in">
+                    <div class="tech-icon">PIC</div>
+                    <div class="tech-name">PIC MCU</div>
+                </div>
+                
+                <div class="tech-item scale-in">
+                    <div class="tech-icon">AVR</div>
+                    <div class="tech-name">AVR MCU</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Our Process</div>
+                <h2 class="section-title">Industry-Proven Development Process</h2>
+                <p class="section-subtitle">
+                    Our structured approach ensures successful project delivery from concept to market-ready product
+                </p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step slide-up">
+                    <div class="process-number">1</div>
+                    <h3 class="process-title">Requirements Analysis & Feasibility</h3>
+                    <p class="process-description">
+                        Comprehensive analysis of your requirements, technical feasibility assessment, and project planning
+                    </p>
+                </div>
+                
+                <div class="process-step slide-up">
+                    <div class="process-number">2</div>
+                    <h3 class="process-title">System Architecture & Component Selection</h3>
+                    <p class="process-description">
+                        Design system architecture, select optimal components, and create detailed technical specifications
+                    </p>
+                </div>
+                
+                <div class="process-step slide-up">
+                    <div class="process-number">3</div>
+                    <h3 class="process-title">Schematic Design & PCB Layout</h3>
+                    <p class="process-description">
+                        Create detailed schematics, design PCB layout, and perform signal integrity analysis
+                    </p>
+                </div>
+                
+                <div class="process-step slide-up">
+                    <div class="process-number">4</div>
+                    <h3 class="process-title">Prototyping & Validation</h3>
+                    <p class="process-description">
+                        Build prototypes, conduct comprehensive testing, and validate design performance
+                    </p>
+                </div>
+                
+                <div class="process-step slide-up">
+                    <div class="process-number">5</div>
+                    <h3 class="process-title">Manufacturing Transition & Support</h3>
+                    <p class="process-description">
+                        Prepare for manufacturing, support production ramp-up, and provide ongoing technical support
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Verticals -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Industries</div>
+                <h2 class="section-title">Industry Verticals & Applications</h2>
+                <p class="section-subtitle">
+                    Our hardware development expertise spans across multiple industries and application domains
+                </p>
+            </div>
+            
+            <div class="industry-grid">
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="wifi" width="24" height="24"></i>
+                    </div>
+                    <h3 class="industry-title">IoT Devices</h3>
+                    <p class="industry-description">
+                        Connected devices, sensor networks, and smart home automation systems with wireless connectivity
+                    </p>
+                </div>
+                
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="settings" width="24" height="24"></i>
+                    </div>
+                    <h3 class="industry-title">Industrial Automation</h3>
+                    <p class="industry-description">
+                        Control systems, monitoring devices, and industrial IoT solutions for manufacturing environments
+                    </p>
+                </div>
+                
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="car" width="24" height="24"></i>
+                    </div>
+                    <h3 class="industry-title">Automotive Electronics</h3>
+                    <p class="industry-description">
+                        ECUs, diagnostic tools, and automotive communication systems meeting industry standards
+                    </p>
+                </div>
+                
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="heart-pulse" width="24" height="24"></i>
+                    </div>
+                    <h3 class="industry-title">Medical Devices</h3>
+                    <p class="industry-description">
+                        FDA-compliant medical electronics, diagnostic equipment, and patient monitoring systems
+                    </p>
+                </div>
+                
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="smartphone" width="24" height="24"></i>
+                    </div>
+                    <h3 class="industry-title">Consumer Electronics</h3>
+                    <p class="industry-description">
+                        Wearables, smart appliances, and consumer IoT devices with focus on user experience
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Certifications</div>
+                <h2 class="section-title">Certifications & Compliance</h2>
+                <p class="section-subtitle">
+                    Our development processes and products meet international standards and regulatory requirements
+                </p>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-item scale-in">
+                    <div class="cert-badge">ISO</div>
+                    <div class="cert-name">ISO 9001:2015</div>
+                </div>
+                
+                <div class="cert-item scale-in">
+                    <div class="cert-badge">IPC</div>
+                    <div class="cert-name">IPC-A-610</div>
+                </div>
+                
+                <div class="cert-item scale-in">
+                    <div class="cert-badge">RoHS</div>
+                    <div class="cert-name">RoHS & REACH</div>
+                </div>
+                
+                <div class="cert-item scale-in">
+                    <div class="cert-badge">FCC</div>
+                    <div class="cert-name">FCC/CE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="section bg-gray-50" id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Case Studies</div>
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-subtitle">
+                    Discover how we've helped clients transform their hardware concepts into successful products
+                </p>
+            </div>
+            
+            <div class="case-studies-carousel">
+                <div class="case-studies-track" id="case-studies-track">
+                    <!-- Case Study 1 -->
+                    <div class="case-study">
+                        <div class="case-study-content">
+                            <div class="case-study-text">
+                                <h3 class="case-study-title">IoT Environmental Monitoring System</h3>
+                                <p class="case-study-description">
+                                    Developed a comprehensive IoT environmental monitoring solution for smart agriculture, featuring multi-sensor integration, wireless connectivity, and cloud data analytics.
+                                </p>
+                                <div class="case-study-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">95%</span>
+                                        <span class="metric-label">Power Efficiency</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">6 months</span>
+                                        <span class="metric-label">Development Time</span>
+                                    </div>
+                                </div>
+                                <blockquote style="font-style: italic; color: var(--gray-600); border-left: 4px solid var(--primary); padding-left: 1rem; margin: var(--space-lg) 0;">
+                                    "Several Sustain delivered an exceptional IoT solution that exceeded our performance expectations and was delivered on time and within budget."
+                                </blockquote>
+                            </div>
+                            <div class="case-study-image">
+                                <i data-lucide="thermometer" width="80" height="80"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 2 -->
+                    <div class="case-study">
+                        <div class="case-study-content">
+                            <div class="case-study-text">
+                                <h3 class="case-study-title">Industrial Control System</h3>
+                                <p class="case-study-description">
+                                    Designed and developed a real-time industrial control system with FPGA-based processing, featuring high-speed data acquisition and control algorithms.
+                                </p>
+                                <div class="case-study-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">1μs</span>
+                                        <span class="metric-label">Response Time</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">99.9%</span>
+                                        <span class="metric-label">Uptime</span>
+                                    </div>
+                                </div>
+                                <blockquote style="font-style: italic; color: var(--gray-600); border-left: 4px solid var(--primary); padding-left: 1rem; margin: var(--space-lg) 0;">
+                                    "The real-time performance and reliability of this system has significantly improved our production efficiency."
+                                </blockquote>
+                            </div>
+                            <div class="case-study-image">
+                                <i data-lucide="gauge" width="80" height="80"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 3 -->
+                    <div class="case-study">
+                        <div class="case-study-content">
+                            <div class="case-study-text">
+                                <h3 class="case-study-title">Medical Device PCB</h3>
+                                <p class="case-study-description">
+                                    Developed FDA-compliant PCB design for a portable medical diagnostic device with stringent safety and EMC requirements.
+                                </p>
+                                <div class="case-study-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">FDA</span>
+                                        <span class="metric-label">Approved</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">12 weeks</span>
+                                        <span class="metric-label">Design Cycle</span>
+                                    </div>
+                                </div>
+                                <blockquote style="font-style: italic; color: var(--gray-600); border-left: 4px solid var(--primary); padding-left: 1rem; margin: var(--space-lg) 0;">
+                                    "Their expertise in medical device regulations and EMC compliance was invaluable to our project success."
+                                </blockquote>
+                            </div>
+                            <div class="case-study-image">
+                                <i data-lucide="activity" width="80" height="80"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-button" onclick="previousCase()">
+                        <i data-lucide="chevron-left" width="20" height="20"></i>
+                    </button>
+                    <button class="carousel-button" onclick="nextCase()">
+                        <i data-lucide="chevron-right" width="20" height="20"></i>
+                    </button>
+                </div>
+                
+                <div class="carousel-dots">
+                    <div class="carousel-dot active" onclick="goToCase(0)"></div>
+                    <div class="carousel-dot" onclick="goToCase(1)"></div>
+                    <div class="carousel-dot" onclick="goToCase(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagement Models -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Engagement Models</div>
+                <h2 class="section-title">Flexible Engagement & Pricing</h2>
+                <p class="section-subtitle">
+                    Choose the engagement model that best fits your project requirements and budget
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3 class="pricing-title">Fixed-Price Projects</h3>
+                    <p class="pricing-description">
+                        Ideal for well-defined projects with clear scope and requirements
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Fixed project cost</li>
+                        <li>Defined deliverables</li>
+                        <li>Predictable timeline</li>
+                        <li>Risk mitigation</li>
+                        <li>Quality guarantees</li>
+                    </ul>
+                    <button class="pricing-button">Get Quote</button>
+                </div>
+                
+                <div class="pricing-card featured fade-in">
+                    <h3 class="pricing-title">Time & Materials</h3>
+                    <p class="pricing-description">
+                        Flexible approach for evolving projects with changing requirements
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Hourly/daily rates</li>
+                        <li>Flexible scope</li>
+                        <li>Iterative development</li>
+                        <li>Regular updates</li>
+                        <li>Transparent billing</li>
+                    </ul>
+                    <button class="pricing-button">Start Project</button>
+                </div>
+                
+                <div class="pricing-card fade-in">
+                    <h3 class="pricing-title">Dedicated Team</h3>
+                    <p class="pricing-description">
+                        Long-term partnership with dedicated engineering resources
+                    </p>
+                    <ul class="pricing-features">
+                        <li>Dedicated engineers</li>
+                        <li>Long-term commitment</li>
+                        <li>Scalable team size</li>
+                        <li>Direct communication</li>
+                        <li>Cost optimization</li>
+                    </ul>
+                    <button class="pricing-button">Discuss Requirements</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section bg-gray-50" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Why Choose Us</div>
+                <h2 class="section-title">Why Choose Several Sustain</h2>
+                <p class="section-subtitle">
+                    Our proven expertise and commitment to excellence make us the ideal partner for your hardware development needs
+                </p>
+            </div>
+            
+            <div class="trust-grid">
+                <div class="trust-item scale-in">
+                    <div class="trust-icon">
+                        <i data-lucide="award" width="24" height="24"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h3>14+ Years Embedded Expertise</h3>
+                        <p>Extensive experience in embedded systems design and hardware development across industries</p>
+                    </div>
+                </div>
+                
+                <div class="trust-item scale-in">
+                    <div class="trust-icon">
+                        <i data-lucide="users" width="24" height="24"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h3>Certified Engineering Team</h3>
+                        <p>Highly qualified engineers with industry certifications and proven track record</p>
+                    </div>
+                </div>
+                
+                <div class="trust-item scale-in">
+                    <div class="trust-icon">
+                        <i data-lucide="layers" width="24" height="24"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h3>End-to-End Services</h3>
+                        <p>Complete hardware development lifecycle from concept to manufacturing support</p>
+                    </div>
+                </div>
+                
+                <div class="trust-item scale-in">
+                    <div class="trust-icon">
+                        <i data-lucide="network" width="24" height="24"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h3>Manufacturing Partner Network</h3>
+                        <p>Established relationships with trusted manufacturing partners for seamless production</p>
+                    </div>
+                </div>
+                
+                <div class="trust-item scale-in">
+                    <div class="trust-icon">
+                        <i data-lucide="shield-check" width="24" height="24"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h3>IP Protection Guarantee</h3>
+                        <p>Strict confidentiality and intellectual property protection protocols</p>
+                    </div>
+                </div>
+                
+                <div class="trust-item scale-in">
+                    <div class="trust-icon">
+                        <i data-lucide="clock" width="24" height="24"></i>
+                    </div>
+                    <div class="trust-content">
+                        <h3>On-Time Delivery</h3>
+                        <p>Proven track record of delivering projects on schedule and within budget</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Find answers to common questions about our hardware development services
+                </p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What hardware development services do you offer?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We offer complete hardware development services including embedded systems design, PCB design and layout, FPGA programming, microcontroller development, prototype testing, and manufacturing support.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How long does a typical hardware development project take?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Project timelines vary based on complexity, but typical embedded hardware projects range from 8-24 weeks from concept to prototype, with an additional 4-8 weeks for manufacturing preparation.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you provide manufacturing support?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we provide comprehensive manufacturing support including supplier selection, DFM optimization, quality control processes, and production scaling assistance through our partner network.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What industries do you serve?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We serve multiple industries including IoT devices, industrial automation, automotive electronics, medical devices, and consumer electronics, with expertise in industry-specific requirements and standards.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you handle regulatory compliance and certifications?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we have extensive experience with regulatory compliance including FCC, CE, FDA, and other industry-specific certifications. We design with compliance requirements in mind from the start.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is your approach to intellectual property protection?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We maintain strict confidentiality protocols and sign comprehensive NDAs. All intellectual property developed for your project remains exclusively yours, with full documentation and design file ownership transfer.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can you work with existing designs or do you only start from scratch?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We can work with existing designs for enhancement, optimization, or troubleshooting. We also provide reverse engineering services and can modernize legacy hardware designs.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What tools and software do you use for hardware design?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We use industry-standard tools including Altium Designer, Eagle CAD, KiCad for PCB design, and various simulation tools for signal integrity analysis and thermal modeling.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you provide ongoing support after project completion?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we provide comprehensive post-project support including technical documentation, training, warranty support, and ongoing maintenance services as needed.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How do you ensure project quality and reliability?
+                        <i class="faq-icon" data-lucide="chevron-down" width="20" height="20"></i>
+                    </button>
+                    <div class="faq-answer">
+                        We follow ISO 9001:2015 quality management processes, conduct rigorous testing at each stage, perform design reviews, and maintain detailed documentation throughout the development process.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2 class="contact-title">Ready to Start Your Hardware Development Project?</h2>
+                    <p class="contact-subtitle">
+                        Get a free consultation and discover how we can transform your hardware concept into a market-ready solution
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+                        <a href="#" class="secondary-button" style="border-color: white; color: white;">
+                            Download Portfolio
+                            <i data-lucide="download" width="20" height="20"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: var(--gray-900); margin-bottom: var(--space-lg); font-size: 1.5rem; font-weight: var(--font-weight-bold);">
+                        Get Free Consultation
+                    </h3>
+                    
+                    <form onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="company">Company</label>
+                            <input type="text" id="company" name="company" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="project-type">Project Type *</label>
+                            <select id="project-type" name="project-type" class="form-select" required>
+                                <option value="">Select Project Type</option>
+                                <option value="embedded-design">Embedded Hardware Design</option>
+                                <option value="pcb-design">PCB Design & Layout</option>
+                                <option value="fpga-programming">FPGA Programming</option>
+                                <option value="prototype-development">Prototype Development</option>
+                                <option value="manufacturing-support">Manufacturing Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Project Details *</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Please describe your project requirements, timeline, and any specific technical needs..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">
+                            Get Free Consultation
+                            <i data-lucide="send" width="20" height="20" style="margin-left: 0.5rem;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="color: white; margin-bottom: var(--space-lg);">
+                        <div class="logo-icon">
+                            <i data-lucide="cpu" width="20" height="20"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary" style="color: white;">Several</span>
+                            <span class="logo-secondary">Sustain</span>
+                        </div>
+                    </div>
+                    <p>
+                        Transform your electronic concepts into market-ready products with our expert hardware development and engineering services.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Embedded Hardware Design</a></li>
+                        <li><a href="#services">PCB Design & Layout</a></li>
+                        <li><a href="#services">FPGA Programming</a></li>
+                        <li><a href="#services">Prototype Development</a></li>
+                        <li><a href="#services">Manufacturing Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>Email: hardware@severalsustain.com</li>
+                        <li>Phone: +1-555-SUSTAIN</li>
+                        <li>Available 24/7 for consultations</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Several Sustain. All rights reserved. Professional hardware development services.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        let lastScrollY = window.scrollY;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const icon = mobileMenuButton.querySelector('[data-lucide]');
+            if (mobileMenu.classList.contains('open')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                const icon = mobileMenuButton.querySelector('[data-lucide]');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Case studies carousel
+        let currentCase = 0;
+        const totalCases = 3;
+
+        function showCase(index) {
+            const track = document.getElementById('case-studies-track');
+            track.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextCase() {
+            currentCase = (currentCase + 1) % totalCases;
+            showCase(currentCase);
+        }
+
+        function previousCase() {
+            currentCase = (currentCase - 1 + totalCases) % totalCases;
+            showCase(currentCase);
+        }
+
+        function goToCase(index) {
+            currentCase = index;
+            showCase(currentCase);
+        }
+
+        // Auto-advance carousel
+        setInterval(nextCase, 8000);
+
+        // FAQ functionality
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-question').forEach(q => {
+                if (q !== button) {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            if (!isActive) {
+                button.classList.add('active');
+                answer.classList.add('active');
+            } else {
+                button.classList.remove('active');
+                answer.classList.remove('active');
+            }
+        }
+
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Simulate form submission
+            const submitButton = event.target.querySelector('.form-submit');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = 'Sending...';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your inquiry! We will contact you within 24 hours to discuss your hardware development project.');
+                event.target.reset();
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }, 2000);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-up, .scale-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Performance optimization: Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Update current year in footer if needed
+            const currentYear = new Date().getFullYear();
+            document.querySelectorAll('.current-year').forEach(el => {
+                el.textContent = currentYear;
+            });
+            
+            // Initialize icons
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
