@@ -24,7 +24,7 @@ class EmailService {
 
       if (emailService === 'zoho') {
         // Zoho Mail SMTP configuration
-        this.transporter = nodemailer.createTransporter({
+        this.transporter = nodemailer.createTransport({
           host: 'smtp.zoho.com',
           port: 587,
           secure: false, // true for 465, false for other ports
@@ -35,7 +35,7 @@ class EmailService {
         });
       } else if (emailService === 'custom') {
         // For custom SMTP servers
-        this.transporter = nodemailer.createTransporter({
+        this.transporter = nodemailer.createTransport({
           host: process.env.EMAIL_HOST,
           port: parseInt(process.env.EMAIL_PORT || '587'),
           secure: process.env.EMAIL_SECURE === 'true',
@@ -46,7 +46,7 @@ class EmailService {
         });
       } else {
         // For predefined services (gmail, hotmail, yahoo, etc.)
-        this.transporter = nodemailer.createTransporter({
+        this.transporter = nodemailer.createTransport({
           service: emailService,
           auth: {
             user: process.env.EMAIL_USER,
