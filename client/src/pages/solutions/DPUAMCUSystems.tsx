@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Truck, CheckCircle, Download, Wifi, DollarSign, BarChart3 } from "lucide-react";
+import { Truck, CheckCircle, Download, Wifi, DollarSign, BarChart3, Star, Quote } from "lucide-react";
 
 const DPUAMCUSystems = () => {
   return (
@@ -147,7 +147,7 @@ const DPUAMCUSystems = () => {
             </div>
           </GlassCard>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 mb-20">
             <GlassCard className="p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Benefits for Farmers</h3>
               <div className="space-y-4">
@@ -200,6 +200,224 @@ const DPUAMCUSystems = () => {
               </div>
             </GlassCard>
           </div>
+
+          {/* System Comparison */}
+          <div>
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Choose Your System</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <GlassCard className="p-8 relative">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">DPU Basic</h3>
+                  <p className="text-sm text-muted-foreground mb-4">For small collection centers</p>
+                  <div className="text-3xl font-bold text-primary">From $18,000</div>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">500L/hour capacity</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">Basic milk analyzer</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">RFID farmer ID</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">SMS notifications</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">1 year warranty</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full" variant="outline" data-testid="button-quote-dpu-basic">Get Quote</Button>
+                </Link>
+              </GlassCard>
+
+              <GlassCard className="p-8 relative border-2 border-primary">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  Recommended
+                </div>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">AMCU Standard</h3>
+                  <p className="text-sm text-muted-foreground mb-4">Complete automation</p>
+                  <div className="text-3xl font-bold text-primary">From $35,000</div>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">2000L/hour capacity</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">Advanced analyzer + adulteration</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">Auto can washing</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">Cloud + mobile app</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">2 years warranty + support</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-quote-amcu-standard">Get Quote</Button>
+                </Link>
+              </GlassCard>
+
+              <GlassCard className="p-8 relative">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">AMCU Premium</h3>
+                  <p className="text-sm text-muted-foreground mb-4">For large cooperatives</p>
+                  <div className="text-3xl font-bold text-primary">From $55,000</div>
+                </div>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">5000L/hour capacity</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">Full lab-grade analyzer</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">GPS tracking system</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">Bank integration + API</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">3 years warranty + priority support</span>
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full" variant="outline" data-testid="button-quote-amcu-premium">Get Quote</Button>
+                </Link>
+              </GlassCard>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Success Stories
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Transforming dairy operations across the country
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <GlassCard className="p-8">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-primary/30 mb-4" />
+              <p className="text-foreground mb-6 leading-relaxed">
+                "Our AMCU system has revolutionized milk collection. Farmers get instant payment receipts, and we've reduced collection time by 70%. ROI was achieved in just 18 months!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold">AS</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">Anil Sharma</div>
+                  <div className="text-sm text-muted-foreground">Dairy Cooperative Manager</div>
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard className="p-8">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-primary/30 mb-4" />
+              <p className="text-foreground mb-6 leading-relaxed">
+                "The cloud-based monitoring is a game changer. I can track all collection centers from my office in real-time. Quality issues are detected immediately, preventing bad milk from entering the supply chain."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold">PJ</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">Priya Joshi</div>
+                  <div className="text-sm text-muted-foreground">Operations Director</div>
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard className="p-8">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <Quote className="w-10 h-10 text-primary/30 mb-4" />
+              <p className="text-foreground mb-6 leading-relaxed">
+                "As a farmer, I love the transparency. I see the exact fat and SNF content of my milk, get a printed receipt, and the money is in my bank the same evening. No disputes, no delays."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <span className="text-primary font-bold">VN</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">Vijay Naik</div>
+                  <div className="text-sm text-muted-foreground">Dairy Farmer</div>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary/10">
+        <div className="container mx-auto px-4 lg:px-8">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
+            <Truck className="w-16 h-16 text-primary mx-auto mb-6" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Ready to Automate Your Dairy Collection?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Transform your dairy operations with our DPU/AMCU systems. Get a customized solution for your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-dpu-amcu-contact">
+                  Schedule Site Visit
+                </Button>
+              </Link>
+              <a href="#" onClick={(e) => {
+                e.preventDefault();
+                alert('Product datasheet will be available for download soon. Please contact us for detailed specifications.');
+              }} data-testid="button-download-catalog">
+                <Button size="lg" variant="outline">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Catalog
+                </Button>
+              </a>
+            </div>
+          </GlassCard>
         </div>
       </section>
 
