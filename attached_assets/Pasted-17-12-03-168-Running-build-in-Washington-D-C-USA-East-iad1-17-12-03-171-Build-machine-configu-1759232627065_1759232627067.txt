@@ -1,0 +1,44 @@
+17:12:03.168 Running build in Washington, D.C., USA (East) – iad1
+17:12:03.171 Build machine configuration: 2 cores, 8 GB
+17:12:03.228 Cloning github.com/Roshan115258/Trail (Branch: main, Commit: 6fba72b)
+17:12:03.472 Previous build caches not available
+17:12:05.294 Cloning completed: 2.065s
+17:12:05.636 Running "vercel build"
+17:12:06.240 Vercel CLI 48.1.6
+17:12:07.033 Installing dependencies...
+17:12:11.458 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+17:12:11.482 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+17:12:16.105 
+17:12:16.106 added 478 packages in 9s
+17:12:16.106 
+17:12:16.106 64 packages are looking for funding
+17:12:16.106   run `npm fund` for details
+17:12:16.157 Running "npm run build"
+17:12:16.291 
+17:12:16.292 > rest-express@1.0.0 build
+17:12:16.292 > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+17:12:16.292 
+17:12:16.550 [36mvite v5.4.20 [32mbuilding for production...[36m[39m
+17:12:16.601 transforming...
+17:12:16.897 Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+17:12:16.897   npx update-browserslist-db@latest
+17:12:16.898   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+17:12:21.404 [32m✓[39m 1743 modules transformed.
+17:12:21.788 rendering chunks...
+17:12:21.799 computing gzip size...
+17:12:21.817 [2m../dist/public/[22m[32mindex.html                                                             [39m[1m[2m  3.00 kB[22m[1m[22m[2m │ gzip:   1.01 kB[22m
+17:12:21.818 [2m../dist/public/[22m[2massets/[22m[32mcropped-1000113581-removebg-preview_1759222236071-Bl4oDOMZ.png  [39m[1m[2m 52.66 kB[22m[1m[22m
+17:12:21.818 [2m../dist/public/[22m[2massets/[22m[35mindex-CKXkr64B.css                                              [39m[1m[2m 81.02 kB[22m[1m[22m[2m │ gzip:  13.26 kB[22m
+17:12:21.818 [2m../dist/public/[22m[2massets/[22m[36mindex-Dt3I0hjK.js                                               [39m[1m[2m644.37 kB[22m[1m[22m[2m │ gzip: 165.83 kB[22m
+17:12:21.819 [32m✓ built in 5.25s[39m
+17:12:21.853 
+17:12:21.854   dist/index.js  8.8kb
+17:12:21.856 
+17:12:21.856 ⚡ Done in 4ms
+17:12:21.928 Build Completed in /vercel/output [15s]
+17:12:22.025 Deploying outputs...
+17:12:24.280 Deployment completed
+17:12:25.101 Creating build cache...
+17:12:38.028 Created build cache: 12.918s
+17:12:38.029 Uploading build cache [77.48 MB]
+17:12:39.098 Build cache uploaded: 1.077s
