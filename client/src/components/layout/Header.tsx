@@ -42,8 +42,8 @@ const Header = () => {
               alt="Several Sustain Logo" 
               className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
             />
-            <div className="hidden sm:block">
-              <h1 className="text-xl lg:text-2xl font-bold text-foreground">
+            <div>
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">
                 Several <span className="text-primary">Sustain</span>
               </h1>
             </div>
