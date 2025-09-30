@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import logoImage from "@assets/cropped-1000113581-removebg-preview_1759222236071.png";
 
 const Header = () => {
   const [location] = useLocation();
@@ -36,9 +37,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3" data-testid="logo">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg">
-              <span className="text-primary-foreground font-bold text-lg lg:text-xl">SS</span>
-            </div>
+            <img 
+              src={logoImage} 
+              alt="Several Sustain Logo" 
+              className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
+            />
             <div className="hidden sm:block">
               <h1 className="text-xl lg:text-2xl font-bold text-foreground">
                 Several <span className="text-primary">Sustain</span>
