@@ -1,14 +1,16 @@
-modules = ["nodejs-20", "web", "postgresql-16"]
+modules = ["nodejs-20", "postgresql-16", "python-3.11", "web"]
 run = "npm run dev"
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["yakut", "zip"]
 
 [deployment]
-deploymentTarget = "autoscale"
+deploymentTarget = "static"
 build = ["npm", "run", "build"]
 run = ["npm", "run", "start"]
+publicDir = "dist"
 
 [[ports]]
 localPort = 5000
