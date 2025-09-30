@@ -56,10 +56,15 @@ const MilkAnalyzer = () => {
                     Get Quote
                   </Button>
                 </Link>
-                <Button variant="outline" data-testid="button-download-spec">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Specs
-                </Button>
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  alert('Product specification sheet will be available for download soon. Please contact us for detailed specifications.');
+                }} data-testid="button-download-spec">
+                  <Button variant="outline">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Specs
+                  </Button>
+                </a>
               </div>
             </div>
             <div>

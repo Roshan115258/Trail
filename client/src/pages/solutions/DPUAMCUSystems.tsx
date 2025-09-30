@@ -56,10 +56,15 @@ const DPUAMCUSystems = () => {
                     Get Quote
                   </Button>
                 </Link>
-                <Button variant="outline" data-testid="button-download-datasheet">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download Datasheet
-                </Button>
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  alert('Product datasheet will be available for download soon. Please contact us for detailed specifications.');
+                }} data-testid="button-download-datasheet">
+                  <Button variant="outline">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Datasheet
+                  </Button>
+                </a>
               </div>
             </div>
             <div>
