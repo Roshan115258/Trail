@@ -40,10 +40,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-3">
-              <li><Link href="/services/pcb-design" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-pcb-design">PCB Design</Link></li>
-              <li><Link href="/services/hardware-development" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-hardware-development">Hardware Development</Link></li>
-              <li><Link href="/services/firmware-programming" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-firmware-programming">Firmware Programming</Link></li>
-              <li><Link href="/services/app-development" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-app-development">App Development</Link></li>
+              <li><Link href="/services/design/pcb-design" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-pcb-design">PCB Design</Link></li>
+              <li><Link href="/services/design/web-design" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-web-design">Web Design</Link></li>
+              <li><Link href="/services/development/hardware" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-hardware-development">Hardware Development</Link></li>
+              <li><Link href="/services/development/firmware" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-firmware">Firmware Development</Link></li>
+              <li><Link href="/services/development/app-development" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-app-development">App Development</Link></li>
             </ul>
           </div>
 

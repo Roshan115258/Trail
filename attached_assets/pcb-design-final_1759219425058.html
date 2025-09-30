@@ -1,0 +1,3018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#15803d">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+
+    <title>PCB Design Services | IPC-Certified Circuit Board Layout | Several Sustain</title>
+    <meta name="description" content="Expert PCB layout services for automotive, IoT, and medical devices. IPC-certified engineers with HDI, RF, high-speed design expertise.">
+    <meta name="keywords" content="PCB design services, circuit board layout, hardware development, IPC standards, electronics engineering, PCB manufacturing">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="PCB Design Services | IPC-Certified Circuit Board Layout | Several Sustain">
+    <meta property="og:description" content="Expert PCB layout services for automotive, IoT, and medical devices. IPC-certified engineers with HDI, RF, high-speed design expertise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://severalsustain.com/pcb-design">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            /* Colors */
+            --primary: #15803d;
+            --primary-light: #22c55e;
+            --primary-dark: #166534;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --secondary-dark: #d97706;
+            
+            /* Neutrals */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+            
+            /* Borders */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            
+            /* Layout */
+            --max-width-sm: 640px;
+            --max-width-md: 768px;
+            --max-width-lg: 1024px;
+            --max-width-xl: 1280px;
+            --max-width-2xl: 1536px;
+            --max-width-container: 1400px;
+        }
+        
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            font-weight: var(--font-weight-normal);
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography Scale */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-7xl { font-size: 4.5rem; line-height: 1; }
+        
+        /* Responsive Typography */
+        @media (min-width: 640px) {
+            .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:text-6xl { font-size: 3.75rem; line-height: 1; }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .lg\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .lg\:text-7xl { font-size: 4.5rem; line-height: 1; }
+            .lg\:text-8xl { font-size: 6rem; line-height: 1; }
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--max-width-container);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .container { 
+                padding-left: var(--space-xl); 
+                padding-right: var(--space-xl); 
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container { 
+                padding-left: var(--space-2xl); 
+                padding-right: var(--space-2xl); 
+                max-width: 1200px;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .container { 
+                max-width: 1400px;
+            }
+        }
+        
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .block { display: block; }
+        .inline-flex { display: inline-flex; }
+        
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .font-light { font-weight: var(--font-weight-light); }
+        .font-normal { font-weight: var(--font-weight-normal); }
+        .font-medium { font-weight: var(--font-weight-medium); }
+        .font-semibold { font-weight: var(--font-weight-semibold); }
+        .font-bold { font-weight: var(--font-weight-bold); }
+        .font-extrabold { font-weight: var(--font-weight-extrabold); }
+        
+        .leading-tight { line-height: 1.25; }
+        .leading-snug { line-height: 1.375; }
+        .leading-normal { line-height: 1.5; }
+        .leading-relaxed { line-height: 1.625; }
+        
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-gray-500 { color: var(--gray-500); }
+        .text-gray-600 { color: var(--gray-600); }
+        .text-gray-700 { color: var(--gray-700); }
+        .text-gray-800 { color: var(--gray-800); }
+        .text-gray-900 { color: var(--gray-900); }
+        .text-white { color: white; }
+        
+        .bg-primary { background-color: var(--primary); }
+        .bg-primary-light { background-color: var(--primary-light); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-gray-50 { background-color: var(--gray-50); }
+        .bg-gray-100 { background-color: var(--gray-100); }
+        .bg-gray-900 { background-color: var(--gray-900); }
+        .bg-white { background-color: white; }
+        
+        .rounded { border-radius: var(--radius-md); }
+        .rounded-lg { border-radius: var(--radius-lg); }
+        .rounded-xl { border-radius: var(--radius-xl); }
+        .rounded-2xl { border-radius: var(--radius-2xl); }
+        .rounded-full { border-radius: var(--radius-full); }
+        
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+        .shadow-xl { box-shadow: var(--shadow-xl); }
+        .shadow-2xl { box-shadow: var(--shadow-2xl); }
+        
+        .transition-all { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .duration-200 { transition-duration: 200ms; }
+        .duration-300 { transition-duration: 300ms; }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.2s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: var(--gray-300);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-content { height: 4.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-content { height: 5rem; }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        
+        .logo-text {
+            font-size: 1.125rem;
+        }
+        
+        @media (min-width: 768px) {
+            .logo-text { font-size: 1.25rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-text { font-size: 1.5rem; }
+        }
+        
+        .logo-primary { color: var(--primary); }
+        .logo-secondary { color: var(--secondary); }
+        
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links { 
+                display: flex; 
+                gap: 0.5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-links { gap: 0.75rem; }
+        }
+        
+        .nav-link {
+            padding: 0.5rem 0.875rem;
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+            white-space: nowrap;
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .nav-link:hover {
+            background-color: var(--gray-100);
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 0.625rem 1.25rem;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            gap: 0.375rem;
+            white-space: nowrap;
+        }
+        
+        @media (min-width: 768px) {
+            .cta-button {
+                display: inline-flex;
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+            padding: 0.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: var(--gray-700);
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn { display: none; }
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding-top: var(--space-4xl);
+            padding-bottom: var(--space-4xl);
+            text-align: center;
+            color: white;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-content {
+                padding-top: var(--space-5xl);
+                padding-bottom: var(--space-5xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-content {
+                text-align: left;
+            }
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: var(--space-3xl);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .hero-grid {
+                gap: var(--space-4xl);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .hero-badge { font-size: 0.875rem; }
+        }
+        
+        .hero-title {
+            font-size: 2.25rem;
+            line-height: 1.1;
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .hero-title { font-size: 2.75rem; }
+        }
+        
+        @media (min-width: 768px) {
+            .hero-title { font-size: 3.25rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-title { font-size: 3.75rem; }
+        }
+        
+        @media (min-width: 1280px) {
+            .hero-title { font-size: 4rem; }
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-subtitle {
+                max-width: none;
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-buttons { justify-content: flex-start; }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .btn-primary {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .btn-secondary {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-stats {
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+        }
+        
+        @media (min-width: 768px) {
+            .hero-stats { 
+                display: grid;
+                margin-top: var(--space-3xl);
+            }
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--secondary);
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .stat-number { font-size: 1.75rem; }
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        @media (min-width: 768px) {
+            .stat-label { font-size: 0.875rem; }
+        }
+        
+        .hero-visual {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-visual { display: flex; }
+        }
+        
+        /* Enhanced Hero Image */
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (min-width: 768px) {
+            .hero-image-container { height: 450px; }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-image-container { height: 500px; }
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .hero-image:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        @media (min-width: 768px) {
+            .section { padding: 5rem 0; }
+        }
+        
+        @media (min-width: 1024px) {
+            .section { padding: 6rem 0; }
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .section-header { margin-bottom: var(--space-4xl); }
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(21, 128, 61, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(21, 128, 61, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            line-height: 1.2;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .section-title { font-size: 2.25rem; }
+        }
+        
+        @media (min-width: 768px) {
+            .section-title { font-size: 2.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title { font-size: 3rem; }
+        }
+        
+        .section-subtitle {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-600);
+        }
+        
+        @media (min-width: 768px) {
+            .section-subtitle { font-size: 1.125rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-subtitle { font-size: 1.25rem; }
+        }
+        
+        /* Value Props */
+        .value-props {
+            background: linear-gradient(135deg, var(--gray-50), white);
+        }
+        
+        .value-props-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .value-props-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .value-props-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        .value-prop-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-lg);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: fit-content;
+        }
+        
+        @media (min-width: 768px) {
+            .value-prop-card { padding: var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .value-prop-card { padding: var(--space-2xl); }
+        }
+        
+        .value-prop-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        }
+        
+        .value-prop-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+        
+        .value-prop-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-lg);
+            transition: transform 0.3s ease;
+        }
+        
+        .value-prop-card:hover .value-prop-image {
+            transform: scale(1.05);
+        }
+        
+        @media (min-width: 768px) {
+            .value-prop-image { height: 220px; }
+        }
+        
+        .value-prop-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .value-prop-icon {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+        
+        .value-prop-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+            line-height: 1.3;
+        }
+        
+        @media (min-width: 768px) {
+            .value-prop-title { font-size: 1.375rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .value-prop-title { font-size: 1.5rem; }
+        }
+        
+        .value-prop-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .value-prop-description { font-size: 1rem; }
+        }
+        
+        .value-prop-features {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .value-prop-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        .value-prop-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: var(--font-weight-bold);
+            margin-top: 0.125rem;
+        }
+        
+        .value-prop-btn {
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .value-prop-btn { width: auto; }
+        }
+        
+        .value-prop-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-lg);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 768px) {
+            .service-card { padding: var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .service-card { padding: var(--space-2xl); }
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-lg);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+        
+        @media (min-width: 768px) {
+            .service-image { height: 200px; }
+        }
+        
+        .service-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .service-icon {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+        
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+            line-height: 1.3;
+        }
+        
+        @media (min-width: 768px) {
+            .service-title { font-size: 1.375rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .service-title { font-size: 1.5rem; }
+        }
+        
+        .service-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .service-description { font-size: 1rem; }
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        .service-features li::before {
+            content: '▶';
+            color: var(--primary);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        
+        .service-meta {
+            background: var(--gray-50);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-meta-title {
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .service-meta-text {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        /* Industry Applications */
+        .industry-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .industry-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .industry-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .industry-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .industry-card { padding: var(--space-xl); }
+        }
+        
+        .industry-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .industry-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto var(--space-md);
+        }
+        
+        @media (min-width: 768px) {
+            .industry-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        
+        .industry-title {
+            font-size: 1rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-sm);
+        }
+        
+        @media (min-width: 768px) {
+            .industry-title { font-size: 1.125rem; }
+        }
+        
+        .industry-description {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+        
+        @media (min-width: 768px) {
+            .industry-description { font-size: 0.875rem; }
+        }
+
+        /* Process Timeline */
+        .process-timeline {
+            display: grid;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .process-timeline { gap: var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .process-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .process-timeline { gap: var(--space-3xl); }
+        }
+        
+        .process-step {
+            position: relative;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            transition: all 0.3s ease;
+        }
+        
+        @media (min-width: 768px) {
+            .process-step { padding: var(--space-xl); }
+        }
+        
+        .process-step:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .process-number {
+            position: absolute;
+            top: -0.75rem;
+            left: var(--space-lg);
+            width: 1.5rem;
+            height: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        @media (min-width: 768px) {
+            .process-number { left: var(--space-xl); }
+        }
+        
+        .process-header {
+            margin-bottom: var(--space-md);
+        }
+        
+        .process-title {
+            font-size: 1.125rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-sm);
+        }
+        
+        @media (min-width: 768px) {
+            .process-title { font-size: 1.25rem; }
+        }
+        
+        .process-timeline-info {
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .process-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .process-description { font-size: 1rem; }
+        }
+        
+        .process-deliverables {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+        }
+        
+        .process-deliverables-title {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .process-deliverables ul {
+            list-style: none;
+        }
+        
+        .process-deliverables li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        .process-deliverables li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: var(--font-weight-bold);
+        }
+
+        /* Enhanced Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, var(--gray-50), white);
+            position: relative;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(21, 128, 61, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .testimonials-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .testimonial-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-light);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .testimonial-avatar {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-weight-bold);
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-info {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-role {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-company {
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .testimonial-stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: var(--space-md);
+            color: var(--secondary);
+        }
+        
+        .testimonial-quote {
+            position: relative;
+            color: var(--gray-700);
+            font-style: italic;
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+            font-size: 0.95rem;
+        }
+        
+        .testimonial-quote::before {
+            content: '"';
+            position: absolute;
+            top: -0.5rem;
+            left: -0.75rem;
+            font-size: 3rem;
+            color: var(--primary-light);
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .testimonial-meta {
+            background: rgba(21, 128, 61, 0.05);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .testimonial-project {
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-result {
+            font-size: 0.8rem;
+            color: var(--primary-dark);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        /* Enhanced client logo section */
+        .client-logos {
+            margin-top: var(--space-4xl);
+            padding: var(--space-2xl) 0;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .client-logos-title {
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .client-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            align-items: center;
+            opacity: 0.6;
+        }
+        
+        @media (min-width: 640px) {
+            .client-logos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .client-logos-grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+        
+        .client-logo {
+            background: var(--gray-100);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            text-align: center;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Accordion */
+        .faq-accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-question {
+            width: 100%;
+            background: white;
+            border: none;
+            padding: var(--space-lg);
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .faq-question {
+                font-size: 1rem;
+                padding: var(--space-xl);
+            }
+        }
+        
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+        
+        .faq-question.active {
+            background: var(--gray-50);
+            color: var(--primary);
+        }
+        
+        .faq-icon {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            margin-left: var(--space-md);
+        }
+        
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: white;
+        }
+        
+        .faq-answer.active {
+            max-height: 300px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 var(--space-lg) var(--space-lg);
+            color: var(--gray-600);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .faq-answer-content {
+                padding: 0 var(--space-xl) var(--space-xl);
+                font-size: 1rem;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            align-items: start;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-grid { gap: var(--space-3xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-4xl);
+            }
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .contact-form { padding: var(--space-2xl); }
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-label {
+            display: block;
+            color: white;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            display: grid;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .contact-info { gap: var(--space-xl); }
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .contact-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-icon {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        
+        .contact-details h3 {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: 0.5rem;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .contact-details p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-2xl) 0 var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .footer { padding: var(--space-3xl) 0 var(--space-xl); }
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        @media (min-width: 640px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+        
+        .footer-section h3 {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-md);
+            color: var(--primary-light);
+            font-size: 1rem;
+        }
+        
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-lg);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Image Optimizations */
+        .content-image {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+        
+        .content-image:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .contact-form {
+                padding: var(--space-lg);
+            }
+            
+            .value-prop-card,
+            .service-card {
+                padding: var(--space-lg);
+            }
+            
+            .testimonial-card {
+                padding: var(--space-lg);
+            }
+        }
+        
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .content-image,
+            .value-prop-image,
+            .service-image,
+            .hero-image {
+                image-rendering: -webkit-optimize-contrast;
+            }
+        }
+        
+        /* Dark mode support preparation */
+        @media (prefers-color-scheme: dark) {
+            .value-prop-card,
+            .service-card,
+            .testimonial-card {
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        /* Focus accessibility */
+        .content-image:focus,
+        .value-prop-image:focus,
+        .service-image:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        
+        /* Print styles */
+        @media print {
+            .navbar,
+            .hero-visual,
+            .contact-form {
+                display: none;
+            }
+            
+            .hero-content {
+                color: black;
+            }
+            
+            .section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "PCB Design Services",
+        "provider": {
+            "@type": "Organization",
+            "name": "Several Sustain",
+            "url": "https://severalsustain.com"
+        },
+        "description": "Expert PCB layout services for automotive, IoT, and medical devices. IPC-certified engineers with HDI, RF, high-speed design expertise.",
+        "areaServed": "India",
+        "serviceType": "PCB Design and Circuit Board Layout",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "PCB Design Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Digital & Analog PCB Design"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Advanced PCB Technologies"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Complete PCB Development"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What information do you need to start a PCB design project?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We need your functional requirements, performance specifications, size constraints, environmental conditions, regulatory requirements, and target cost. If you have existing schematics or reference designs, those are helpful too."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does a typical PCB design project take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Timeline depends on complexity. Simple 2-4 layer boards take 5-10 days, while complex multi-layer designs can take 2-4 weeks. We provide detailed timelines during project planning."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">Several</span>
+                        <span class="logo-secondary">Sustain</span>
+                    </div>
+                </div>
+                
+                <div class="nav-links">
+                    <button class="nav-link" onclick="scrollTo('services')">Services</button>
+                    <button class="nav-link" onclick="scrollTo('process')">Process</button>
+                    <button class="nav-link" onclick="scrollTo('industries')">Industries</button>
+                    <button class="nav-link" onclick="scrollTo('testimonials')">Reviews</button>
+                    <button class="nav-link" onclick="scrollTo('contact')">Contact</button>
+                </div>
+                
+                <button class="cta-button" onclick="scrollTo('contact')">
+                    Get PCB Quote
+                    <i data-lucide="arrow-right" style="width: 0.875rem; height: 0.875rem;"></i>
+                </button>
+                
+                <button class="mobile-menu-btn">
+                    <i data-lucide="menu" style="width: 1.5rem; height: 1.5rem;"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-badge">
+                            <i data-lucide="award" style="width: 1rem; height: 1rem;"></i>
+                            <span>IPC-Certified Engineers | 24-48h Review | IP Protection</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Professional <span class="hero-gradient">PCB Design Services</span>
+                        </h1>
+                        
+                        <h2 class="hero-subtitle" style="font-size: 1.375rem; margin-bottom: var(--space-md); font-weight: var(--font-weight-semibold);">
+                            Custom Circuit Board Layout & Engineering
+                        </h2>
+                        
+                        <p class="hero-subtitle">
+                            Transform your electronic concepts into production-ready PCB designs with our IPC-certified engineers. Get 24-48 hour design reviews with complete IP protection and industry compliance.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="scrollTo('contact')">
+                                Get PCB Design Quote
+                                <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                            </button>
+                            <button class="btn-secondary" onclick="scrollTo('services')">
+                                View Portfolio
+                                <i data-lucide="external-link" style="width: 1rem; height: 1rem;"></i>
+                            </button>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">PCBs Designed</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">32</span>
+                                <span class="stat-label">Max Layers</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">99.5%</span>
+                                <span class="stat-label">First Pass Yield</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="hero-image-container">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1917a3a0-51df-489d-864b-c43145c18ff8.png" alt="Professional PCB Design Laboratory Workspace" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PCB Design Services & Capabilities -->
+    <section id="services" class="section value-props">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="circuit-board" style="width: 1rem; height: 1rem;"></i>
+                    PCB Design Capabilities
+                </div>
+                <h2 class="section-title">Complete PCB Design Solutions</h2>
+                <p class="section-subtitle">From simple prototypes to complex multi-layer designs, we deliver precision-engineered PCB solutions that meet your exact specifications and industry standards.</p>
+            </div>
+
+            <div class="value-props-grid">
+                <div class="value-prop-card fade-in">
+                    <img src="https://i.imgur.com/XQKnQqG.jpeg" alt="Digital and Analog PCB Design" class="value-prop-image">
+                    <div class="value-prop-icon">
+                        <i data-lucide="cpu" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="value-prop-title">Digital & Analog PCB Design</h3>
+                    <p class="value-prop-description">Expert circuit board layout for digital, analog, and mixed-signal applications with optimized routing and signal integrity analysis for maximum performance.</p>
+                    <ul class="value-prop-features">
+                        <li>High-speed digital design up to 10+ GHz</li>
+                        <li>Low-noise analog circuits with precision routing</li>
+                        <li>Mixed-signal optimization and isolation</li>
+                        <li>Power distribution network design</li>
+                        <li>EMI/EMC compliance optimization</li>
+                    </ul>
+                    <button class="value-prop-btn" onclick="scrollTo('contact')">Discuss Your Design</button>
+                </div>
+
+                <div class="value-prop-card fade-in">
+                    <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/013f73d0-0433-48e8-8816-34c4939f2645.png" alt="Advanced PCB Technologies" class="value-prop-image">
+                    <div class="value-prop-icon">
+                        <i data-lucide="zap" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="value-prop-title">Advanced PCB Technologies</h3>
+                    <p class="value-prop-description">Cutting-edge PCB solutions including HDI, flex-rigid, RF/microwave, and high-frequency designs for the most demanding applications.</p>
+                    <ul class="value-prop-features">
+                        <li>HDI technology with microvias</li>
+                        <li>Flex-rigid board design</li>
+                        <li>RF/microwave layout expertise</li>
+                        <li>High-frequency signal routing</li>
+                        <li>Embedded component integration</li>
+                    </ul>
+                    <button class="value-prop-btn" onclick="scrollTo('contact')">Explore Advanced PCB</button>
+                </div>
+
+                <div class="value-prop-card fade-in">
+                    <img src="https://i.imgur.com/VNHJkL6.png" alt="Technical PCB Specifications" class="value-prop-image">
+                    <div class="value-prop-icon">
+                        <i data-lucide="settings" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="value-prop-title">Technical Specifications</h3>
+                    <p class="value-prop-description">Comprehensive technical capabilities covering all layer counts, materials, and manufacturing specifications with industry-leading precision.</p>
+                    <ul class="value-prop-features">
+                        <li>1-32+ layer PCB designs</li>
+                        <li>0.1mm minimum trace width</li>
+                        <li>±0.05mm dimensional tolerance</li>
+                        <li>All substrate materials (FR4, Rogers, etc.)</li>
+                        <li>Complete documentation package</li>
+                    </ul>
+                    <button class="value-prop-btn" onclick="scrollTo('contact')">View Specifications</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process & Methodology -->
+    <section id="process" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="workflow" style="width: 1rem; height: 1rem;"></i>
+                    Design Process
+                </div>
+                <h2 class="section-title">Proven PCB Design Methodology</h2>
+                <p class="section-subtitle">Our systematic 6-step process ensures optimal design outcomes, on-time delivery, and manufacturing success from requirements to production.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step fade-in">
+                    <div class="process-number">1</div>
+                    <div class="process-header">
+                        <h3 class="process-title">Requirements Analysis</h3>
+                        <div class="process-timeline-info">Timeline: 1-2 days</div>
+                    </div>
+                    <p class="process-description">Detailed consultation to understand your specifications, performance requirements, environmental constraints, and project objectives.</p>
+                    <div class="process-deliverables">
+                        <div class="process-deliverables-title">Deliverables:</div>
+                        <ul>
+                            <li>Technical specification document</li>
+                            <li>Project timeline and milestones</li>
+                            <li>Component recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">2</div>
+                    <div class="process-header">
+                        <h3 class="process-title">Schematic Design</h3>
+                        <div class="process-timeline-info">Timeline: 3-5 days</div>
+                    </div>
+                    <p class="process-description">Complete circuit schematic creation with optimal component selection and comprehensive electrical rule checking.</p>
+                    <div class="process-deliverables">
+                        <div class="process-deliverables-title">Deliverables:</div>
+                        <ul>
+                            <li>Complete schematic design</li>
+                            <li>Bill of materials (BOM)</li>
+                            <li>Design rule check (DRC) report</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">3</div>
+                    <div class="process-header">
+                        <h3 class="process-title">PCB Layout</h3>
+                        <div class="process-timeline-info">Timeline: 5-10 days</div>
+                    </div>
+                    <p class="process-description">Precision PCB layout with optimized component placement, intelligent routing, and comprehensive signal integrity analysis.</p>
+                    <div class="process-deliverables">
+                        <div class="process-deliverables-title">Deliverables:</div>
+                        <ul>
+                            <li>Complete PCB layout files</li>
+                            <li>3D visualization and renderings</li>
+                            <li>Layer stackup documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">4</div>
+                    <div class="process-header">
+                        <h3 class="process-title">Design Verification</h3>
+                        <div class="process-timeline-info">Timeline: 2-3 days</div>
+                    </div>
+                    <p class="process-description">Comprehensive verification including design rule checks, electrical testing, thermal analysis, and signal integrity simulation.</p>
+                    <div class="process-deliverables">
+                        <div class="process-deliverables-title">Deliverables:</div>
+                        <ul>
+                            <li>Verification and test reports</li>
+                            <li>Simulation results and analysis</li>
+                            <li>Manufacturing readiness assessment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">5</div>
+                    <div class="process-header">
+                        <h3 class="process-title">Documentation</h3>
+                        <div class="process-timeline-info">Timeline: 1-2 days</div>
+                    </div>
+                    <p class="process-description">Complete manufacturing package preparation with assembly drawings, fabrication notes, and comprehensive specifications.</p>
+                    <div class="process-deliverables">
+                        <div class="process-deliverables-title">Deliverables:</div>
+                        <ul>
+                            <li>Gerber files and drill data</li>
+                            <li>Assembly drawings and specifications</li>
+                            <li>Manufacturing and testing notes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">6</div>
+                    <div class="process-header">
+                        <h3 class="process-title">Production Support</h3>
+                        <div class="process-timeline-info">Timeline: Ongoing</div>
+                    </div>
+                    <p class="process-description">Continuous support during manufacturing and assembly phases to ensure successful production and quality outcomes.</p>
+                    <div class="process-deliverables">
+                        <div class="process-deliverables-title">Support includes:</div>
+                        <ul>
+                            <li>Manufacturing vendor support</li>
+                            <li>Assembly guidance and troubleshooting</li>
+                            <li>Testing protocols and validation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Applications -->
+    <section id="industries" class="section value-props">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="target" style="width: 1rem; height: 1rem;"></i>
+                    Industry Applications
+                </div>
+                <h2 class="section-title">Specialized PCB Solutions Across Industries</h2>
+                <p class="section-subtitle">Our expertise spans multiple industry sectors, delivering PCB designs that meet stringent requirements and regulatory standards.</p>
+            </div>
+
+            <div class="industry-grid">
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="car" style="width: 1.25rem; height: 1.25rem;"></i>
+                    </div>
+                    <h3 class="industry-title">Automotive Electronics</h3>
+                    <p class="industry-description">ECUs, sensor modules, and automotive control systems with AEC-Q qualification</p>
+                </div>
+
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="heart" style="width: 1.25rem; height: 1.25rem;"></i>
+                    </div>
+                    <h3 class="industry-title">Medical Devices</h3>
+                    <p class="industry-description">Patient monitoring, diagnostic equipment, and FDA-compliant implantable devices</p>
+                </div>
+
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="smartphone" style="width: 1.25rem; height: 1.25rem;"></i>
+                    </div>
+                    <h3 class="industry-title">IoT & Consumer Electronics</h3>
+                    <p class="industry-description">Smart home devices, wearables, and connected products with wireless connectivity</p>
+                </div>
+
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="cog" style="width: 1.25rem; height: 1.25rem;"></i>
+                    </div>
+                    <h3 class="industry-title">Industrial Automation</h3>
+                    <p class="industry-description">Control systems, sensors, and industrial IoT devices for harsh environments</p>
+                </div>
+
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="plane" style="width: 1.25rem; height: 1.25rem;"></i>
+                    </div>
+                    <h3 class="industry-title">Aerospace & Defense</h3>
+                    <p class="industry-description">Avionics, radar systems, and mission-critical electronics with military standards</p>
+                </div>
+
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">
+                        <i data-lucide="radio" style="width: 1.25rem; height: 1.25rem;"></i>
+                    </div>
+                    <h3 class="industry-title">Telecommunications</h3>
+                    <p class="industry-description">Base stations, routers, and high-frequency communication equipment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Standards -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="tool" style="width: 1rem; height: 1rem;"></i>
+                    Tools & Standards
+                </div>
+                <h2 class="section-title">Industry-Leading Design Tools & Compliance</h2>
+                <p class="section-subtitle">We utilize the most advanced PCB design software and adhere to international standards to ensure optimal design quality and manufacturability.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <img src="https://i.imgur.com/3MIgcjH.png" alt="PCB Design Software Interface" class="service-image">
+                    <div class="service-icon">
+                        <i data-lucide="monitor" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Design Software</h3>
+                    <p class="service-description">Professional-grade PCB design tools for optimal results and industry compatibility.</p>
+                    <ul class="service-features">
+                        <li>Altium Designer (primary platform)</li>
+                        <li>Cadence Allegro & OrCAD</li>
+                        <li>KiCad for open-source projects</li>
+                        <li>Eagle for rapid prototyping</li>
+                        <li>Mentor Graphics Xpedition</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="service-meta-title">Advanced Features</div>
+                        <div class="service-meta-text">3D modeling, signal integrity analysis, real-time DRC, and automated routing capabilities</div>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1a9b4693-9ce8-4e24-a834-0b85be824d64.png" alt="IoT PCB Device Applications" class="service-image">
+                    <div class="service-icon">
+                        <i data-lucide="shield-check" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Standards & Certifications</h3>
+                    <p class="service-description">Complete compliance with international PCB design and manufacturing standards.</p>
+                    <ul class="service-features">
+                        <li>IPC-2221 (Generic Standard)</li>
+                        <li>IPC-2222 (Rigid PCB Design)</li>
+                        <li>UL Recognition & Safety</li>
+                        <li>RoHS & REACH Compliance</li>
+                        <li>ISO 9001 Quality Management</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="service-meta-title">Industry Certifications</div>
+                        <div class="service-meta-text">Our engineers hold IPC designer certifications and industry-specific qualifications</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Testimonials & Success Stories -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container testimonials-container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="star" style="width: 1rem; height: 1rem;"></i>
+                    Client Success Stories
+                </div>
+                <h2 class="section-title">Proven PCB Design Excellence</h2>
+                <p class="section-subtitle">Real projects, real results. See how our PCB design expertise has helped clients achieve breakthrough success across various industries and applications.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AG</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Smart Agriculture Team</div>
+                            <div class="testimonial-role">CTO & Lead Engineer</div>
+                            <div class="testimonial-company">AgriTech Startup</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-quote">Several Sustain designed our IoT sensor board with ultra-low power requirements for agricultural monitoring. The PCB exceeded our 5-year battery life target by an incredible 40%, enabling successful product launch in the smart agriculture market. Their attention to power optimization was exceptional.</p>
+                    <div class="testimonial-meta">
+                        <div class="testimonial-project">IoT Agricultural Sensor Board</div>
+                        <div class="testimonial-result">40% longer battery life • Successful product launch</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MT</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Healthcare Technology</div>
+                            <div class="testimonial-role">VP of Engineering</div>
+                            <div class="testimonial-company">MedDevice Solutions</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-quote">The medical monitoring device PCB design achieved 99.5% signal accuracy and successfully passed FDA approval on the first attempt. Their expertise in medical-grade electronics, noise reduction, and regulatory compliance was absolutely exceptional. A true partnership that delivered results.</p>
+                    <div class="testimonial-meta">
+                        <div class="testimonial-project">Medical Patient Monitoring Device</div>
+                        <div class="testimonial-result">99.5% accuracy • FDA approval achieved</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AU</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Automotive Supplier</div>
+                            <div class="testimonial-role">Senior Design Engineer</div>
+                            <div class="testimonial-company">Tier 1 Automotive</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-quote">Our automotive ECU PCB design passed all AEC-Q qualification tests and is now in high-volume production. The thermal-optimized layout performs flawlessly in extreme temperature conditions from -40°C to +125°C. Outstanding engineering expertise and automotive knowledge.</p>
+                    <div class="testimonial-meta">
+                        <div class="testimonial-project">Automotive ECU Control Unit</div>
+                        <div class="testimonial-result">AEC-Q qualified • Volume production</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">IO</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Industrial IoT Company</div>
+                            <div class="testimonial-role">Hardware Director</div>
+                            <div class="testimonial-company">SmartFactory Systems</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-quote">World-class embedded system design expertise. The IoT connectivity features for our industrial automation system work flawlessly across WiFi, Bluetooth, and cellular networks. Their knowledge of RF design and real-time systems is truly impressive. Highly recommended.</p>
+                    <div class="testimonial-meta">
+                        <div class="testimonial-project">Industrial IoT Automation Hub</div>
+                        <div class="testimonial-result">Multi-protocol connectivity • Real-time performance</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">CS</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Consumer Electronics</div>
+                            <div class="testimonial-role">Product Manager</div>
+                            <div class="testimonial-company">WearTech Innovations</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-quote">Excellent wearable device PCB design that perfectly integrates sensors, wireless connectivity, and power management in a tiny form factor. The real-time health monitoring dashboard gives unprecedented operational insights. Professional team with outstanding communication throughout.</p>
+                    <div class="testimonial-meta">
+                        <div class="testimonial-project">Wearable Health Monitor</div>
+                        <div class="testimonial-result">Miniaturized design • Real-time monitoring</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">HW</div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Hardware Development</div>
+                            <div class="testimonial-role">Engineering Manager</div>
+                            <div class="testimonial-company">TechScale Solutions</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-quote">Complete hardware development with exceptional professionalism from concept to production. Their DFM optimization reduced our manufacturing costs by 25% while maintaining the highest quality standards. Several Sustain is now our trusted partner for all complex electronics projects.</p>
+                    <div class="testimonial-meta">
+                        <div class="testimonial-project">Complete Hardware Development</div>
+                        <div class="testimonial-result">25% cost reduction • Production optimization</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Success Metrics -->
+            <div class="client-logos">
+                <div class="client-logos-title">Trusted by Industry Leaders Across Sectors</div>
+                <div class="client-logos-grid">
+                    <div class="client-logo">AgriTech</div>
+                    <div class="client-logo">MedDevice</div>
+                    <div class="client-logo">Automotive</div>
+                    <div class="client-logo">SmartFactory</div>
+                    <div class="client-logo">WearTech</div>
+                    <div class="client-logo">TechScale</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section value-props">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="help-circle" style="width: 1rem; height: 1rem;"></i>
+                    Frequently Asked Questions
+                </div>
+                <h2 class="section-title">PCB Design FAQs</h2>
+                <p class="section-subtitle">Get answers to common questions about our PCB design process, capabilities, and services.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What information do you need to start a PCB design project?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We need your functional requirements, performance specifications, size constraints, environmental conditions, regulatory requirements, and target cost. If you have existing schematics or reference designs, those are helpful too.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long does a typical PCB design project take?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Timeline depends on complexity. Simple 2-4 layer boards take 5-10 days, while complex multi-layer designs can take 2-4 weeks. We provide detailed timelines during project planning.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you provide manufacturing support?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, we provide complete manufacturing support including vendor selection, DFM review, prototype coordination, and production scaling assistance.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What design standards do you follow?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We follow IPC standards (IPC-2221, IPC-2222), industry-specific standards (automotive, medical, aerospace), and regional compliance requirements (CE, FCC, RoHS).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can you work with our existing team?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely. We offer flexible engagement models from independent design to collaborative development with your internal team.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What file formats do you deliver?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We deliver native design files, Gerber files, pick-and-place files, bill of materials, assembly drawings, and complete manufacturing documentation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you sign NDAs for IP protection?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, we prioritize IP protection and readily sign NDAs and confidentiality agreements before project discussions begin.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What layer counts can you handle?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We design PCBs from simple single-layer to complex 32+ layer boards, including HDI designs with microvias and buried vias.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you provide simulation and analysis?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, we provide signal integrity analysis, thermal simulation, EMI/EMC analysis, and power integrity simulation as needed.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are your payment terms?</span>
+                        <i data-lucide="chevron-down" class="faq-icon" style="width: 1.125rem; height: 1.125rem;"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We typically work with 50% advance and 50% on delivery. For larger projects, milestone-based payments can be arranged.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section id="contact" class="section contact">
+        <div class="container contact-content">
+            <div class="section-header">
+                <div class="section-badge" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.2);">
+                    <i data-lucide="phone" style="width: 1rem; height: 1rem;"></i>
+                    Get Your PCB Design Quote
+                </div>
+                <h2 class="section-title" style="color: white;">Ready to Transform Your Circuit Ideas?</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Let's discuss your PCB design requirements and accelerate your hardware development journey with our expert engineering team.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name *</label>
+                            <input class="form-input" type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="company">Company</label>
+                            <input class="form-input" type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="project-type">Project Type</label>
+                            <select class="form-select" id="project-type" name="project-type">
+                                <option value="">Select Project Type</option>
+                                <option value="prototype">Prototype PCB</option>
+                                <option value="production">Production PCB</option>
+                                <option value="complete">Complete Hardware Development</option>
+                                <option value="consultation">Design Consultation</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="requirements">Project Requirements *</label>
+                        <textarea class="form-textarea" id="requirements" name="requirements" placeholder="Describe your PCB design requirements, layer count, size constraints, special features, etc." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">
+                        Get PCB Design Quote
+                        <i data-lucide="send" style="width: 1rem; height: 1rem;"></i>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail" style="width: 1.25rem; height: 1.25rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>info@severalsustain.com<br>pcb@severalsustain.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone" style="width: 1.25rem; height: 1.25rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+91 XXXXX XXXXX<br>Monday to Friday, 9 AM - 6 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin" style="width: 1.25rem; height: 1.25rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>India<br>Serving clients nationwide and internationally</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="clock" style="width: 1.25rem; height: 1.25rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Quick Response</h3>
+                            <p>24-48 hour design review<br>Same-day quote response</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Several Sustain</h3>
+                    <p>Premier PCB design and hardware development services in India. Transforming electronic concepts into market-ready products with precision engineering and innovative solutions.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>PCB Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Digital PCB Design</a></li>
+                        <li><a href="#services">Analog PCB Design</a></li>
+                        <li><a href="#services">HDI PCB Design</a></li>
+                        <li><a href="#services">Flex-Rigid PCB</a></li>
+                        <li><a href="#services">RF/Microwave PCB</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Industries</h3>
+                    <ul class="footer-links">
+                        <li><a href="#industries">Automotive</a></li>
+                        <li><a href="#industries">Medical Devices</a></li>
+                        <li><a href="#industries">IoT Electronics</a></li>
+                        <li><a href="#industries">Industrial</a></li>
+                        <li><a href="#industries">Aerospace</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#process">Design Process</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Several Sustain. All rights reserved. Professional PCB design services in India.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        function scrollTo(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // FAQ functionality
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-question').forEach(q => {
+                if (q !== button) {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            button.classList.toggle('active');
+            answer.classList.toggle('active');
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create mailto link with form data
+            const subject = encodeURIComponent('PCB Design Quote Request - ' + (data.company || 'New Client'));
+            const body = encodeURIComponent(`
+PCB Design Quote Request
+
+Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company || 'Not specified'}
+Project Type: ${data['project-type'] || 'Not specified'}
+
+Project Requirements:
+${data.requirements}
+
+Please provide a detailed quote for this PCB design project.
+
+Best regards,
+${data.name}
+            `);
+            
+            window.location.href = `mailto:info@severalsustain.com?subject=${subject}&body=${body}`;
+            
+            // Show success message
+            alert('Thank you for your inquiry! Your email client should now open with a pre-filled message. We will respond within 24 hours.');
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Enhanced Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const isVisible = navLinks.style.display === 'flex';
+            
+            if (isVisible) {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.backgroundColor = 'white';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+                navLinks.style.borderRadius = '0 0 1rem 1rem';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.querySelector('.nav-links');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const navbar = document.querySelector('.navbar');
+            
+            if (!navbar.contains(event.target) && navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Performance optimization: Lazy load images if any
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src || img.src;
+            });
+        }
+
+        // Image error handling
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.log('Failed to load image:', this.src);
+            });
+        });
+
+        // Enhanced scroll behavior for better UX
+        let ticking = false;
+        
+        function updateScrollEffects() {
+            const scrolled = window.scrollY;
+            const navbar = document.getElementById('navbar');
+            
+            if (scrolled > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            ticking = false;
+        }
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        });
+
+        // Touch-friendly hover effects for mobile
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.testimonial-card, .value-prop-card, .service-card').forEach(card => {
+                card.addEventListener('touchstart', function() {
+                    this.classList.add('touch-active');
+                });
+                
+                card.addEventListener('touchend', function() {
+                    setTimeout(() => {
+                        this.classList.remove('touch-active');
+                    }, 150);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

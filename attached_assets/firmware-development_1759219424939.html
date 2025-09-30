@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#15803d">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&auto=format&fit=crop&q=80" as="image">
+
+    <!-- SEO Meta Tags -->
+    <title>Custom Firmware Development Services | Secure IoT Solutions – Several Sustain</title>
+    <meta name="description" content="Custom firmware development for IoT, industrial, and medical devices. Certified engineers, OTA updates, and security-first approach. Get free consultation today.">
+    <meta name="keywords" content="firmware development, embedded systems, IoT firmware, industrial firmware, medical device firmware, OTA updates, secure firmware, BSP development, RTOS integration">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://severalsustain.com/firmware-development-services/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Custom Firmware Development Services | Secure IoT Solutions – Several Sustain">
+    <meta property="og:description" content="Custom firmware development for IoT, industrial, and medical devices. Certified engineers, OTA updates, and security-first approach.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://severalsustain.com/firmware-development-services/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&auto=format&fit=crop&q=80">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Firmware Development Services | Several Sustain">
+    <meta name="twitter:description" content="Custom firmware development for IoT, industrial, and medical devices. Certified engineers, OTA updates, and security-first approach.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&auto=format&fit=crop&q=80">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            /* Colors */
+            --primary: #15803d;
+            --primary-light: #22c55e;
+            --primary-dark: #166534;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --secondary-dark: #d97706;
+            
+            /* Neutrals */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+            
+            /* Borders */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            
+            /* Layout */
+            --max-width-sm: 640px;
+            --max-width-md: 768px;
+            --max-width-lg: 1024px;
+            --max-width-xl: 1280px;
+            --max-width-2xl: 1536px;
+            --max-width-container: 1400px;
+        }
+        
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            font-weight: var(--font-weight-normal);
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography Scale */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-7xl { font-size: 4.5rem; line-height: 1; }
+        
+        /* Responsive Typography */
+        @media (min-width: 640px) {
+            .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:text-6xl { font-size: 3.75rem; line-height: 1; }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .lg\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .lg\:text-7xl { font-size: 4.5rem; line-height: 1; }
+            .lg\:text-8xl { font-size: 6rem; line-height: 1; }
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--max-width-container);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .container { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .container { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+        }
+        
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .block { display: block; }
+        .inline-flex { display: inline-flex; }
+        
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .font-light { font-weight: var(--font-weight-light); }
+        .font-normal { font-weight: var(--font-weight-normal); }
+        .font-medium { font-weight: var(--font-weight-medium); }
+        .font-semibold { font-weight: var(--font-weight-semibold); }
+        .font-bold { font-weight: var(--font-weight-bold); }
+        .font-extrabold { font-weight: var(--font-weight-extrabold); }
+        
+        .leading-tight { line-height: 1.25; }
+        .leading-snug { line-height: 1.375; }
+        .leading-normal { line-height: 1.5; }
+        .leading-relaxed { line-height: 1.625; }
+        
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-gray-500 { color: var(--gray-500); }
+        .text-gray-600 { color: var(--gray-600); }
+        .text-gray-700 { color: var(--gray-700); }
+        .text-gray-800 { color: var(--gray-800); }
+        .text-gray-900 { color: var(--gray-900); }
+        .text-white { color: white; }
+        
+        .bg-primary { background-color: var(--primary); }
+        .bg-primary-light { background-color: var(--primary-light); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-gray-50 { background-color: var(--gray-50); }
+        .bg-gray-100 { background-color: var(--gray-100); }
+        .bg-gray-900 { background-color: var(--gray-900); }
+        .bg-white { background-color: white; }
+        
+        .rounded { border-radius: var(--radius-md); }
+        .rounded-lg { border-radius: var(--radius-lg); }
+        .rounded-xl { border-radius: var(--radius-xl); }
+        .rounded-2xl { border-radius: var(--radius-2xl); }
+        .rounded-full { border-radius: var(--radius-full); }
+        
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+        .shadow-xl { box-shadow: var(--shadow-xl); }
+        .shadow-2xl { box-shadow: var(--shadow-2xl); }
+        
+        .transition-all { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .duration-200 { transition-duration: 200ms; }
+        .duration-300 { transition-duration: 300ms; }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.2s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: var(--gray-300);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-content { height: 5rem; }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-text { font-size: 1.5rem; }
+        }
+        
+        .logo-primary { color: var(--primary); }
+        .logo-secondary { color: var(--secondary); }
+        
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+        
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--gray-100);
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .cta-button {
+                display: inline-flex;
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+            padding: 0.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: var(--gray-700);
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn { display: none; }
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding-top: var(--space-4xl);
+            padding-bottom: var(--space-4xl);
+            text-align: center;
+            color: white;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-content {
+                text-align: left;
+                padding-top: var(--space-5xl);
+                padding-bottom: var(--space-5xl);
+            }
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: var(--space-4xl);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .hero-title { font-size: 3.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-title { font-size: 4rem; }
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-subtitle {
+                font-size: 1.25rem;
+                max-width: none;
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-buttons { justify-content: flex-start; }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-visual {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-visual { display: flex; }
+        }
+        
+        .hero-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-card-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: var(--space-4xl) 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .section { padding: var(--space-5xl) 0; }
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .section-header { margin-bottom: var(--space-4xl); }
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(21, 128, 61, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(21, 128, 61, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            line-height: 1.2;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .section-title { font-size: 2.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title { font-size: 3rem; }
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: var(--gray-600);
+        }
+        
+        @media (min-width: 1024px) {
+            .section-subtitle { font-size: 1.25rem; }
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            gap: var(--space-xl);
+            margin-top: var(--space-2xl);
+        }
+        
+        @media (min-width: 640px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .service-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-light);
+        }
+        
+        .service-card .icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-md);
+            color: var(--gray-900);
+        }
+        
+        .service-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        @media (min-width: 640px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+        
+        .footer-section h3 {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-md);
+            color: var(--primary-light);
+            font-size: 1rem;
+        }
+        
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links button {
+            color: rgba(255, 255, 255, 0.8);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-align: left;
+            padding: 0;
+        }
+        
+        .footer-links button:hover {
+            color: var(--primary-light);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-lg);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-3xl);
+            align-items: start;
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-4xl);
+            }
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-label {
+            display: block;
+            color: white;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            display: grid;
+            gap: var(--space-xl);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .contact-details p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: var(--space-lg) 0;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-200);
+            margin-top: 4rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .breadcrumb { margin-top: 5rem; }
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .breadcrumb-nav a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .breadcrumb-separator {
+            width: 1rem;
+            height: 1rem;
+            color: var(--gray-400);
+        }
+
+        /* FAQ Styles */
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+            margin-bottom: var(--space-md);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: var(--space-lg);
+            background: none;
+            border: none;
+            font-size: 1.125rem;
+            font-weight: var(--font-weight-semibold);
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--gray-900);
+        }
+        
+        .faq-answer {
+            padding: 0 var(--space-lg) var(--space-lg);
+            color: var(--gray-600);
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .faq-question[aria-expanded="true"] + .faq-answer {
+            display: block;
+        }
+        
+        .faq-icon {
+            transition: transform 0.2s ease;
+        }
+        
+        .faq-question[aria-expanded="true"] .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">Several</span>
+                        <span class="logo-secondary">Sustain</span>
+                    </div>
+                </div>
+                
+                <div class="nav-links">
+                    <button class="nav-link" onclick="scrollTo('about')">About</button>
+                    <button class="nav-link" onclick="scrollTo('services')">Services</button>
+                    <button class="nav-link" onclick="scrollTo('testimonials')">Success Stories</button>
+                    <button class="nav-link" onclick="scrollTo('contact')">Contact</button>
+                </div>
+                
+                <button class="cta-button" onclick="scrollTo('contact')">
+                    Get Started
+                    <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                </button>
+                
+                <button class="mobile-menu-btn">
+                    <i data-lucide="menu" style="width: 1.5rem; height: 1.5rem;"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-badge">
+                            <i data-lucide="shield-check" style="width: 1rem; height: 1rem;"></i>
+                            <span>Security-First Firmware Development</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Custom <span class="hero-gradient">Firmware Development</span> Services for Next-Generation Embedded Systems
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Certified engineers delivering secure, scalable firmware solutions with OTA capabilities for IoT, industrial, and medical applications.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="scrollTo('contact')">
+                                Get Free Firmware Consultation
+                                <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                            </button>
+                            <button class="btn-secondary" onclick="scrollTo('services')">
+                                Download Firmware Development Guide
+                                <i data-lucide="download" style="width: 1rem; height: 1rem;"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="hero-card">
+                            <div class="hero-card-icon">
+                                <i data-lucide="cpu" style="width: 2rem; height: 2rem;"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-white">Embedded Excellence</h3>
+                            <p class="text-gray-300 text-sm">Secure, scalable firmware solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="/">Home</a>
+                <i data-lucide="chevron-right" class="breadcrumb-separator"></i>
+                <a href="/services">Services</a>
+                <i data-lucide="chevron-right" class="breadcrumb-separator"></i>
+                <a href="/embedded-systems">Embedded Systems</a>
+                <i data-lucide="chevron-right" class="breadcrumb-separator"></i>
+                <span>Firmware Development</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Comprehensive Firmware Development Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="code" style="width: 1rem; height: 1rem;"></i>
+                    Firmware Development Services
+                </div>
+                <h2 class="section-title">Comprehensive Firmware Solutions</h2>
+                <p class="section-subtitle">End-to-end firmware development from concept to deployment with security-first approach.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="icon">
+                        <i data-lucide="layers" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3>Custom Embedded Firmware Design</h3>
+                    <p>Tailored firmware solutions for microcontrollers and embedded systems with optimal performance and power efficiency for your specific hardware requirements.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">
+                        <i data-lucide="package" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3>BSP (Board Support Package) Development</h3>
+                    <p>Complete Board Support Package development for custom hardware platforms enabling seamless software-hardware integration and peripheral control.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">
+                        <i data-lucide="settings" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3>RTOS Integration (FreeRTOS, Zephyr, ThreadX)</h3>
+                    <p>Real-time operating system integration including FreeRTOS, Zephyr, ThreadX, and Embedded Linux for mission-critical applications requiring deterministic behavior.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">
+                        <i data-lucide="hard-drive" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3>Device Driver Development & Optimization</h3>
+                    <p>High-performance device drivers for sensors, communication interfaces, and peripheral components with power optimization and error handling.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="icon">
+                        <i data-lucide="shield" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3>Secure Boot & Firmware Encryption</h3>
+                    <p>Implementation of secure boot processes, firmware signing, and encryption for protection against security threats and unauthorized access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Expertise & Hardware Platforms -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="cpu" style="width: 1rem; height: 1rem;"></i>
+                    Technology Expertise
+                </div>
+                <h2 class="section-title">Hardware Platforms & Technology Stack</h2>
+                <p class="section-subtitle">Comprehensive support for leading microcontrollers and development environments.</p>
+            </div>
+
+            <div style="display: grid; gap: var(--space-2xl); margin-top: var(--space-2xl);">
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-lg); color: var(--gray-900);">Microcontrollers</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <i data-lucide="chip" style="width: 2rem; height: 2rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
+                            <h4 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-sm);">ARM Cortex-M</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">M0+, M3, M4, M7 series</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <i data-lucide="microchip" style="width: 2rem; height: 2rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
+                            <h4 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-sm);">STM32</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Full STM32 family support</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <i data-lucide="cpu" style="width: 2rem; height: 2rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
+                            <h4 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-sm);">NXP Kinetis/LPC</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Industrial-grade MCUs</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <i data-lucide="zap" style="width: 2rem; height: 2rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
+                            <h4 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-sm);">TI MSP430/C2000</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Low-power & DSP solutions</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <i data-lucide="circuit-board" style="width: 2rem; height: 2rem; color: var(--primary); margin-bottom: var(--space-md);"></i>
+                            <h4 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-sm);">Microchip PIC/AVR</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">8-bit & 32-bit controllers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-lg); color: var(--gray-900);">RTOS Platforms</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);">
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">FreeRTOS</h4>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">Zephyr</h4>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">ThreadX</h4>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">Embedded Linux</h4>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">Bare-metal</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firmware Development Process -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="workflow" style="width: 1rem; height: 1rem;"></i>
+                    Development Process
+                </div>
+                <h2 class="section-title">Firmware Development Methodology</h2>
+                <p class="section-subtitle">Systematic approach ensuring quality, security, and reliability from concept to deployment.</p>
+            </div>
+
+            <div style="display: grid; gap: var(--space-xl); margin-top: var(--space-2xl);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+                    <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); border-left: 4px solid var(--primary); box-shadow: var(--shadow-lg);">
+                        <div style="background: var(--primary); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: var(--space-md);">1</div>
+                        <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Requirements Analysis & Architecture</h3>
+                        <p style="color: var(--gray-600); line-height: 1.6;">Comprehensive requirements gathering, system architecture design, and technical specification documentation.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); border-left: 4px solid var(--primary); box-shadow: var(--shadow-lg);">
+                        <div style="background: var(--primary); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: var(--space-md);">2</div>
+                        <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Secure Coding & MISRA-C Compliance</h3>
+                        <p style="color: var(--gray-600); line-height: 1.6;">Implementation following MISRA-C standards with secure coding practices and vulnerability assessment.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); border-left: 4px solid var(--primary); box-shadow: var(--shadow-lg);">
+                        <div style="background: var(--primary); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: var(--space-md);">3</div>
+                        <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Agile Development + CI Pipelines</h3>
+                        <p style="color: var(--gray-600); line-height: 1.6;">Iterative development with continuous integration, automated testing, and regular milestone reviews.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); border-left: 4px solid var(--primary); box-shadow: var(--shadow-lg);">
+                        <div style="background: var(--primary); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: var(--space-md);">4</div>
+                        <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Hardware-in-the-Loop (HIL) Testing</h3>
+                        <p style="color: var(--gray-600); line-height: 1.6;">Real-world testing with actual hardware, stress testing, and performance validation under various conditions.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); border-left: 4px solid var(--primary); box-shadow: var(--shadow-lg);">
+                        <div style="background: var(--primary); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: var(--space-md);">5</div>
+                        <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Code Review & QA Protocols</h3>
+                        <p style="color: var(--gray-600); line-height: 1.6;">Rigorous peer code reviews, quality assurance testing, and documentation before deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Security & OTA Capabilities -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="shield-check" style="width: 1rem; height: 1rem;"></i>
+                    Security & OTA Features
+                </div>
+                <h2 class="section-title">Advanced Security & OTA Capabilities</h2>
+                <p class="section-subtitle">Enterprise-grade security features and over-the-air update systems for modern connected devices.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-top: var(--space-2xl);">
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="lock" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Secure Boot & Firmware Signing</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Implementation of secure boot chains with cryptographic firmware signing and integrity verification.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• Root of trust establishment</li>
+                        <li>• Digital signature verification</li>
+                        <li>• Chain of trust validation</li>
+                        <li>• Anti-rollback protection</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="wifi" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">OTA Update Systems with Rollback Protection</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Comprehensive over-the-air update infrastructure with advanced rollback mechanisms.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• Delta updates for efficiency</li>
+                        <li>• Automatic rollback on failure</li>
+                        <li>• Incremental deployment</li>
+                        <li>• Update verification protocols</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="key" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Encryption & Secure Communications</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Advanced encryption protocols and secure communication channels for device protection.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• AES-256 data encryption</li>
+                        <li>• TLS/SSL communication</li>
+                        <li>• Secure key management</li>
+                        <li>• Certificate-based authentication</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="bug" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Firmware Vulnerability Testing</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Comprehensive security testing and vulnerability assessment for robust firmware protection.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• Static code analysis</li>
+                        <li>• Dynamic security testing</li>
+                        <li>• Penetration testing</li>
+                        <li>• Security code reviews</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="file-check" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Compliance Standards</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Adherence to international security and safety standards for regulated industries.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• ISO 27001 security standards</li>
+                        <li>• IEC 62304 medical compliance</li>
+                        <li>• FDA security guidelines</li>
+                        <li>• ISO 26262 automotive safety</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry-Specific Solutions -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="target" style="width: 1rem; height: 1rem;"></i>
+                    Industry Solutions
+                </div>
+                <h2 class="section-title">Industry-Specific Firmware Solutions</h2>
+                <p class="section-subtitle">Specialized firmware development for various industries with regulatory compliance and specific requirements.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-xl); margin-top: var(--space-2xl);">
+                <div style="background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+                    <i data-lucide="wifi" style="width: 2.5rem; height: 2.5rem; margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">IoT & Connected Devices</h3>
+                    <p style="line-height: 1.6; margin-bottom: var(--space-md); opacity: 0.9;">Smart home devices, industrial sensors, and connected appliances with cloud connectivity.</p>
+                    <ul style="font-size: 0.9rem; line-height: 1.5; opacity: 0.9;">
+                        <li>• Low-power wireless protocols</li>
+                        <li>• Cloud integration (AWS, Azure)</li>
+                        <li>• Edge computing capabilities</li>
+                        <li>• Multi-sensor data fusion</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="factory" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Industrial Automation</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Robust firmware for industrial control systems, PLCs, and manufacturing equipment.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• Real-time control systems</li>
+                        <li>• Modbus/Profibus protocols</li>
+                        <li>• Safety-critical applications</li>
+                        <li>• HMI interface development</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="heart-pulse" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Medical Device Firmware (FDA Compliance)</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">FDA-compliant firmware for medical devices with IEC 62304 standards adherence.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• IEC 62304 lifecycle compliance</li>
+                        <li>• FDA 510(k) documentation</li>
+                        <li>• Risk management (ISO 14971)</li>
+                        <li>• Clinical data integration</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="car" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Automotive Electronics (ISO 26262)</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Safety-critical automotive firmware compliant with ISO 26262 functional safety standards.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• ASIL-B/C/D compliance</li>
+                        <li>• CAN/LIN bus protocols</li>
+                        <li>• Diagnostic protocols (UDS)</li>
+                        <li>• AUTOSAR compatibility</li>
+                    </ul>
+                </div>
+
+                <div style="background: white; padding: var(--space-xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <i data-lucide="smartphone" style="width: 2.5rem; height: 2.5rem; color: var(--primary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md);">Consumer Electronics</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-md);">Firmware for consumer devices with focus on user experience and power efficiency.</p>
+                    <ul style="color: var(--gray-600); font-size: 0.9rem; line-height: 1.5;">
+                        <li>• Touch interface controllers</li>
+                        <li>• Audio/video processing</li>
+                        <li>• Battery management systems</li>
+                        <li>• Wireless connectivity (BLE, WiFi)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Tools & Testing Frameworks -->
+    <section class="section bg-gray-50">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="tool" style="width: 1rem; height: 1rem;"></i>
+                    Development Tools
+                </div>
+                <h2 class="section-title">Development Tools & Testing Frameworks</h2>
+                <p class="section-subtitle">Industry-leading development environments and comprehensive testing methodologies.</p>
+            </div>
+
+            <div style="display: grid; gap: var(--space-2xl); margin-top: var(--space-2xl);">
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-lg); color: var(--gray-900);">IDEs & Development Environments</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-lg);">
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">Keil µVision</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">ARM development</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">IAR Embedded Workbench</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Multi-platform IDE</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">STM32CubeIDE</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">STM32 ecosystem</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200); text-align: center;">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary);">PlatformIO</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Cross-platform IDE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-lg); color: var(--gray-900);">Debug & Testing Tools</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200);">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary); margin-bottom: var(--space-sm);">JTAG/SWD Debugging</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Real-time debugging and programming interfaces</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200);">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary); margin-bottom: var(--space-sm);">Logic Analyzers</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Digital signal analysis and protocol decoding</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200);">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary); margin-bottom: var(--space-sm);">CI/CD Pipelines</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Automated build, test, and deployment workflows</p>
+                        </div>
+                        <div style="background: white; padding: var(--space-lg); border-radius: var(--radius-xl); border: 1px solid var(--gray-200);">
+                            <h4 style="font-weight: var(--font-weight-semibold); color: var(--primary); margin-bottom: var(--space-sm);">Validation Frameworks</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Automated testing and validation systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies & Success Stories -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="trophy" style="width: 1rem; height: 1rem;"></i>
+                    Case Studies
+                </div>
+                <h2 class="section-title">Success Stories & Real-World Applications</h2>
+                <p class="section-subtitle">Proven track record of successful firmware implementations across various industries and applications.</p>
+            </div>
+
+            <div style="display: grid; gap: var(--space-2xl); margin-top: var(--space-2xl);">
+                <div style="background: white; padding: var(--space-2xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: var(--primary);">IoT Sensor Network Firmware</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-lg);">Developed low-power firmware for a distributed environmental monitoring system with 500+ wireless sensors. Implemented mesh networking protocol, data aggregation algorithms, and cloud connectivity with advanced power management achieving 5+ year battery life.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-lg);">
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">5+</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">Years Battery Life</div>
+                        </div>
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">500+</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">Connected Sensors</div>
+                        </div>
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">99.8%</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">Uptime Achieved</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: var(--space-2xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: var(--primary);">Medical Device FDA-Compliant Firmware</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-lg);">Created IEC 62304 compliant firmware for a portable diagnostic device used in critical care environments. Implemented safety mechanisms, data encryption, and regulatory documentation that enabled successful FDA 510(k) clearance.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-lg);">
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">FDA</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">510(k) Cleared</div>
+                        </div>
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">IEC 62304</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">Compliant</div>
+                        </div>
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">6 Months</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">Development Time</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: var(--space-2xl); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <h3 style="font-size: 1.5rem; font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: var(--primary);">Automotive ECU with OTA Updates</h3>
+                    <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: var(--space-lg);">Developed ISO 26262 compliant firmware for an automotive body control module with secure OTA update capabilities. Implemented CAN bus communication, diagnostic protocols, and fail-safe mechanisms for critical vehicle functions.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-lg);">
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">ISO 26262</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">ASIL-B Certified</div>
+                        </div>
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">Secure</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">OTA Updates</div>
+                        </div>
+                        <div style="text-align: center; padding: var(--space-md); background: var(--gray-50); border-radius: var(--radius-lg);">
+                            <div style="font-size: 1.75rem; font-weight: var(--font-weight-bold); color: var(--primary);">1M+</div>
+                            <div style="font-size: 0.875rem; color: var(--gray-600);">Vehicles Deployed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Several Sustain -->
+    <section class="section bg-gray-900">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.2);">
+                    <i data-lucide="award" style="width: 1rem; height: 1rem;"></i>
+                    Why Choose Us
+                </div>
+                <h2 class="section-title" style="color: white;">Why Choose Several Sustain</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Combining technical expertise with cost-effective solutions to deliver world-class firmware development services.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl); margin-top: var(--space-2xl);">
+                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); padding: var(--space-xl); border-radius: var(--radius-xl); text-align: center;">
+                    <i data-lucide="dollar-sign" style="width: 3rem; height: 3rem; color: var(--secondary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: white;">40-60% Cost Savings</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Competitive rates compared to global competitors while maintaining high quality standards and professional service delivery.</p>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); padding: var(--space-xl); border-radius: var(--radius-xl); text-align: center;">
+                    <i data-lucide="users" style="width: 3rem; height: 3rem; color: var(--secondary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: white;">Certified Engineers (5+ Years Average Experience)</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Team of certified professionals with extensive experience in embedded systems and firmware development across multiple industries.</p>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); padding: var(--space-xl); border-radius: var(--radius-xl); text-align: center;">
+                    <i data-lucide="shield-check" style="width: 3rem; height: 3rem; color: var(--secondary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: white;">Security-First Methodology</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Built-in security practices from design to deployment ensuring your devices are protected against emerging threats and vulnerabilities.</p>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); padding: var(--space-xl); border-radius: var(--radius-xl); text-align: center;">
+                    <i data-lucide="headphones" style="width: 3rem; height: 3rem; color: var(--secondary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: white;">End-to-End Support (Concept → Production → Maintenance)</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Complete lifecycle support from initial concept through production deployment to ongoing maintenance with dedicated project management.</p>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); padding: var(--space-xl); border-radius: var(--radius-xl); text-align: center;">
+                    <i data-lucide="zap" style="width: 3rem; height: 3rem; color: var(--secondary); margin-bottom: var(--space-lg);"></i>
+                    <h3 style="font-weight: var(--font-weight-bold); margin-bottom: var(--space-md); color: white;">Agile & Faster Time-to-Market</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Accelerated development cycles with agile methodologies, regular milestone updates, and flexible project management approaches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="help-circle" style="width: 1rem; height: 1rem;"></i>
+                    FAQ
+                </div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our firmware development services, processes, and technical capabilities.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: var(--space-2xl) auto 0;">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What is firmware development and how is it different from software?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Firmware is low-level software that directly controls hardware components in embedded systems. Unlike regular software that runs on operating systems, firmware operates at the hardware level, managing device functions, hardware interfaces, and system initialization. It's stored in non-volatile memory and is essential for device operation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>How long does custom firmware development take?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Custom firmware development typically takes 8-24 weeks depending on project complexity. Simple applications may take 8-12 weeks, while complex systems with multiple protocols, security features, and extensive testing can take 16-24 weeks. We provide detailed timelines after requirements analysis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What microcontrollers and RTOS platforms do you support?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We support ARM Cortex-M series (M0+, M3, M4, M7), STM32, NXP Kinetis/LPC, TI MSP430/C2000, and Microchip PIC/AVR microcontrollers. For RTOS, we work with FreeRTOS, Zephyr, ThreadX, Embedded Linux, and bare-metal firmware development.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>Do you offer secure OTA firmware updates?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we implement secure over-the-air (OTA) update systems with firmware signing, encryption, rollback protection, and secure communication protocols. Our OTA solutions ensure device security while enabling remote updates and maintenance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What industries do you serve for firmware development?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We serve IoT & connected devices, industrial automation, medical devices (FDA compliance), automotive electronics (ISO 26262), and consumer electronics industries. Our team has expertise in industry-specific standards and regulatory requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What security measures do you implement in firmware?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We implement comprehensive security measures including secure boot, firmware encryption, code signing, secure key storage, TLS/SSL communication, and regular security audits. All firmware follows secure coding practices and undergoes vulnerability testing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>Can you help with regulatory compliance for medical and automotive applications?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we have extensive experience with regulatory compliance including IEC 62304 for medical devices, ISO 26262 for automotive safety, and FDA documentation requirements. We provide all necessary documentation and testing for regulatory approval.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What testing and validation processes do you follow?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our testing includes unit testing, integration testing, hardware-in-the-loop (HIL) testing, stress testing, and validation against specifications. We use automated testing frameworks, static code analysis, and peer code reviews to ensure quality.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>Do you provide ongoing firmware maintenance and support?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive maintenance packages including bug fixes, feature updates, security patches, performance optimization, and technical support. We also provide documentation and knowledge transfer for internal teams.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What is your approach to low-power firmware design?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We implement advanced power management techniques including sleep modes, dynamic frequency scaling, peripheral power gating, and optimized algorithms. Our low-power designs can achieve years of battery life for IoT applications.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>Can you work with existing hardware designs?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We can develop firmware for existing hardware designs, reverse-engineer legacy systems, port firmware to new platforms, and optimize existing firmware for better performance and features.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What communication protocols can you implement?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We implement various protocols including UART, SPI, I2C, CAN, Ethernet, WiFi, Bluetooth (Classic/LE), LoRaWAN, Zigbee, Modbus, and custom protocols. We also handle protocol stacks and network connectivity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>How do you ensure firmware quality and reliability?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We follow rigorous quality processes including MISRA-C compliance, static code analysis, peer reviews, comprehensive testing, continuous integration, and documentation standards. All code undergoes multiple validation stages before release.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>What is included in your firmware development documentation?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our documentation includes system architecture diagrams, API documentation, user manuals, technical specifications, testing reports, regulatory compliance documents, and source code documentation for maintenance and future development.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">
+                        <span>How do you handle intellectual property and confidentiality?</span>
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We maintain strict confidentiality through comprehensive NDAs, secure development environments, and intellectual property protection protocols. All client IP remains with the client, and we provide full ownership of developed firmware and documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="container contact-content">
+            <div class="section-header">
+                <div class="section-badge" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.2);">
+                    <i data-lucide="phone" style="width: 1rem; height: 1rem;"></i>
+                    Get In Touch
+                </div>
+                <h2 class="section-title" style="color: white;">Ready to Secure Your Embedded Systems with Custom Firmware?</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Let's discuss your firmware development requirements and accelerate your product development.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name *</label>
+                            <input class="form-input" type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone</label>
+                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="service">Firmware Type</label>
+                        <select class="form-select" id="service" name="service">
+                            <option value="">Select firmware type</option>
+                            <option value="iot-firmware">IoT Device Firmware</option>
+                            <option value="industrial-firmware">Industrial Automation</option>
+                            <option value="medical-firmware">Medical Device Firmware</option>
+                            <option value="automotive-firmware">Automotive Electronics</option>
+                            <option value="rtos-development">RTOS Development</option>
+                            <option value="bsp-development">BSP Development</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Project Details</label>
+                        <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your firmware requirements, target platform, security needs, and technical specifications..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        Get Free Firmware Consultation
+                        <i data-lucide="send" style="width: 1rem; height: 1rem;"></i>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>info@severalsustain.com<br>Connect with our firmware experts</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+91 XXXXX XXXXX<br>Monday to Friday, 9 AM - 6 PM IST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>Bhagalpur, India<br>Serving clients nationwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--space-md);">
+                        <div class="logo-icon">
+                            <i data-lucide="cpu" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary">Several</span>
+                            <span class="logo-secondary">Sustain</span>
+                        </div>
+                    </div>
+                    <p>Transforming electronic innovations into market-ready solutions with 15+ years of expertise in firmware development, embedded systems, and specialized industry solutions.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><button onclick="scrollTo('services')">Custom Firmware Development</button></li>
+                        <li><button onclick="scrollTo('services')">BSP Development</button></li>
+                        <li><button onclick="scrollTo('services')">RTOS Integration</button></li>
+                        <li><button onclick="scrollTo('services')">Device Drivers</button></li>
+                        <li><button onclick="scrollTo('services')">Secure Boot Systems</button></li>
+                        <li><button onclick="scrollTo('services')">OTA Updates</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><button onclick="scrollTo('about')">About Us</button></li>
+                        <li><button onclick="scrollTo('testimonials')">Success Stories</button></li>
+                        <li><button onclick="scrollTo('contact')">Contact</button></li>
+                        <li><button onclick="scrollTo('contact')">Get Quote</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Get Started</h3>
+                    <p>Ready to develop secure firmware solutions?</p>
+                    <button class="cta-button" onclick="scrollTo('contact')" style="margin-top: var(--space-md);">
+                        Start Your Project
+                        <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Several Sustain. All rights reserved. | Leading Firmware Development & Embedded Systems Services in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Several Sustain",
+        "description": "Custom firmware development services for IoT, industrial, and medical devices with security-first approach.",
+        "url": "https://severalsustain.com/firmware-development-services/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bhagalpur",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-XXXXX-XXXXX",
+            "contactType": "Customer Service",
+            "email": "info@severalsustain.com"
+        },
+        "serviceArea": ["India", "United States"],
+        "service": {
+            "@type": "Service",
+            "name": "Firmware Development",
+            "description": "Custom embedded firmware development with security-first approach",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Several Sustain"
+            }
+        }
+    }
+    </script>
+
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            initScrollAnimations();
+            initNavbar();
+        });
+
+        // Smooth scrolling function
+        function scrollTo(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                const offset = 80;
+                const elementPosition = element.offsetTop - offset;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // FAQ Toggle function
+        function toggleFAQ(button) {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const answer = button.nextElementSibling;
+            
+            button.setAttribute('aria-expanded', !isExpanded);
+            
+            if (isExpanded) {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Scroll animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            if (!data.name || !data.email) {
+                alert('Please fill in your name and email address.');
+                return;
+            }
+            
+            alert('Thank you for your firmware development inquiry! We will contact you soon to discuss your project requirements.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

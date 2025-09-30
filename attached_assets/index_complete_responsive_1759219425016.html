@@ -1,0 +1,3016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#15803d">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png" as="image">
+
+
+    <title>Several Sustain | Premier PCB Design & Electronics Development Services</title>
+    <meta name="description" content="Transform your electronic concepts into market-ready products with Several Sustain's expert PCB design, hardware development, and specialized dairy technology solutions.">
+    <meta name="keywords" content="PCB design services, hardware development, firmware programming, electronics engineering, milk analyzer systems, dairy technology">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Several Sustain | Premier PCB Design & Electronics Development Services">
+    <meta property="og:description" content="Transform your electronic concepts into market-ready products with Several Sustain's expert PCB design, hardware development, and specialized dairy technology solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://severalsustain.com">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            /* Colors */
+            --primary: #15803d;
+            --primary-light: #22c55e;
+            --primary-dark: #166534;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --secondary-dark: #d97706;
+            
+            /* Neutrals */
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-weight-light: 300;
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+            
+            /* Borders */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            
+            /* Layout */
+            --max-width-sm: 640px;
+            --max-width-md: 768px;
+            --max-width-lg: 1024px;
+            --max-width-xl: 1280px;
+            --max-width-2xl: 1536px;
+            --max-width-container: 1400px;
+        }
+        
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            font-weight: var(--font-weight-normal);
+            line-height: 1.6;
+            color: var(--gray-900);
+            background-color: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography Scale */
+        .text-xs { font-size: 0.75rem; line-height: 1rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .text-base { font-size: 1rem; line-height: 1.5rem; }
+        .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+        .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .text-5xl { font-size: 3rem; line-height: 1; }
+        .text-6xl { font-size: 3.75rem; line-height: 1; }
+        .text-7xl { font-size: 4.5rem; line-height: 1; }
+        
+        /* Responsive Typography */
+        @media (min-width: 640px) {
+            .sm\:text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+            .sm\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .sm\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .sm\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .sm\:text-5xl { font-size: 3rem; line-height: 1; }
+            .sm\:text-6xl { font-size: 3.75rem; line-height: 1; }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+            .lg\:text-2xl { font-size: 1.5rem; line-height: 2rem; }
+            .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+            .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+            .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+            .lg\:text-6xl { font-size: 3.75rem; line-height: 1; }
+            .lg\:text-7xl { font-size: 4.5rem; line-height: 1; }
+            .lg\:text-8xl { font-size: 6rem; line-height: 1; }
+        }
+        
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--max-width-container);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .container { padding-left: var(--space-xl); padding-right: var(--space-xl); }
+        }
+        
+        @media (min-width: 1024px) {
+            .container { padding-left: var(--space-2xl); padding-right: var(--space-2xl); }
+        }
+        
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .block { display: block; }
+        .inline-flex { display: inline-flex; }
+        
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-end { justify-content: flex-end; }
+        
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .font-light { font-weight: var(--font-weight-light); }
+        .font-normal { font-weight: var(--font-weight-normal); }
+        .font-medium { font-weight: var(--font-weight-medium); }
+        .font-semibold { font-weight: var(--font-weight-semibold); }
+        .font-bold { font-weight: var(--font-weight-bold); }
+        .font-extrabold { font-weight: var(--font-weight-extrabold); }
+        
+        .leading-tight { line-height: 1.25; }
+        .leading-snug { line-height: 1.375; }
+        .leading-normal { line-height: 1.5; }
+        .leading-relaxed { line-height: 1.625; }
+        
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-gray-500 { color: var(--gray-500); }
+        .text-gray-600 { color: var(--gray-600); }
+        .text-gray-700 { color: var(--gray-700); }
+        .text-gray-800 { color: var(--gray-800); }
+        .text-gray-900 { color: var(--gray-900); }
+        .text-white { color: white; }
+        
+        .bg-primary { background-color: var(--primary); }
+        .bg-primary-light { background-color: var(--primary-light); }
+        .bg-secondary { background-color: var(--secondary); }
+        .bg-gray-50 { background-color: var(--gray-50); }
+        .bg-gray-100 { background-color: var(--gray-100); }
+        .bg-gray-900 { background-color: var(--gray-900); }
+        .bg-white { background-color: white; }
+        
+        .rounded { border-radius: var(--radius-md); }
+        .rounded-lg { border-radius: var(--radius-lg); }
+        .rounded-xl { border-radius: var(--radius-xl); }
+        .rounded-2xl { border-radius: var(--radius-2xl); }
+        .rounded-full { border-radius: var(--radius-full); }
+        
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+        .shadow-xl { box-shadow: var(--shadow-xl); }
+        .shadow-2xl { box-shadow: var(--shadow-2xl); }
+        
+        .transition-all { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .duration-200 { transition-duration: 200ms; }
+        .duration-300 { transition-duration: 300ms; }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            transition: all 0.2s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: var(--gray-300);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-content { height: 5rem; }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        
+        .logo-text {
+            font-size: 1.25rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .logo-text { font-size: 1.5rem; }
+        }
+        
+        .logo-primary { color: var(--primary); }
+        .logo-secondary { color: var(--secondary); }
+        
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+        }
+        
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--gray-100);
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .cta-button {
+                display: inline-flex;
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+            padding: 0.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: var(--gray-700);
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn { display: none; }
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding-top: var(--space-4xl);
+            padding-bottom: var(--space-4xl);
+            text-align: center;
+            color: white;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-content {
+                text-align: left;
+                padding-top: var(--space-5xl);
+                padding-bottom: var(--space-5xl);
+            }
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: var(--space-4xl);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            font-weight: var(--font-weight-extrabold);
+            margin-bottom: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .hero-title { font-size: 3.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-title { font-size: 4rem; }
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-xl);
+            max-width: 600px;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-subtitle {
+                font-size: 1.25rem;
+                max-width: none;
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-buttons { justify-content: flex-start; }
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-xl);
+            font-weight: var(--font-weight-semibold);
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-stats {
+            display: none;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-stats { display: grid; }
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--secondary);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .hero-visual {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        @media (min-width: 1024px) {
+            .hero-visual { display: flex; }
+        }
+        
+        .hero-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-card-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: var(--space-4xl) 0;
+        }
+        
+        @media (min-width: 1024px) {
+            .section { padding: var(--space-5xl) 0; }
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .section-header { margin-bottom: var(--space-4xl); }
+        }
+        
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(21, 128, 61, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(21, 128, 61, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            line-height: 1.2;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+        }
+        
+        @media (min-width: 640px) {
+            .section-title { font-size: 2.5rem; }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-title { font-size: 3rem; }
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: var(--gray-600);
+        }
+        
+        @media (min-width: 1024px) {
+            .section-subtitle { font-size: 1.25rem; }
+        }
+        
+        /* Value Props */
+        .value-props {
+            background: linear-gradient(135deg, var(--gray-50), white);
+        }
+        
+        .value-props-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .value-props-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .value-props-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        .value-prop-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-prop-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        }
+        
+        .value-prop-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+        
+        .value-prop-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .value-prop-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+            line-height: 1.3;
+        }
+        
+        .value-prop-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .value-prop-features {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .value-prop-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        .value-prop-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: var(--font-weight-bold);
+            margin-top: 0.125rem;
+        }
+        
+        .value-prop-btn {
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .value-prop-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+        
+        .service-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-md);
+            line-height: 1.3;
+        }
+        
+        .service-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        
+        .service-features li::before {
+            content: '▶';
+            color: var(--primary);
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        
+        .service-meta {
+            background: var(--gray-50);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-meta-title {
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .service-meta-text {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        .service-benefits {
+            background: rgba(21, 128, 61, 0.05);
+            border: 1px solid rgba(21, 128, 61, 0.1);
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-benefits-title {
+            font-weight: var(--font-weight-semibold);
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .service-benefits ul {
+            list-style: none;
+        }
+        
+        .service-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.375rem;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+        }
+        
+        .service-benefits li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .service-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .service-btn {
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.625rem 1.25rem;
+            border-radius: var(--radius-lg);
+            font-weight: var(--font-weight-medium);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .service-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--gray-50);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+        }
+        
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .testimonial-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-xl);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .testimonial-stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: var(--space-md);
+            color: var(--secondary);
+        }
+        
+        .testimonial-text {
+            color: var(--gray-700);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .testimonial-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.875rem;
+        }
+        
+        .testimonial-name {
+            font-weight: var(--font-weight-semibold);
+            color: var(--gray-900);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-role {
+            color: var(--gray-500);
+            font-size: 0.8rem;
+        }
+        
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-3xl);
+            align-items: start;
+        }
+        
+        @media (min-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-4xl);
+            }
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-label {
+            display: block;
+            color: white;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-lg);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+        
+        @media (min-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            display: grid;
+            gap: var(--space-xl);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .contact-icon {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .contact-details p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        @media (min-width: 640px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+        
+        .footer-section h3 {
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-md);
+            color: var(--primary-light);
+            font-size: 1rem;
+        }
+        
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links button {
+            color: rgba(255, 255, 255, 0.8);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-align: left;
+            padding: 0;
+        }
+        
+        .footer-links button:hover {
+            color: var(--primary-light);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--space-lg);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.875rem;
+            }
+            
+            .contact-form {
+                padding: var(--space-lg);
+            }
+            
+            .value-prop-card,
+            .service-card {
+                padding: var(--space-lg);
+            }
+        }
+    
+
+        /* Enhanced Image System for Fast Loading and Visual Appeal */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(21, 128, 61, 0.85), rgba(22, 101, 52, 0.9)), 
+                       url('https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fabfd2f5-a207-41de-8e59-265d724fdd6b.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Fast-loading image system with blur-to-sharp transition */
+        .enhanced-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: blur(0px);
+            opacity: 1;
+        }
+
+        .enhanced-image.loading {
+            filter: blur(5px);
+            opacity: 0.7;
+            transform: scale(1.02);
+        }
+
+        /* Card image containers */
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(45deg, var(--gray-100), var(--gray-200));
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #f3f4f6 25%, transparent 25%), 
+                       linear-gradient(-45deg, #f3f4f6 25%, transparent 25%), 
+                       linear-gradient(45deg, transparent 75%, #f3f4f6 75%), 
+                       linear-gradient(-45deg, transparent 75%, #f3f4f6 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container.loading::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -20px 0, -20px 10px, -10px -10px, -30px 0px; }
+            100% { background-position: 20px 0, 20px 10px, 30px -10px, 10px 0px; }
+        }
+
+        /* Hero visual enhancements */
+        .hero-visual-enhanced {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+
+        .hero-main-image {
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+            object-fit: cover;
+            border-radius: var(--radius-2xl);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.4s ease;
+        }
+
+        .hero-main-image:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        /* Floating cards with glassmorphism */
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 3;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating-card.top-left {
+            top: 30px;
+            left: -30px;
+            width: 200px;
+            animation-delay: 0s;
+        }
+
+        .floating-card.bottom-right {
+            bottom: 30px;
+            right: -30px;
+            width: 220px;
+            animation-delay: 1.5s;
+        }
+
+        .floating-card img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-md);
+        }
+
+        .floating-card h4 {
+            font-size: 1rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--gray-900);
+            margin-bottom: var(--space-xs);
+        }
+
+        .floating-card p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+        /* Enhanced card hover effects */
+        .value-prop-card,
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .value-prop-card:hover,
+        .service-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .value-prop-card:hover .image-container,
+        .service-card:hover .image-container {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        /* Responsive design */
+        @media (min-width: 640px) {
+            .image-container {
+                height: 300px;
+            }
+            .hero-visual-enhanced {
+                height: 600px;
+            }
+            .hero-main-image {
+                height: 550px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .image-container {
+                height: 350px;
+            }
+            .hero-visual-enhanced {
+                height: 700px;
+            }
+            .hero-main-image {
+                height: 650px;
+            }
+            .floating-card.top-left {
+                top: 50px;
+                left: -50px;
+                width: 250px;
+            }
+            .floating-card.bottom-right {
+                bottom: 50px;
+                right: -50px;
+                width: 270px;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 767px) {
+            .floating-card {
+                display: none;
+            }
+            .hero-background {
+                background-attachment: scroll;
+            }
+        }
+
+        /* Preload and performance optimizations */
+        .enhanced-image,
+        .hero-main-image {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        /* Section images for showcase */
+        .showcase-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            transition: all 0.4s ease;
+        }
+
+        .showcase-image:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (min-width: 1024px) {
+            .showcase-image {
+                height: 500px;
+            }
+        }
+    
+
+        /* Responsive Showcase Section */
+        .showcase-item {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .showcase-item {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .showcase-item.reverse {
+                direction: rtl;
+            }
+
+            .showcase-item.reverse > * {
+                direction: ltr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .showcase-item {
+                gap: var(--space-3xl);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .showcase-item {
+                gap: var(--space-4xl);
+            }
+        }
+
+        /* Image loading optimizations */
+        .enhanced-image {
+            transition: filter 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .enhanced-image[data-loaded="true"] {
+            filter: blur(0px);
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .enhanced-image[data-loaded="false"] {
+            filter: blur(5px);
+            opacity: 0.7;
+            transform: scale(1.02);
+        }
+
+        /* Enhanced performance for mobile */
+        @media (max-width: 767px) {
+            .showcase-image {
+                height: 300px;
+            }
+
+            .image-container {
+                height: 200px;
+            }
+
+            .hero-background {
+                background-attachment: scroll;
+                background-size: cover;
+            }
+        }
+
+        /* Intersection Observer fade-in animations */
+        .fade-in-observer {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-observer.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Premium card styling */
+        .premium-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    
+
+        /* Comprehensive Responsive Image System */
+        .section-image-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: var(--space-lg);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .section-image-container:hover {
+            box-shadow: var(--shadow-xl);
+            transform: translateY(-2px);
+        }
+
+        .section-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .section-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Service card specific images */
+        .service-image-container {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            margin-bottom: var(--space-md);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: linear-gradient(45deg, var(--gray-100), var(--gray-200));
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+        }
+
+        /* Showcase section images */
+        .showcase-image-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .showcase-main-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .showcase-main-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 640px) {
+            .section-image {
+                height: 160px;
+            }
+
+            .service-image-container {
+                height: 140px;
+            }
+
+            .showcase-main-image {
+                height: 200px;
+            }
+        }
+
+        /* Tablet responsiveness */
+        @media (min-width: 641px) and (max-width: 1023px) {
+            .section-image {
+                height: 220px;
+            }
+
+            .service-image-container {
+                height: 200px;
+            }
+
+            .showcase-main-image {
+                height: 350px;
+            }
+        }
+
+        /* Desktop responsiveness */
+        @media (min-width: 1024px) {
+            .section-image {
+                height: 280px;
+            }
+
+            .service-image-container {
+                height: 240px;
+            }
+
+            .showcase-main-image {
+                height: 450px;
+            }
+        }
+
+        /* Large desktop */
+        @media (min-width: 1280px) {
+            .section-image {
+                height: 320px;
+            }
+
+            .service-image-container {
+                height: 280px;
+            }
+
+            .showcase-main-image {
+                height: 500px;
+            }
+        }
+
+        /* Ultra-wide screens */
+        @media (min-width: 1536px) {
+            .section-image {
+                height: 360px;
+            }
+
+            .service-image-container {
+                height: 320px;
+            }
+
+            .showcase-main-image {
+                height: 550px;
+            }
+        }
+
+        /* Image loading states */
+        .section-image,
+        .service-image,
+        .showcase-main-image {
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .section-image.loaded,
+        .service-image.loaded,
+        .showcase-main-image.loaded {
+            animation: none;
+            background: none;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Aspect ratio containers for consistent sizing */
+        .aspect-ratio-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+        }
+
+        .aspect-ratio-16-9 {
+            padding-bottom: 56.25%; /* 16:9 */
+        }
+
+        .aspect-ratio-4-3 {
+            padding-bottom: 75%; /* 4:3 */
+        }
+
+        .aspect-ratio-3-2 {
+            padding-bottom: 66.67%; /* 3:2 */
+        }
+
+        .aspect-ratio-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+
+        /* Final Quality Assurance - Complete Responsive Layout */
+
+        /* Ensure all images maintain aspect ratios */
+        .image-container img,
+        .service-image-container img,
+        .showcase-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Mobile-first approach - Base styles (320px+) */
+        @media (max-width: 640px) {
+            .service-card {
+                margin-bottom: var(--space-xl);
+                padding: var(--space-lg);
+            }
+
+            .service-image-container {
+                height: 160px;
+                margin-bottom: var(--space-md);
+                border-radius: var(--radius-md);
+            }
+
+            .showcase-item {
+                margin-bottom: var(--space-2xl);
+            }
+
+            .showcase-main-image {
+                height: 220px;
+                border-radius: var(--radius-lg);
+            }
+
+            /* Ensure text doesn't overlap images */
+            .service-card h3,
+            .service-card p {
+                margin-top: var(--space-md);
+            }
+        }
+
+        /* Small tablets (641px - 768px) */
+        @media (min-width: 641px) and (max-width: 768px) {
+            .service-image-container {
+                height: 200px;
+            }
+
+            .showcase-main-image {
+                height: 280px;
+            }
+        }
+
+        /* Tablets (769px - 1023px) */
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-xl);
+            }
+
+            .service-image-container {
+                height: 220px;
+            }
+
+            .showcase-main-image {
+                height: 350px;
+            }
+        }
+
+        /* Desktop (1024px - 1279px) */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+            .service-image-container {
+                height: 240px;
+            }
+
+            .showcase-main-image {
+                height: 400px;
+            }
+        }
+
+        /* Large desktop (1280px - 1535px) */
+        @media (min-width: 1280px) and (max-width: 1535px) {
+            .service-image-container {
+                height: 280px;
+            }
+
+            .showcase-main-image {
+                height: 450px;
+            }
+        }
+
+        /* Ultra-wide (1536px+) */
+        @media (min-width: 1536px) {
+            .service-image-container {
+                height: 320px;
+            }
+
+            .showcase-main-image {
+                height: 500px;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .service-image,
+            .showcase-main-image,
+            .section-image {
+                image-rendering: -webkit-optimize-contrast;
+            }
+        }
+
+        /* Landscape mobile devices */
+        @media (max-width: 896px) and (orientation: landscape) {
+            .service-image-container {
+                height: 140px;
+            }
+
+            .showcase-main-image {
+                height: 200px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .service-image,
+            .showcase-main-image,
+            .floating-card {
+                display: none;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .service-image,
+            .showcase-main-image,
+            .section-image,
+            .floating-card {
+                animation: none;
+                transition: none;
+            }
+        }
+
+        /* Dark mode support preparation */
+        @media (prefers-color-scheme: dark) {
+            .service-image-container,
+            .showcase-image-wrapper {
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        /* Focus accessibility */
+        .service-image:focus,
+        .showcase-main-image:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-primary">Several</span>
+                        <span class="logo-secondary">Sustain</span>
+                    </div>
+                </div>
+                
+                <div class="nav-links">
+                    <button class="nav-link" onclick="scrollTo('about')">About</button>
+                    <button class="nav-link" onclick="scrollTo('services')">Services</button>
+                    <button class="nav-link" onclick="scrollTo('testimonials')">Success Stories</button>
+                    <button class="nav-link" onclick="scrollTo('contact')">Contact</button>
+                </div>
+                
+                <button class="cta-button" onclick="scrollTo('contact')">
+                    Get Started
+                    <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                </button>
+                
+                <button class="mobile-menu-btn">
+                    <i data-lucide="menu" style="width: 1.5rem; height: 1.5rem;"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-badge">
+                            <i data-lucide="award" style="width: 1rem; height: 1rem;"></i>
+                            <span>15+ Years of Electronics Excellence</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Transform Electronic Ideas Into 
+                            <span class="hero-gradient">Market Success</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Premier PCB design and hardware development services in India. From concept to production, we deliver cutting-edge electronic solutions for dairy technology, IoT systems, and industrial automation.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="scrollTo('contact')">
+                                Start Your Project
+                                <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                            </button>
+                            <button class="btn-secondary" onclick="scrollTo('services')">
+                                Explore Services
+                                <i data-lucide="eye" style="width: 1rem; height: 1rem;"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">250+</span>
+                                <span class="stat-label">Projects Delivered</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Client Retention</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual hero-visual-enhanced">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png" 
+                                 alt="Professional Electronics Engineers Collaboration" 
+                                 class="hero-main-image enhanced-image"
+                                 loading="eager">
+
+                            <div class="floating-card top-left">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/4d26b429-ac8a-49a0-a3a5-3e8517e21bfd.png" 
+                                     alt="PCB Design Excellence" 
+                                     loading="lazy">
+                                <h4>PCB Design</h4>
+                                <p>Precision Engineering Solutions</p>
+                            </div>
+
+                            <div class="floating-card bottom-right">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/44d75c08-289f-4c22-a207-eebb7ec24c19.png" 
+                                     alt="Advanced Dairy Technology" 
+                                     loading="lazy">
+                                <h4>Dairy Technology</h4>
+                                <p>Revolutionary Analytics</p>
+                            </div>
+                        </div>
+                            <h3 class="text-xl font-semibold text-white">Innovation Driven</h3>
+                            <p class="text-gray-300 text-sm">Cutting-edge solutions for modern challenges</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section id="about" class="section value-props">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="target" style="width: 1rem; height: 1rem;"></i>
+                    Why Choose Several Sustain
+                </div>
+                <h2 class="section-title">Precision Engineering for Your Success</h2>
+                <p class="section-subtitle">Custom PCB design and hardware development tailored to your exact specifications and industry requirements.</p>
+            </div>
+
+            <div class="value-props-grid">
+                <div class="value-prop-card fade-in">
+                            <div class="image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/4d26b429-ac8a-49a0-a3a5-3e8517e21bfd.png" 
+                                     alt="Professional PCB Manufacturing" 
+                                     class="enhanced-image"
+                                     loading="lazy">
+                            </div>
+                        <div class="value-prop-icon">🎯</div>
+                    <h3 class="value-prop-title">Custom PCB Design Excellence</h3>
+                    <p class="value-prop-description">From simple single-layer boards to complex multi-layer PCB designs with high-speed signal integrity. Our precision-engineered solutions match your performance, size, and budget requirements.</p>
+                    <ul class="value-prop-features">
+                        <li>Comprehensive DRC and ERC validation</li>
+                        <li>EMI/EMC optimization for compliance</li>
+                        <li>Thermal analysis and power integrity</li>
+                        <li>Manufacturing-ready documentation</li>
+                    </ul>
+                    <button class="value-prop-btn" onclick="scrollTo('contact')">Discuss Your Project</button>
+                </div>
+
+                <div class="value-prop-card fade-in">
+                            <div class="image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ca5bfe21-0634-45ec-8af6-7007c9167e05.png" 
+                                     alt="IoT Development Solutions" 
+                                     class="enhanced-image"
+                                     loading="lazy">
+                            </div>
+                        <div class="value-prop-icon">🚀</div>
+                    <h3 class="value-prop-title">Flexible Engagement Models</h3>
+                    <p class="value-prop-description">Seamless embedded systems development through adaptive service delivery. Remote consultations to on-site integration support, meeting your project needs regardless of location.</p>
+                    <ul class="value-prop-features">
+                        <li>Remote development with secure collaboration</li>
+                        <li>Hybrid remote design and on-site testing</li>
+                        <li>Direct hardware implementation support</li>
+                        <li>Rapid prototyping capabilities</li>
+                    </ul>
+                    <button class="value-prop-btn" onclick="scrollTo('contact')">View Capabilities</button>
+                </div>
+
+                <div class="value-prop-card fade-in">
+                    <div class="value-prop-icon">🏆</div>
+                    <h3 class="value-prop-title">Certified Expert Team</h3>
+                    <p class="value-prop-description">Certified electronics engineers with specialized expertise in firmware development, IoT hardware integration, and industry-specific applications with rigorous quality assurance.</p>
+                    <ul class="value-prop-features">
+                        <li>IPC-certified PCB design professionals</li>
+                        <li>ARM Cortex programming specialists</li>
+                        <li>Regulatory compliance experts</li>
+                        <li>Dairy industry automation certified</li>
+                    </ul>
+                    <button class="value-prop-btn" onclick="scrollTo('contact')">Meet Our Team</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="settings" style="width: 1rem; height: 1rem;"></i>
+                    Our Services
+                </div>
+                <h2 class="section-title">Comprehensive Electronic Development</h2>
+                <p class="section-subtitle">End-to-end solutions from concept to production with detailed technical specifications and industry applications.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                            <div class="image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/4d26b429-ac8a-49a0-a3a5-3e8517e21bfd.png" 
+                                     alt="Advanced PCB Design Services" 
+                                     class="enhanced-image"
+                                     loading="lazy">
+                            </div>
+                        <div class="service-icon">
+                        <i data-lucide="cpu" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Professional PCB Design</h3>
+                    <p class="service-description">Complete spectrum PCB design services from simple prototypes to complex high-frequency designs using industry-leading tools for optimal signal integrity and manufacturability.</p>
+                    <ul class="service-features">
+                        <li>High-speed digital and analog circuit design</li>
+                        <li>RF/microwave PCB layouts up to 10GHz</li>
+                        <li>Impedance-controlled traces and differential pairs</li>
+                        <li>HDI (High-Density Interconnect) expertise</li>
+                        <li>Flexible and rigid-flex PCB solutions</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="service-meta-title">Industries Served:</div>
+                        <div class="service-meta-text">Automotive electronics, medical devices, telecommunications, industrial automation, consumer electronics</div>
+                    </div>
+                    <div class="service-buttons">
+                        <button class="service-btn" onclick="scrollTo('contact')">Get Quote</button>
+                        <button class="service-btn" onclick="scrollTo('contact')">View Portfolio</button>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                            <div class="image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/11eecd43-db9a-4626-99f6-1e30b75a7665.png" 
+                                     alt="Comprehensive Hardware Development" 
+                                     class="enhanced-image"
+                                     loading="lazy">
+                            </div>
+                        <div class="service-icon">
+                        <i data-lucide="circuit-board" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Hardware Development</h3>
+                    <p class="service-description">Transform ideas into market-ready products with comprehensive hardware development. Systematic approach ensuring component selection and circuit optimization aligns with your objectives.</p>
+                    <ul class="service-features">
+                        <li>Requirements analysis and system architecture</li>
+                        <li>Component selection and sourcing optimization</li>
+                        <li>Schematic capture and simulation validation</li>
+                        <li>Prototype development and testing</li>
+                        <li>DFM (Design for Manufacturing) optimization</li>
+                        <li>Production support and quality assurance</li>
+                    </ul>
+                    <div class="service-buttons">
+                        <button class="service-btn" onclick="scrollTo('contact')">Start Project</button>
+                        <button class="service-btn" onclick="scrollTo('contact')">Download Guide</button>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                            <div class="image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/2885ff73-ff35-4c35-ab4d-7f2fd5c203d1.png" 
+                                     alt="Expert Firmware Development" 
+                                     class="enhanced-image"
+                                     loading="lazy">
+                            </div>
+                        <div class="service-icon">
+                        <i data-lucide="code" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Firmware Development</h3>
+                    <p class="service-description">Robust, efficient embedded firmware development spanning multiple microcontroller families, real-time operating systems, and communication protocols for connected devices.</p>
+                    <ul class="service-features">
+                        <li>ARM Cortex-M series microcontrollers</li>
+                        <li>ESP32/Arduino ecosystem development</li>
+                        <li>FreeRTOS and bare-metal programming</li>
+                        <li>IoT connectivity protocols (WiFi, Bluetooth, LoRaWAN)</li>
+                        <li>Industrial communication (Modbus, CAN, RS485)</li>
+                    </ul>
+                    <div class="service-buttons">
+                        <button class="service-btn" onclick="scrollTo('contact')">Discuss Requirements</button>
+                        <button class="service-btn" onclick="scrollTo('contact')">View Examples</button>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                            <div class="service-image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/135d8cdd-42fe-452e-8e24-3ae6bb71259b.png" 
+                                     alt="Mobile & Web Applications Development Dashboard" 
+                                     class="service-image"
+                                     loading="lazy">
+                            </div>
+                    <div class="service-icon">
+                        <i data-lucide="smartphone" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Mobile & Web Applications</h3>
+                    <p class="service-description">Complete product ecosystem with intuitive mobile and web interfaces that seamlessly integrate with hardware solutions. From configuration apps to analytics dashboards.</p>
+                    <ul class="service-features">
+                        <li>Native iOS and Android applications</li>
+                        <li>Cross-platform Flutter development</li>
+                        <li>Progressive Web Applications (PWA)</li>
+                        <li>Real-time data visualization dashboards</li>
+                        <li>Cloud integration and API development</li>
+                    </ul>
+                    <div class="service-buttons">
+                        <button class="service-btn" onclick="scrollTo('contact')">Plan Your App</button>
+                        <button class="service-btn" onclick="scrollTo('contact')">See Demos</button>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                            <div class="service-image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/1cff2baf-9eff-40a3-8bbe-3d0bb760f780.png" 
+                                     alt="Professional Milk Analyzer Systems" 
+                                     class="service-image"
+                                     loading="lazy">
+                            </div>
+                    <div class="service-icon">
+                        <i data-lucide="beaker" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">Milk Analyzer Systems</h3>
+                    <p class="service-description">Revolutionary dairy operations with cutting-edge milk analyzer technology. Instant, accurate analysis of milk composition including fat content, SNF, protein levels, and quality parameters.</p>
+                    <ul class="service-features">
+                        <li>Multi-parameter analysis in under 60 seconds</li>
+                        <li>±0.02% accuracy for fat content measurement</li>
+                        <li>Temperature compensation for consistent results</li>
+                        <li>Multilingual LCD display interface</li>
+                        <li>Calibration-free with self-diagnostics</li>
+                        <li>USB and wireless connectivity options</li>
+                    </ul>
+                    <div class="service-meta">
+                        <div class="service-meta-title">Applications:</div>
+                        <div class="service-meta-text">Dairy cooperatives, milk collection centers, quality control laboratories, research institutions</div>
+                    </div>
+                    <div class="service-buttons">
+                        <button class="service-btn" onclick="scrollTo('contact')">Request Demo</button>
+                        <button class="service-btn" onclick="scrollTo('contact')">Get Specifications</button>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                            <div class="service-image-container">
+                                <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/eeb76e00-d9e5-41b7-a176-78ad2affa0f3.png" 
+                                     alt="Data Processing Unit and AMCU Systems" 
+                                     class="service-image"
+                                     loading="lazy">
+                            </div>
+                    <div class="service-icon">
+                        <i data-lucide="database" style="width: 1.5rem; height: 1.5rem;"></i>
+                    </div>
+                    <h3 class="service-title">DPU & AMCU Systems</h3>
+                    <p class="service-description">Modernize milk procurement with state-of-the-art Data Processing Unit (DPU) and Automatic Milk Collection Unit (AMCU) systems eliminating manual errors and ensuring transparent transactions.</p>
+                    <ul class="service-features">
+                        <li>High-precision electronic weighing scales</li>
+                        <li>Integrated milk quality analyzers</li>
+                        <li>Thermal receipt printers for instant receipts</li>
+                        <li>Biometric farmer identification systems</li>
+                        <li>Cloud-based data synchronization</li>
+                        <li>Mobile app for collection center management</li>
+                        <li>Real-time rate updates via GSM/WiFi</li>
+                    </ul>
+                    <div class="service-benefits">
+                        <div class="service-benefits-title">Key Benefits:</div>
+                        <ul>
+                            <li>99.9% accuracy in measurement and testing</li>
+                            <li>60% reduction in collection time</li>
+                            <li>Complete audit trail and traceability</li>
+                            <li>Automated farmer payment processing</li>
+                            <li>Multi-shift and multi-center consolidation</li>
+                            <li>Offline operation with data sync capability</li>
+                        </ul>
+                    </div>
+                    <div class="service-buttons">
+                        <button class="service-btn" onclick="scrollTo('contact')">Schedule Demo</button>
+                        <button class="service-btn" onclick="scrollTo('contact')">Download Brochure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Technology Showcase Section -->
+    <section class="section showcase" style="background: linear-gradient(135deg, var(--gray-50), rgba(21, 128, 61, 0.05)); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fabfd2f5-a207-41de-8e59-265d724fdd6b.png'); background-size: cover; background-position: center; opacity: 0.05; z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="eye" style="width: 1rem; height: 1rem;"></i>
+                    Technology Excellence
+                </div>
+                <h2 class="section-title">Where Innovation Meets Precision</h2>
+                <p class="section-subtitle">
+                    Discover our state-of-the-art development environments and cutting-edge solutions 
+                    that consistently deliver exceptional results for our clients worldwide.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-4xl); margin-top: var(--space-5xl);">
+                <!-- IoT Development Showcase -->
+                <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-2xl); align-items: center;" class="showcase-item">
+                    <div>
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ca5bfe21-0634-45ec-8af6-7007c9167e05.png" 
+                             alt="Advanced IoT Development Environment" 
+                             class="showcase-image enhanced-image"
+                             loading="lazy">
+                    </div>
+                    <div style="padding: var(--space-2xl); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl);">
+                        <div style="display: flex; align-items: center; margin-bottom: var(--space-lg);">
+                            <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin-right: var(--space-lg);">
+                                <i data-lucide="cpu" style="width: 2rem; height: 2rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.875rem; font-weight: var(--font-weight-bold); color: var(--gray-900); margin: 0;">
+                                Advanced IoT Development
+                            </h3>
+                        </div>
+                        <p style="color: var(--gray-600); font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-xl);">
+                            Our meticulously organized development environments combine cutting-edge tools 
+                            with systematic workflows to create innovative IoT solutions that exceed industry standards.
+                        </p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
+                            <div style="display: flex; align-items: center; color: var(--gray-700);">
+                                <i data-lucide="check-circle" style="width: 1.5rem; height: 1.5rem; color: var(--primary); margin-right: var(--space-md);"></i>
+                                Multi-sensor integration platforms
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--gray-700);">
+                                <i data-lucide="check-circle" style="width: 1.5rem; height: 1.5rem; color: var(--primary); margin-right: var(--space-md);"></i>
+                                Real-time monitoring systems
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--gray-700);">
+                                <i data-lucide="check-circle" style="width: 1.5rem; height: 1.5rem; color: var(--primary); margin-right: var(--space-md);"></i>
+                                Smart device connectivity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dairy Technology Showcase -->
+                <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-2xl); align-items: center;" class="showcase-item reverse">
+                    <div style="padding: var(--space-2xl); background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl);">
+                        <div style="display: flex; align-items: center; margin-bottom: var(--space-lg);">
+                            <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--secondary), var(--secondary-light)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin-right: var(--space-lg);">
+                                <i data-lucide="beaker" style="width: 2rem; height: 2rem; color: white;"></i>
+                            </div>
+                            <h3 style="font-size: 1.875rem; font-weight: var(--font-weight-bold); color: var(--gray-900); margin: 0;">
+                                Precision Dairy Technology
+                            </h3>
+                        </div>
+                        <p style="color: var(--gray-600); font-size: 1.125rem; line-height: 1.6; margin-bottom: var(--space-xl);">
+                            Revolutionary milk analysis systems delivering instant, accurate results for modern dairy operations, 
+                            transforming traditional processes into intelligent, efficient workflows.
+                        </p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
+                            <div style="display: flex; align-items: center; color: var(--gray-700);">
+                                <i data-lucide="check-circle" style="width: 1.5rem; height: 1.5rem; color: var(--secondary); margin-right: var(--space-md);"></i>
+                                Instant milk composition analysis
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--gray-700);">
+                                <i data-lucide="check-circle" style="width: 1.5rem; height: 1.5rem; color: var(--secondary); margin-right: var(--space-md);"></i>
+                                Automated quality assessment
+                            </div>
+                            <div style="display: flex; align-items: center; color: var(--gray-700);">
+                                <i data-lucide="check-circle" style="width: 1.5rem; height: 1.5rem; color: var(--secondary); margin-right: var(--space-md);"></i>
+                                Transparent transaction systems
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/544b9e2b-a336-4de1-a354-72bd015875e7.png" 
+                             alt="Precision Dairy Technology Systems" 
+                             class="showcase-image enhanced-image"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i data-lucide="star" style="width: 1rem; height: 1rem;"></i>
+                    Client Success Stories
+                </div>
+                <h2 class="section-title">Trusted by Industry Leaders</h2>
+                <div class="section-subtitle">
+                    250+ companies across India and beyond trust our electronic solutions<br>
+                    <strong style="color: var(--primary);">4.9/5 Stars | 95% Client Retention Rate</strong>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"Several Sustain delivered our IoT-enabled milk analyzer system ahead of schedule and within budget. Their expertise in hardware design and firmware development made our dairy automation project a complete success."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RS</div>
+                        <div>
+                            <div class="testimonial-name">Rajesh Sharma</div>
+                            <div class="testimonial-role">Technical Director, Maharashtra Dairy Co-operative</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"Outstanding PCB design services! Their multi-layer board design for our medical device met all regulatory requirements perfectly. The team's attention to EMI/EMC compliance was exceptional."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div>
+                            <div class="testimonial-name">Dr. Anita Kumar</div>
+                            <div class="testimonial-role">R&D Head, MedTech Innovations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"The DPU system transformation revolutionized our milk collection process. Farmer satisfaction increased dramatically due to transparent, instant payments. The 60% time reduction exceeded expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">VS</div>
+                        <div>
+                            <div class="testimonial-name">Vijay Singh</div>
+                            <div class="testimonial-role">Operations Manager, Punjab Milk Federation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"World-class embedded firmware development expertise. The IoT connectivity features for our industrial automation system work flawlessly. Their knowledge of real-time systems is impressive."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MG</div>
+                        <div>
+                            <div class="testimonial-name">Mohan Gupta</div>
+                            <div class="testimonial-role">CTO, AutoTech Solutions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent mobile app development that perfectly integrates with hardware. The real-time dashboard gives unprecedented operational insights. Professional team with great communication."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SK</div>
+                        <div>
+                            <div class="testimonial-name">Sunita Kulkarni</div>
+                            <div class="testimonial-role">Product Manager, Smart Systems Ltd</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                        <i data-lucide="star" style="width: 1rem; height: 1rem; fill: currentColor;"></i>
+                    </div>
+                    <p class="testimonial-text">"Complete hardware development with exceptional professionalism. Their DFM optimization reduced manufacturing costs by 25% while maintaining quality. A trusted partner for complex electronics."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AP</div>
+                        <div>
+                            <div class="testimonial-name">Amit Patel</div>
+                            <div class="testimonial-role">Founder, ElectroVision Technologies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <div class="container contact-content">
+            <div class="section-header">
+                <div class="section-badge" style="background: rgba(255, 255, 255, 0.1); color: white; border-color: rgba(255, 255, 255, 0.2);">
+                    <i data-lucide="phone" style="width: 1rem; height: 1rem;"></i>
+                    Get In Touch
+                </div>
+                <h2 class="section-title" style="color: white;">Ready to Transform Your Ideas?</h2>
+                <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">Let's discuss your project requirements and accelerate your development journey.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name *</label>
+                            <input class="form-input" type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone</label>
+                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="service">Service Interest</label>
+                        <select class="form-select" id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="pcb-design">PCB Design</option>
+                            <option value="hardware-dev">Hardware Development</option>
+                            <option value="firmware-dev">Firmware Development</option>
+                            <option value="mobile-app">Mobile & Web Applications</option>
+                            <option value="milk-analyzer">Milk Analyzer Systems</option>
+                            <option value="dpu-amcu">DPU & AMCU Systems</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Project Details</label>
+                        <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your project requirements, timeline, and technical challenges..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">
+                        Send Message
+                        <i data-lucide="send" style="width: 1rem; height: 1rem;"></i>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>info@severalsustain.com<br>Connect with our technical team</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+91 XXXXX XXXXX<br>Monday to Friday, 9 AM - 6 PM IST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>India<br>Serving clients nationwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: var(--space-md);">
+                        <div class="logo-icon">
+                            <i data-lucide="cpu" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary">Several</span>
+                            <span class="logo-secondary">Sustain</span>
+                        </div>
+                    </div>
+                    <p>Transforming electronic innovations into market-ready solutions with 15+ years of expertise in PCB design, hardware development, and specialized dairy technology systems.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><button onclick="scrollTo('services')">PCB Design</button></li>
+                        <li><button onclick="scrollTo('services')">Hardware Development</button></li>
+                        <li><button onclick="scrollTo('services')">Firmware Development</button></li>
+                        <li><button onclick="scrollTo('services')">Mobile & Web Apps</button></li>
+                        <li><button onclick="scrollTo('services')">Milk Analyzers</button></li>
+                        <li><button onclick="scrollTo('services')">DPU Systems</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><button onclick="scrollTo('about')">About Us</button></li>
+                        <li><button onclick="scrollTo('testimonials')">Success Stories</button></li>
+                        <li><button onclick="scrollTo('contact')">Contact</button></li>
+                        <li><button onclick="scrollTo('contact')">Get Quote</button></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Get Started</h3>
+                    <p>Ready to transform your ideas into reality?</p>
+                    <button class="cta-button" onclick="scrollTo('contact')" style="margin-top: var(--space-md);">
+                        Start Your Project
+                        <i data-lucide="arrow-right" style="width: 1rem; height: 1rem;"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Several Sustain. All rights reserved. | Leading PCB Design & Electronics Development Services in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
+            initScrollAnimations();
+            initNavbar();
+        });
+
+        // Smooth scrolling
+        function scrollTo(elementId) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                const offset = 80;
+                const elementPosition = element.offsetTop - offset;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Scroll animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            if (!data.name || !data.email) {
+                alert('Please fill in your name and email address.');
+                return;
+            }
+            
+            alert('Thank you for your message! We will contact you soon.');
+            event.target.reset();
+        }
+    </script>
+
+    <script>
+        // Enhanced Image Loading System
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fast image loading with blur-to-sharp effect
+            const images = document.querySelectorAll('.enhanced-image');
+
+            images.forEach(img => {
+                img.setAttribute('data-loaded', 'false');
+
+                if (img.complete && img.naturalHeight !== 0) {
+                    img.setAttribute('data-loaded', 'true');
+                } else {
+                    img.addEventListener('load', function() {
+                        setTimeout(() => {
+                            img.setAttribute('data-loaded', 'true');
+                        }, 100);
+                    });
+
+                    img.addEventListener('error', function() {
+                        // Fallback for failed image loads
+                        img.style.display = 'none';
+                    });
+                }
+            });
+
+            // Intersection Observer for smooth animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe cards and sections for animations
+            document.querySelectorAll('.fade-in, .showcase-item').forEach(el => {
+                el.classList.add('fade-in-observer');
+                observer.observe(el);
+            });
+
+            // Preload critical images
+            const criticalImages = [
+                'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png',
+                'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/fabfd2f5-a207-41de-8e59-265d724fdd6b.png'
+            ];
+
+            criticalImages.forEach(src => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = src;
+                document.head.appendChild(link);
+            });
+
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Optimize images for different screen sizes
+        function optimizeImages() {
+            const images = document.querySelectorAll('.enhanced-image, .showcase-image');
+            const isHighDPI = window.devicePixelRatio > 1;
+            const isMobile = window.innerWidth < 768;
+
+            images.forEach(img => {
+                if (isMobile) {
+                    img.loading = 'lazy';
+                } else {
+                    if (img.classList.contains('hero-main-image')) {
+                        img.loading = 'eager';
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('resize', optimizeImages);
+        window.addEventListener('load', optimizeImages);
+    </script>
+
+    <script>
+        // Enhanced Image Loading and Responsive Management
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Image loading optimization
+            function initializeImageLoading() {
+                const images = document.querySelectorAll('.section-image, .service-image, .showcase-main-image');
+
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+
+                            // Add loading class for shimmer effect
+                            img.classList.remove('loaded');
+
+                            // Handle successful load
+                            img.addEventListener('load', function() {
+                                img.classList.add('loaded');
+                            });
+
+                            // Handle load errors
+                            img.addEventListener('error', function() {
+                                img.style.display = 'none';
+                                console.warn('Failed to load image:', img.src);
+                            });
+
+                            // Stop observing this image
+                            observer.unobserve(img);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px'
+                });
+
+                images.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+
+            // Responsive image sizing
+            function adjustImageSizes() {
+                const screenWidth = window.innerWidth;
+                const images = document.querySelectorAll('.section-image, .service-image, .showcase-main-image');
+
+                images.forEach(img => {
+                    // Adjust loading priority based on screen size
+                    if (screenWidth < 640) {
+                        img.loading = 'lazy';
+                    } else if (img.classList.contains('hero-main-image')) {
+                        img.loading = 'eager';
+                    }
+                });
+            }
+
+            // Touch and hover optimization for mobile
+            function optimizeForTouch() {
+                const isTouchDevice = 'ontouchstart' in window;
+
+                if (isTouchDevice) {
+                    // Reduce hover effects on touch devices
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .service-card:hover .service-image,
+                        .section-image:hover,
+                        .showcase-main-image:hover {
+                            transform: none;
+                        }
+
+                        .service-card:active .service-image {
+                            transform: scale(1.02);
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }
+
+            // Service card image visibility check
+            function ensureImageVisibility() {
+                const serviceCards = document.querySelectorAll('.service-card');
+
+                serviceCards.forEach(card => {
+                    const img = card.querySelector('.service-image');
+                    if (img) {
+                        // Ensure image container has proper dimensions
+                        const container = img.closest('.service-image-container');
+                        if (container) {
+                            container.style.minHeight = '140px';
+
+                            // Add fallback background
+                            container.style.background = 'linear-gradient(45deg, #f3f4f6, #e5e7eb)';
+                        }
+                    }
+                });
+            }
+
+            // Showcase section image optimization
+            function optimizeShowcaseImages() {
+                const showcaseImages = document.querySelectorAll('.showcase-main-image');
+
+                showcaseImages.forEach(img => {
+                    const wrapper = img.closest('.showcase-image-wrapper');
+                    if (wrapper) {
+                        // Ensure proper aspect ratio maintenance
+                        wrapper.style.position = 'relative';
+                        wrapper.style.overflow = 'hidden';
+
+                        // Add loading indicator
+                        const loadingDiv = document.createElement('div');
+                        loadingDiv.style.cssText = `
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #6b7280;
+                            font-size: 0.875rem;
+                            z-index: 1;
+                        `;
+                        loadingDiv.textContent = 'Loading...';
+                        wrapper.appendChild(loadingDiv);
+
+                        img.addEventListener('load', () => {
+                            loadingDiv.remove();
+                        });
+                    }
+                });
+            }
+
+            // Initialize all optimizations
+            initializeImageLoading();
+            adjustImageSizes();
+            optimizeForTouch();
+            ensureImageVisibility();
+            optimizeShowcaseImages();
+
+            // Handle window resize
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    adjustImageSizes();
+                    ensureImageVisibility();
+                }, 250);
+            });
+
+            // Performance monitoring
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(() => {
+                    console.log('Image optimization complete');
+                });
+            }
+        });
+
+        // Preload critical images
+        const criticalImages = [
+            'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/8ddae874-8e00-419b-b571-cd95c25748bd.png',
+            'https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/135d8cdd-42fe-452e-8e24-3ae6bb71259b.png'
+        ];
+
+        criticalImages.forEach(src => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
+        });
+
+    </script>
+</body>
+</html>
