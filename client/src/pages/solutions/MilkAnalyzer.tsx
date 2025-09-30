@@ -133,10 +133,10 @@ const MilkAnalyzer = () => {
                 <h4 className="font-semibold text-foreground mb-3">Operating Conditions</h4>
                 <ul className="text-muted-foreground space-y-2">
                   <li>• Temperature: 5°C - 40°C</li>
-                  <li>• Humidity: <95% RH</li>
+                  <li>• Humidity: &lt;95% RH</li>
                   <li>• Power: 100-240V AC</li>
                   <li>• Sample volume: 20ml</li>
-                  <li>• Analysis time: <60 seconds</li>
+                  <li>• Analysis time: &lt;60 seconds</li>
                 </ul>
               </div>
             </div>
