@@ -3,9 +3,35 @@ import Footer from "@/components/layout/Footer";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Globe, CheckCircle, Smartphone, Search, Palette, Zap } from "lucide-react";
+import { Globe, CheckCircle, Smartphone, Search, Palette, Zap, Lightbulb, Pencil, Code, TestTube2, Rocket, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const WebDesign = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  
+  const faqs = [
+    {
+      q: "How long does it take to design and build a website?",
+      a: "A standard business website typically takes 4-6 weeks from start to launch. More complex sites with custom features or e-commerce functionality may take 8-12 weeks. We provide a detailed timeline during our initial consultation."
+    },
+    {
+      q: "Will my website be mobile-friendly?",
+      a: "Absolutely! All our websites are built with a mobile-first approach, ensuring they look great and function perfectly on all devices - smartphones, tablets, and desktops."
+    },
+    {
+      q: "Can I update the website content myself?",
+      a: "Yes! We integrate user-friendly content management systems (CMS) that allow you to easily update text, images, and other content without any technical knowledge. We also provide training on how to use the CMS."
+    },
+    {
+      q: "Do you provide ongoing support after the website launches?",
+      a: "Yes, we offer various maintenance and support packages including regular updates, security monitoring, content updates, and technical support to keep your website running smoothly."
+    },
+    {
+      q: "Will my website be optimized for search engines (SEO)?",
+      a: "Yes, SEO optimization is built into every website we create. This includes proper meta tags, structured data, fast loading speeds, mobile responsiveness, and clean code - all factors that help your site rank well in search results."
+    }
+  ];
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -100,41 +126,128 @@ const WebDesign = () => {
             </GlassCard>
           </div>
 
-          <div className="text-center mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Our Design Process</h2>
-            <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold">
-                  1
+          {/* Detailed Process Timeline */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our Web Design Process</h2>
+            <div className="space-y-8">
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">1</span>
+                      <h3 className="text-xl font-bold text-foreground">Discovery & Strategy</h3>
+                      <span className="ml-auto text-sm text-muted-foreground">3-5 days</span>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Deep dive into your business, brand identity, target audience, and competitors. We define project goals, user personas, and create a comprehensive strategy for your website.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Brand Analysis</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">User Research</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Strategy Document</span>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Discovery</h4>
-                <p className="text-sm text-muted-foreground">Understanding your brand, goals, and target audience</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold">
-                  2
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Pencil className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">2</span>
+                      <h3 className="text-xl font-bold text-foreground">Design & Wireframing</h3>
+                      <span className="ml-auto text-sm text-muted-foreground">5-7 days</span>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Create wireframes and visual mockups that bring your vision to life. We iterate on designs until you're completely satisfied with the look and feel.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Wireframes</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Visual Mockups</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Design Iterations</span>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Design</h4>
-                <p className="text-sm text-muted-foreground">Creating wireframes and visual mockups</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold">
-                  3
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Code className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">3</span>
+                      <h3 className="text-xl font-bold text-foreground">Development & Build</h3>
+                      <span className="ml-auto text-sm text-muted-foreground">10-15 days</span>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Transform designs into a fully functional, responsive website using modern technologies. We build with performance, security, and scalability in mind.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Responsive Coding</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">CMS Integration</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Performance Optimization</span>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Development</h4>
-                <p className="text-sm text-muted-foreground">Building responsive, performant websites</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold">
-                  4
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TestTube2 className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">4</span>
+                      <h3 className="text-xl font-bold text-foreground">Testing & Quality Assurance</h3>
+                      <span className="ml-auto text-sm text-muted-foreground">3-5 days</span>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Rigorous testing across browsers, devices, and screen sizes. We ensure everything works perfectly before launch.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Cross-browser Testing</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Device Testing</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">SEO Audit</span>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Launch</h4>
-                <p className="text-sm text-muted-foreground">Testing, deployment, and ongoing support</p>
-              </div>
+              </GlassCard>
+
+              <GlassCard className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-sm">5</span>
+                      <h3 className="text-xl font-bold text-foreground">Launch & Support</h3>
+                      <span className="ml-auto text-sm text-muted-foreground">2-3 days</span>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      Deploy your website to production with proper monitoring and analytics. We provide training and ongoing support to ensure your success.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Deployment</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Training</span>
+                      <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Ongoing Support</span>
+                    </div>
+                  </div>
+                </div>
+              </GlassCard>
             </div>
           </div>
 
-          <GlassCard className="p-8">
+          <GlassCard className="p-8 mb-20">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
@@ -165,6 +278,149 @@ const WebDesign = () => {
                   <p className="text-muted-foreground text-sm">Built-in tracking and analytics to measure performance and user behavior</p>
                 </div>
               </div>
+            </div>
+          </GlassCard>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Recent Web Projects
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore our portfolio of stunning websites built for clients across various industries
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <GlassCard className="overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="E-commerce website design" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                />
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                  E-commerce
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-foreground mb-2">Fashion E-Store</h3>
+                <p className="text-muted-foreground mb-4">Modern online store with seamless checkout and inventory management</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs px-2 py-1 bg-muted rounded">React</span>
+                  <span className="text-xs px-2 py-1 bg-muted rounded">Shopify</span>
+                  <span className="text-xs px-2 py-1 bg-muted rounded">SEO</span>
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard className="overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="Corporate website design" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                />
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                  Corporate
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-foreground mb-2">Tech Startup Site</h3>
+                <p className="text-muted-foreground mb-4">Clean, professional website with dynamic content and analytics integration</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs px-2 py-1 bg-muted rounded">Next.js</span>
+                  <span className="text-xs px-2 py-1 bg-muted rounded">CMS</span>
+                  <span className="text-xs px-2 py-1 bg-muted rounded">Analytics</span>
+                </div>
+              </div>
+            </GlassCard>
+
+            <GlassCard className="overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  alt="Restaurant website design" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
+                />
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                  Restaurant
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-foreground mb-2">Gourmet Restaurant</h3>
+                <p className="text-muted-foreground mb-4">Beautiful restaurant site with online reservations and menu showcase</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-xs px-2 py-1 bg-muted rounded">WordPress</span>
+                  <span className="text-xs px-2 py-1 bg-muted rounded">Booking</span>
+                  <span className="text-xs px-2 py-1 bg-muted rounded">Mobile-First</span>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Common questions about our web design services
+            </p>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <GlassCard key={index} className="overflow-hidden">
+                <button
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
+                  data-testid={`faq-question-${index}`}
+                >
+                  <h3 className="text-lg font-semibold text-foreground">{faq.q}</h3>
+                  <ChevronDown className={`w-5 h-5 text-primary flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                </button>
+                {openFaq === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-muted-foreground leading-relaxed">{faq.a}</p>
+                  </div>
+                )}
+              </GlassCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary/10">
+        <div className="container mx-auto px-4 lg:px-8">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
+            <Globe className="w-16 h-16 text-primary mx-auto mb-6" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Ready to Transform Your Online Presence?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Let's create a stunning website that drives results. Get in touch for a free consultation and quote.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-web-contact">
+                  Get Free Consultation
+                </Button>
+              </Link>
+              <Link href="/case-studies">
+                <Button size="lg" variant="outline" data-testid="button-view-portfolio">
+                  View Full Portfolio
+                </Button>
+              </Link>
             </div>
           </GlassCard>
         </div>
