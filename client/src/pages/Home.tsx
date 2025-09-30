@@ -1,12 +1,40 @@
 import { Link } from "wouter";
-import { Award, ShieldCheck, Clock, Users, CircuitBoard, Cpu, Code, Smartphone, CheckCircle, ArrowRight, Zap, Calendar, Mail, Phone } from "lucide-react";
+import { Award, ShieldCheck, Clock, Users, CircuitBoard, Cpu, Code, Smartphone, CheckCircle, ArrowRight, Zap, Calendar, Mail, Phone, TrendingUp, Target, Rocket, Star, Quote } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { GlassCard } from "@/components/ui/glass-card";
 import ContactForm from "@/components/forms/ContactForm";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [counts, setCounts] = useState({ years: 0, projects: 0, clients: 0, accuracy: 0 });
+  
+  useEffect(() => {
+    const duration = 2000;
+    const targets = { years: 14, projects: 500, clients: 200, accuracy: 99 };
+    const steps = 60;
+    const interval = duration / steps;
+    
+    let current = { years: 0, projects: 0, clients: 0, accuracy: 0 };
+    let step = 0;
+    
+    const timer = setInterval(() => {
+      step++;
+      current = {
+        years: Math.min(Math.floor((targets.years * step) / steps), targets.years),
+        projects: Math.min(Math.floor((targets.projects * step) / steps), targets.projects),
+        clients: Math.min(Math.floor((targets.clients * step) / steps), targets.clients),
+        accuracy: Math.min(Math.floor((targets.accuracy * step) / steps), targets.accuracy),
+      };
+      setCounts(current);
+      
+      if (step >= steps) clearInterval(timer);
+    }, interval);
+    
+    return () => clearInterval(timer);
+  }, []);
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -146,6 +174,62 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Delivering Excellence at Scale
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Trusted by leading companies across industries for innovative electronics and dairy technology solutions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <TrendingUp className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-years">
+                {counts.years}+
+              </div>
+              <div className="text-muted-foreground">Years of Excellence</div>
+            </GlassCard>
+            
+            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <Rocket className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-projects">
+                {counts.projects}+
+              </div>
+              <div className="text-muted-foreground">Projects Delivered</div>
+            </GlassCard>
+            
+            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-clients">
+                {counts.clients}+
+              </div>
+              <div className="text-muted-foreground">Happy Clients</div>
+            </GlassCard>
+            
+            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <Target className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-accuracy">
+                {counts.accuracy}%
+              </div>
+              <div className="text-muted-foreground">Success Rate</div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
       {/* Specialized Solutions Section */}
       <section className="py-20 lg:py-32 bg-muted/30" data-testid="solutions-section">
         <div className="container mx-auto px-4 lg:px-8">
@@ -225,6 +309,196 @@ const Home = () => {
               </Link>
             </GlassCard>
           </div>
+        </div>
+      </section>
+
+      {/* Case Studies Preview Section */}
+      <section className="py-20 lg:py-32 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Success Stories
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real-world examples of how we've helped clients transform their ideas into successful products
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <GlassCard className="p-6 group hover:shadow-2xl transition-all">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <CircuitBoard className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">IoT Gateway Development</h3>
+              <p className="text-muted-foreground mb-4">
+                Designed and developed a multi-protocol IoT gateway supporting 5+ communication standards with 99.9% uptime.
+              </p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                <span className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  6 months
+                </span>
+                <span className="flex items-center gap-1">
+                  <Target className="w-4 h-4" />
+                  Industrial
+                </span>
+              </div>
+              <Link href="/case-studies" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-case-study-1">
+                Read Case Study <ArrowRight className="w-4 h-4" />
+              </Link>
+            </GlassCard>
+            
+            <GlassCard className="p-6 group hover:shadow-2xl transition-all">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">Smart Dairy Management</h3>
+              <p className="text-muted-foreground mb-4">
+                Implemented automated milk collection system serving 1000+ dairy farmers with real-time quality monitoring.
+              </p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                <span className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  4 months
+                </span>
+                <span className="flex items-center gap-1">
+                  <Target className="w-4 h-4" />
+                  Agriculture
+                </span>
+              </div>
+              <Link href="/case-studies" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-case-study-2">
+                Read Case Study <ArrowRight className="w-4 h-4" />
+              </Link>
+            </GlassCard>
+            
+            <GlassCard className="p-6 group hover:shadow-2xl transition-all">
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <Cpu className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-3">Medical Device PCB</h3>
+              <p className="text-muted-foreground mb-4">
+                Delivered IPC Class 3 medical device PCB with advanced signal integrity and FDA compliance certification.
+              </p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                <span className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  8 months
+                </span>
+                <span className="flex items-center gap-1">
+                  <Target className="w-4 h-4" />
+                  Healthcare
+                </span>
+              </div>
+              <Link href="/case-studies" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-case-study-3">
+                Read Case Study <ArrowRight className="w-4 h-4" />
+              </Link>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-muted/30 via-background to-primary/5">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Trusted by industry leaders and innovative startups worldwide
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <GlassCard className="p-8 relative">
+              <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-foreground mb-6 leading-relaxed">
+                "Several Sustain delivered our complex PCB design ahead of schedule. Their expertise in high-speed digital design was instrumental in our product's success."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">Michael Chen</div>
+                  <div className="text-sm text-muted-foreground">CTO, TechVision Systems</div>
+                </div>
+              </div>
+            </GlassCard>
+            
+            <GlassCard className="p-8 relative">
+              <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-foreground mb-6 leading-relaxed">
+                "The milk analyzer system has transformed our quality control process. We now have real-time insights that have improved our product consistency by 40%."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">Priya Sharma</div>
+                  <div className="text-sm text-muted-foreground">Operations Manager, DairyFresh</div>
+                </div>
+              </div>
+            </GlassCard>
+            
+            <GlassCard className="p-8 relative">
+              <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p className="text-foreground mb-6 leading-relaxed">
+                "Professional, responsive, and technically excellent. They understood our unique requirements and delivered a solution that exceeded expectations."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground">David Rodriguez</div>
+                  <div className="text-sm text-muted-foreground">Founder, SmartAgri Solutions</div>
+                </div>
+              </div>
+            </GlassCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Mid-page CTA */}
+      <section className="py-20 bg-primary/10">
+        <div className="container mx-auto px-4 lg:px-8">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Ready to Transform Your Ideas into Reality?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Join 200+ satisfied clients who have successfully launched their products with our expert engineering team.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-cta-get-quote">
+                  Get Free Quote
+                </Button>
+              </Link>
+              <Link href="/services/design/pcb-design">
+                <Button size="lg" variant="outline" data-testid="button-cta-explore">
+                  Explore Services
+                </Button>
+              </Link>
+            </div>
+          </GlassCard>
         </div>
       </section>
 
