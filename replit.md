@@ -4,6 +4,32 @@
 
 Several Sustain is a professional electronics development and dairy technology company website built as a full-stack web application. The platform showcases the company's services including PCB design, hardware development, firmware programming, and specialized dairy technology solutions (milk analyzers and DPU/AMCU systems). The application features a modern, responsive design with contact forms, newsletter subscriptions, service pages, and case studies to attract and engage potential clients.
 
+## Recent Changes
+
+### Navigation Restructuring (September 30, 2025)
+- **Menu Organization**: Reorganized main navigation into hierarchical structure:
+  - "Design Service" dropdown: PCB Design, Web Design
+  - "Development Service" dropdown: Firmware Development, Hardware Development, App Development
+  - Removed "Case Studies" from main navigation per user requirements
+  
+- **Routing Structure**: Implemented hierarchical routes for better organization:
+  - Design services: `/services/design/pcb-design`, `/services/design/web-design`
+  - Development services: `/services/development/firmware`, `/services/development/hardware`, `/services/development/app-development`
+  - Solutions: `/solutions/milk-analyzer`, `/solutions/dpu-amcu-systems`
+  
+- **Backward Compatibility**: Added redirect routes for all old service URLs to prevent 404 errors:
+  - `/services/pcb-design` → PCBDesign component
+  - `/services/hardware-development` → HardwareDevelopment component
+  - `/services/firmware-programming` → FirmwareProgramming component
+  - `/services/app-development` → AppDevelopment component
+
+- **New Pages**: Created WebDesign service page (`client/src/pages/services/WebDesign.tsx`) following established glassmorphism design patterns
+
+- **Updated Components**:
+  - Header: New dropdown menu structure for desktop and mobile navigation
+  - Footer: Updated service links to new hierarchical routes and added Web Design
+  - Home: Updated all service card links to point to new route structure
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
