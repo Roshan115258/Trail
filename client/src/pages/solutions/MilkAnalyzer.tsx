@@ -1,0 +1,174 @@
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { GlassCard } from "@/components/ui/glass-card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { Beaker, CheckCircle, Download, BarChart3, Settings, Shield } from "lucide-react";
+
+const MilkAnalyzer = () => {
+  return (
+    <div className="min-h-screen">
+      <Header />
+      
+      <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Beaker className="w-10 h-10 text-primary" />
+            </div>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="milk-analyzer-title">
+              Milk Analyzer Systems
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Precision milk composition analysis with real-time fat, protein, lactose, and solids measurement.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Advanced Milk Analysis</h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Our milk analyzer systems utilize cutting-edge near-infrared spectroscopy technology to provide 
+                accurate, real-time analysis of milk composition. Perfect for dairy farms, processing plants, 
+                and quality control laboratories requiring precise measurements.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-foreground">Fat, protein, lactose, and SNF analysis</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-foreground">Real-time results in 60 seconds</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-foreground">±0.02% accuracy for fat content</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary" />
+                  <span className="text-foreground">Automatic calibration and cleaning</span>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <Link href="/contact">
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-get-quote">
+                    Get Quote
+                  </Button>
+                </Link>
+                <Button variant="outline" data-testid="button-download-spec">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Specs
+                </Button>
+              </div>
+            </div>
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                alt="Advanced milk analyzer equipment" 
+                className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+              />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            <GlassCard className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <BarChart3 className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Real-Time Analysis</h3>
+              <p className="text-muted-foreground">
+                Instantaneous measurement of milk composition with results displayed in under 60 seconds 
+                for immediate quality control decisions.
+              </p>
+            </GlassCard>
+
+            <GlassCard className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Settings className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Auto Calibration</h3>
+              <p className="text-muted-foreground">
+                Automatic calibration and self-cleaning functions ensure consistent accuracy 
+                with minimal maintenance requirements.
+              </p>
+            </GlassCard>
+
+            <GlassCard className="p-6 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Quality Assurance</h3>
+              <p className="text-muted-foreground">
+                Built-in quality control features with automatic outlier detection 
+                and compliance with international dairy standards.
+              </p>
+            </GlassCard>
+          </div>
+
+          <GlassCard className="p-8 mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Technical Specifications</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Measurement Parameters</h4>
+                <ul className="text-muted-foreground space-y-2">
+                  <li>• Fat: 0.01% - 20.00%</li>
+                  <li>• Protein: 0.01% - 10.00%</li>
+                  <li>• Lactose: 0.01% - 10.00%</li>
+                  <li>• SNF: 0.01% - 25.00%</li>
+                  <li>• Density: 1.000 - 1.200 g/cm³</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Accuracy</h4>
+                <ul className="text-muted-foreground space-y-2">
+                  <li>• Fat: ±0.02%</li>
+                  <li>• Protein: ±0.02%</li>
+                  <li>• Lactose: ±0.03%</li>
+                  <li>• SNF: ±0.05%</li>
+                  <li>• Temperature: ±0.5°C</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground mb-3">Operating Conditions</h4>
+                <ul className="text-muted-foreground space-y-2">
+                  <li>• Temperature: 5°C - 40°C</li>
+                  <li>• Humidity: <95% RH</li>
+                  <li>• Power: 100-240V AC</li>
+                  <li>• Sample volume: 20ml</li>
+                  <li>• Analysis time: <60 seconds</li>
+                </ul>
+              </div>
+            </div>
+          </GlassCard>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-8">Applications</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <h4 className="font-semibold text-foreground mb-2">Dairy Farms</h4>
+                <p className="text-sm text-muted-foreground">On-farm milk testing for herd management and payment systems</p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-foreground mb-2">Processing Plants</h4>
+                <p className="text-sm text-muted-foreground">Incoming milk quality control and batch monitoring</p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-foreground mb-2">Laboratories</h4>
+                <p className="text-sm text-muted-foreground">Reference testing and calibration services</p>
+              </div>
+              <div className="text-center">
+                <h4 className="font-semibold text-foreground mb-2">Collection Centers</h4>
+                <p className="text-sm text-muted-foreground">Rapid screening and farmer payment calculation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default MilkAnalyzer;
