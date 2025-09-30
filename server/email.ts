@@ -1,5 +1,5 @@
 
-import nodemailer from 'nodemailer';
+import * as nodemailer from 'nodemailer';
 
 interface ContactFormData {
   name: string;
@@ -15,21 +15,29 @@ interface NewsletterData {
 }
 
 class EmailService {
-  private transporter: nodemailer.Transporter;
+  private transporter: nodemailer.Transporter | null = null;
 
   constructor() {
-    // Configure your email provider here
-    // For Gmail, you'll need to use App Passwords
-    this.transporter = nodemailer.createTransporter({
-      service: 'gmail', // or your email provider
-      auth: {
-        user: process.env.EMAIL_USER, // your email
-        pass: process.env.EMAIL_PASS, // your app password
-      },
-    });
+    // Only initialize transporter if email credentials are configured
+    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+      this.transporter = nodemailer.createTransport({
+        service: 'gmail', // or your email provider
+        auth: {
+          user: process.env.EMAIL_USER, // your email
+          pass: process.env.EMAIL_PASS, // your app password
+        },
+      });
+    } else {
+      console.log('Email service not configured - EMAIL_USER and EMAIL_PASS not set');
+    }
   }
 
   async sendContactFormNotification(data: ContactFormData) {
+    if (!this.transporter) {
+      console.log('Email not configured, skipping contact form notification');
+      return;
+    }
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.NOTIFICATION_EMAIL || process.env.EMAIL_USER,
@@ -59,6 +67,11 @@ class EmailService {
   }
 
   async sendNewsletterNotification(data: NewsletterData) {
+    if (!this.transporter) {
+      console.log('Email not configured, skipping newsletter notification');
+      return;
+    }
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.NOTIFICATION_EMAIL || process.env.EMAIL_USER,
@@ -80,6 +93,11 @@ class EmailService {
   }
 
   async sendConfirmationEmail(email: string, name: string) {
+    if (!this.transporter) {
+      console.log('Email not configured, skipping confirmation email');
+      return;
+    }
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
