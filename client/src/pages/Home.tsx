@@ -105,7 +105,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">PCB Design</h3>
               <p className="text-muted-foreground mb-6">Expert circuit board layout with HDI, RF, and high-speed design capabilities for complex applications.</p>
-              <Link href="/services/pcb-design" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-pcb-design">
+              <Link href="/services/design/pcb-design" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-pcb-design">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
@@ -116,7 +116,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Hardware Development</h3>
               <p className="text-muted-foreground mb-6">Complete embedded systems design including microcontroller programming and FPGA development.</p>
-              <Link href="/services/hardware-development" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-hardware-development">
+              <Link href="/services/development/hardware" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-hardware-development">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
@@ -127,7 +127,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Firmware Programming</h3>
               <p className="text-muted-foreground mb-6">Low-level firmware development for optimal performance and reliability in embedded systems.</p>
-              <Link href="/services/firmware-programming" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-firmware-programming">
+              <Link href="/services/development/firmware" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-firmware-programming">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
@@ -138,7 +138,7 @@ const Home = () => {
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">App Development</h3>
               <p className="text-muted-foreground mb-6">Mobile and web applications for IoT device control and data visualization platforms.</p>
-              <Link href="/services/app-development" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-app-development">
+              <Link href="/services/development/app-development" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-app-development">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
