@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
+import { emailService } from "./email";
 
 // Validation schemas
 const contactSchema = z.object({
@@ -26,8 +27,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Store the contact submission
       const contact = await storage.createContact(validatedData);
       
-      // TODO: Send email notification to team
-      // TODO: Send confirmation email to user
+      // Send email notification to team
+      try {
+        await emailService.sendContactFormNotification(validatedData);
+        await emailService.sendConfirmationEmail(validatedData.email, validatedData.name);
+      } catch (error) {
+        console.error('Email notification failed:', error);
+        // Continue processing even if email fails
+      }
       
       res.json({ 
         success: true, 
@@ -59,7 +66,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Store the newsletter subscription
       const subscription = await storage.createNewsletterSubscription(validatedData);
       
-      // TODO: Add to email marketing service (Mailchimp, SendGrid, etc.)
+      // Send email notification to team
+      try {
+        await emailService.sendNewsletterNotification(validatedData);
+      } catch (error) {
+        console.error('Email notification failed:', error);
+        // Continue processing even if email fails
+      }
       
       res.json({ 
         success: true, 
