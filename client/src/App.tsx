@@ -12,6 +12,7 @@ import { CartProvider } from "./lib/CartContext";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import Products from "@/pages/Products";
 import PCBDesign from "@/pages/services/PCBDesign";
 import WebDesign from "@/pages/services/WebDesign";
 import HardwareDevelopment from "@/pages/services/HardwareDevelopment";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/products" component={Products} />
       
       {/* Design Services */}
       <Route path="/services/design/pcb-design" component={PCBDesign} />
