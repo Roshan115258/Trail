@@ -257,7 +257,7 @@ const MilkAnalyzer = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">Basic</h3>
                   <p className="text-sm text-muted-foreground mb-4">Perfect for small farms</p>
-                  <div className="text-3xl font-bold text-primary">From $8,500</div>
+                  <div className="text-3xl font-bold text-primary">From ₹7,00,000</div>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">
@@ -293,7 +293,7 @@ const MilkAnalyzer = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">Professional</h3>
                   <p className="text-sm text-muted-foreground mb-4">Ideal for collection centers</p>
-                  <div className="text-3xl font-bold text-primary">From $15,000</div>
+                  <div className="text-3xl font-bold text-primary">From ₹12,50,000</div>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">
@@ -326,7 +326,7 @@ const MilkAnalyzer = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">Enterprise</h3>
                   <p className="text-sm text-muted-foreground mb-4">For processing plants</p>
-                  <div className="text-3xl font-bold text-primary">From $25,000</div>
+                  <div className="text-3xl font-bold text-primary">From ₹20,00,000</div>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">

@@ -258,7 +258,7 @@ const DPUAMCUSystems = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">DPU Basic</h3>
                   <p className="text-sm text-muted-foreground mb-4">For small collection centers</p>
-                  <div className="text-3xl font-bold text-primary">From $18,000</div>
+                  <div className="text-3xl font-bold text-primary">From ₹15,00,000</div>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">
@@ -294,7 +294,7 @@ const DPUAMCUSystems = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">AMCU Standard</h3>
                   <p className="text-sm text-muted-foreground mb-4">Complete automation</p>
-                  <div className="text-3xl font-bold text-primary">From $35,000</div>
+                  <div className="text-3xl font-bold text-primary">From ₹28,00,000</div>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">
@@ -327,7 +327,7 @@ const DPUAMCUSystems = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-foreground mb-2">AMCU Premium</h3>
                   <p className="text-sm text-muted-foreground mb-4">For large cooperatives</p>
-                  <div className="text-3xl font-bold text-primary">From $55,000</div>
+                  <div className="text-3xl font-bold text-primary">From ₹45,00,000</div>
                 </div>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start gap-2">

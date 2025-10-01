@@ -12,6 +12,8 @@ import hardwareImage from "@assets/stock_images/hardware_development_71859658.jp
 import firmwareImage from "@assets/stock_images/software_engineer_co_e48f8e0b.jpg";
 import appDevImage from "@assets/stock_images/mobile_app_developme_2ad31b4c.jpg";
 import teamImage from "@assets/stock_images/engineering_team_col_a3be8406.jpg";
+import milkAnalyzerImage from "@assets/stock_images/milk_analyzer_labora_81f7f86d.jpg";
+import dairySystemImage from "@assets/stock_images/dairy_farm_automated_d54a7149.jpg";
 
 const Home = () => {
   const [counts, setCounts] = useState({ years: 0, projects: 0, clients: 0, accuracy: 0 });
@@ -333,8 +335,8 @@ const Home = () => {
             {/* Milk Analyzer */}
             <GlassCard className="p-8">
               <img 
-                src="https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Advanced milk analyzer equipment" 
+                src={milkAnalyzerImage} 
+                alt="Advanced milk analyzer equipment for precision dairy testing" 
                 className="w-full h-64 object-cover rounded-xl mb-6" 
               />
               <h3 className="text-2xl font-bold text-foreground mb-4">Milk Analyzer Systems</h3>
@@ -366,8 +368,8 @@ const Home = () => {
             {/* DPU/AMCU System */}
             <GlassCard className="p-8">
               <img 
-                src="https://images.unsplash.com/photo-1606880700051-d70bdf7cb265?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Modern dairy processing facility" 
+                src={dairySystemImage} 
+                alt="Automated dairy milk collection system with integrated payment and quality testing" 
                 className="w-full h-64 object-cover rounded-xl mb-6" 
               />
               <h3 className="text-2xl font-bold text-foreground mb-4">DPU/AMCU Collection Systems</h3>
