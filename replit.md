@@ -24,6 +24,9 @@ Several Sustain (Several Sustain Pvt. Ltd.) is a professional engineering compan
   - Colorful gradients and enhanced padding
   - Trust badges (Quality Assured, Free Shipping, Expert Support)
   - Enhanced CTA section with "Limited Time Offer" badge
+- **Product Images**: Updated all 7 products with actual product photos (replacing stock placeholders)
+  - High-quality PNG images for each product
+  - Professional product photography showcasing actual equipment
 - **Checkout Localization**: Indian-specific form placeholders (Patna, Bihar, India, +91 phone format, PIN code)
 - **Currency Formatting**: Standardized ₹ symbol with .toLocaleString('en-IN') across Products, Cart, Checkout pages
 - **Products**: OPINDO COMBO (₹42,000), OPINDO (₹28,500), EXPERT PRO PLUS (₹32,000), OPTEK DPU (₹15,000), Maxtron Scale (₹7,500), Ultrasonic Stirrer (₹3,000), Remote Display (₹10,000)

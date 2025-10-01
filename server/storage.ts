@@ -108,9 +108,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/milk_analyzer_labora_0190cea5.jpg",
-          "/attached_assets/stock_images/milk_analyzer_labora_7c542620.jpg",
-          "/attached_assets/stock_images/milk_analyzer_labora_81f7f86d.jpg"
+          "/attached_assets/OPINDO COMBO Milk Analyser_1759349703008.png"
         ],
         price: "42000",
         category: "Milk Analyzer",
@@ -188,9 +186,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/opindo_combo_milk_analyzer.jpg",
-          "/attached_assets/stock_images/milk_analyzer_labora_cde72be9.jpg",
-          "/attached_assets/stock_images/milk_analyzer_labora_d5efe602.jpg"
+          "/attached_assets/OPINDO Milk Analyser_1759349702975.png"
         ],
         price: "28500",
         category: "Milk Analyzer",
@@ -268,9 +264,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/dairy_farm_milk_coll_423d52cf.jpg",
-          "/attached_assets/stock_images/dairy_farm_milk_coll_f66b6350.jpg",
-          "/attached_assets/stock_images/laboratory_scientist_0182c891.jpg"
+          "/attached_assets/EXPERT PRO PLUS Milk Analyser_1759349702946.png"
         ],
         price: "32000",
         category: "Milk Analyzer",
@@ -359,9 +353,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/hardware_development_1d1d7cab.jpg",
-          "/attached_assets/stock_images/hardware_development_71859658.jpg",
-          "/attached_assets/stock_images/modern_circuit_board_1fd01e5d.jpg"
+          "/attached_assets/OPTEK DPU (Dot Matrix Printer Unit)_1759349702896.png"
         ],
         price: "15000",
         category: "Peripherals / DPU",
@@ -388,9 +380,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/dairy_farm_automated_d54a7149.jpg",
-          "/attached_assets/stock_images/dairy_farm_automated_fe9be52d.jpg",
-          "/attached_assets/stock_images/laboratory_scientist_9212d7ce.jpg"
+          "/attached_assets/Maxtron Weighing Scale_1759349702860.png"
         ],
         price: "7500",
         category: "Scales",
@@ -414,9 +404,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/laboratory_scientist_9bff7a20.jpg",
-          "/attached_assets/stock_images/modern_circuit_board_31891aa3.jpg",
-          "/attached_assets/stock_images/engineering_team_col_a3be8406.jpg"
+          "/attached_assets/Ultrasonic Milk Vibrator (Milk Stirrer)_1759349702823.png"
         ],
         price: "3000",
         category: "Accessories",
@@ -437,9 +425,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/stock_images/engineering_team_col_b8595299.jpg",
-          "/attached_assets/stock_images/software_engineer_co_b31f5c8b.jpg",
-          "/attached_assets/stock_images/software_engineer_co_e48f8e0b.jpg"
+          "/attached_assets/Remote Display for Milk Collection_1759349702762.png"
         ],
         price: "10000",
         category: "Peripherals / Displays",
