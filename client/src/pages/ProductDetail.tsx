@@ -20,11 +20,11 @@ const ProductDetail = () => {
   const { addToCart } = useCartContext();
   const { toast } = useToast();
 
-  const { data, isLoading } = useQuery<{ success: boolean; product: Product }>({
-    queryKey: ["/api/products", slug],
+  const { data: allProducts, isLoading } = useQuery<Product[]>({
+    queryKey: ["/products.json"],
   });
 
-  const product = data?.product;
+  const product = allProducts?.find((p) => p.slug === slug);
 
   const handleAddToCart = () => {
     if (product) {

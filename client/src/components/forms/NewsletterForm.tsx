@@ -26,7 +26,19 @@ const NewsletterForm = () => {
 
   const submitMutation = useMutation({
     mutationFn: async (data: NewsletterData) => {
-      return apiRequest("POST", "/api/newsletter", data);
+      const response = await fetch("https://formspree.io/f/meorgyae", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data, _subject: "Newsletter Subscription" }),
+      });
+      
+      if (!response.ok) {
+        throw new Error("Failed to subscribe");
+      }
+      
+      return response.json();
     },
     onSuccess: () => {
       toast({

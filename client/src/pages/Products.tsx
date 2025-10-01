@@ -17,11 +17,9 @@ const Products = () => {
   const { addToCart } = useCartContext();
   const { toast } = useToast();
 
-  const { data, isLoading } = useQuery<{ success: boolean; products: Product[] }>({
-    queryKey: ["/api/products"],
+  const { data: products = [], isLoading } = useQuery<Product[]>({
+    queryKey: ["/products.json"],
   });
-
-  const products = data?.products || [];
 
   const categories = ["all", ...Array.from(new Set(products.map((p) => p.category)))];
 
