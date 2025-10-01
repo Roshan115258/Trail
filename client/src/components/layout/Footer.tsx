@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { Linkedin, Twitter, Youtube } from "lucide-react";
 import NewsletterForm from "@/components/forms/NewsletterForm";
 import logoImage from "@assets/WhatsApp_Image_2025-10-01_at_1.27.41_PM-removebg-preview_1759322801060.png";
 
@@ -26,17 +25,6 @@ const Footer = () => {
               Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions. 
               Expert PCB design, hardware development, firmware, web & app development, and specialized analytical instruments.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors" data-testid="social-linkedin">
-                <Linkedin className="w-5 h-5 text-primary" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors" data-testid="social-twitter">
-                <Twitter className="w-5 h-5 text-primary" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors" data-testid="social-youtube">
-                <Youtube className="w-5 h-5 text-primary" />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
@@ -57,8 +45,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link href="/solutions/milk-analyzer" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-milk-analyzers">Milk Analyzers</Link></li>
               <li><Link href="/solutions/dpu-amcu-systems" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-dpu-amcu-systems">DPU/AMCU Systems</Link></li>
-              <li><Link href="/case-studies" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-case-studies">Case Studies</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-downloads">Downloads</a></li>
             </ul>
           </div>
 
@@ -68,8 +54,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-about">About Us</Link></li>
               <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-contact">Contact</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-careers">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-support">Support</a></li>
             </ul>
           </div>
         </div>
@@ -94,7 +78,6 @@ const Footer = () => {
             <div className="flex items-center gap-6 text-sm">
               <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-privacy">Privacy Policy</Link>
               <Link href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-terms">Terms of Service</Link>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-cookies">Cookie Policy</a>
             </div>
           </div>
         </div>

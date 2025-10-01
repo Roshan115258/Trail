@@ -8,6 +8,7 @@ import { useState } from "react";
 import milkImage1 from "@assets/stock_images/milk_analyzer_labora_7c542620.jpg";
 import milkImage2 from "@assets/stock_images/milk_analyzer_labora_cde72be9.jpg";
 import milkImage3 from "@assets/stock_images/milk_analyzer_labora_0190cea5.jpg";
+import { Helmet } from "react-helmet-async";
 
 const MilkAnalyzer = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -37,6 +38,20 @@ const MilkAnalyzer = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Milk Analyzer - Several Sustain | Precision Dairy Testing Equipment</title>
+        <meta name="description" content="Advanced milk analyzers for dairy quality testing in India. Fat, protein, lactose, SNF analysis with ±0.02% accuracy. Basic ₹8.5L, Professional ₹15L, Enterprise ₹25L models available." />
+        <link rel="canonical" href="https://severalsustain.in/solutions/milk-analyzer" />
+        
+        <meta property="og:title" content="Milk Analyzer - Several Sustain | Precision Dairy Testing Equipment" />
+        <meta property="og:description" content="Industry-leading milk analyzers for accurate dairy quality testing. Multiple capacity options from ₹8.5 lakh to ₹25 lakh." />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content="https://severalsustain.in/solutions/milk-analyzer" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Milk Analyzer - Several Sustain" />
+        <meta name="twitter:description" content="Precision milk analyzers with ±0.02% accuracy for dairy quality testing." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">

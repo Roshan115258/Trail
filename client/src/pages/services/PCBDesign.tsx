@@ -7,6 +7,7 @@ import { CircuitBoard, CheckCircle, Layers, Zap, Shield, FileSearch, Pencil, Lay
 import { useState } from "react";
 import pcbImage1 from "@assets/stock_images/modern_circuit_board_1fd01e5d.jpg";
 import pcbImage2 from "@assets/stock_images/modern_circuit_board_31891aa3.jpg";
+import { Helmet } from "react-helmet-async";
 
 const PCBDesign = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -36,6 +37,20 @@ const PCBDesign = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>PCB Design Services - Several Sustain | Expert Circuit Board Layout</title>
+        <meta name="description" content="Professional PCB design services in Bihar, India. HDI, RF, and high-speed PCB layout for complex applications. Get expert circuit board design from Several Sustain." />
+        <link rel="canonical" href="https://severalsustain.in/services/design/pcb-design" />
+        
+        <meta property="og:title" content="PCB Design Services - Several Sustain" />
+        <meta property="og:description" content="Expert PCB design with HDI, RF, and high-speed capabilities. From concept to manufacturing-ready boards." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/services/design/pcb-design" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="PCB Design Services - Several Sustain" />
+        <meta name="twitter:description" content="Professional PCB design with HDI, RF, and high-speed capabilities for complex applications." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
@@ -393,11 +408,6 @@ const PCBDesign = () => {
               <Link href="/contact">
                 <Button size="lg" className="gradient-primary text-white hover:opacity-90 transition-opacity" data-testid="button-pcb-contact">
                   Get Free Consultation
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-case-studies">
-                  View Case Studies
                 </Button>
               </Link>
             </div>

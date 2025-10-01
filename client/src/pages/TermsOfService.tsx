@@ -1,10 +1,21 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { GlassCard } from "@/components/ui/glass-card";
+import { Helmet } from "react-helmet-async";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Terms of Service - Several Sustain | Service Agreement & Conditions</title>
+        <meta name="description" content="Several Sustain terms of service. Review our service agreement, user responsibilities, and terms for PCB design, hardware development, and dairy technology solutions." />
+        <link rel="canonical" href="https://severalsustain.in/terms-of-service" />
+        
+        <meta property="og:title" content="Terms of Service - Several Sustain" />
+        <meta property="og:description" content="Review Several Sustain's terms of service and service agreement." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/terms-of-service" />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">

@@ -18,7 +18,6 @@ import FirmwareProgramming from "@/pages/services/FirmwareProgramming";
 import AppDevelopment from "@/pages/services/AppDevelopment";
 import MilkAnalyzer from "@/pages/solutions/MilkAnalyzer";
 import DPUAMCUSystems from "@/pages/solutions/DPUAMCUSystems";
-import CaseStudies from "@/pages/CaseStudies";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import NotFound from "@/pages/not-found";
@@ -52,7 +51,6 @@ function Router() {
       <Route path="/solutions/dpu-amcu-systems" component={DPUAMCUSystems} />
       
       {/* Legal & Other */}
-      <Route path="/case-studies" component={CaseStudies} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route component={NotFound} />

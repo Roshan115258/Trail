@@ -1,10 +1,21 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { GlassCard } from "@/components/ui/glass-card";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Privacy Policy - Several Sustain | Data Protection & Privacy</title>
+        <meta name="description" content="Several Sustain privacy policy. Learn how we collect, use, and protect your personal information. GDPR compliant data handling practices." />
+        <link rel="canonical" href="https://severalsustain.in/privacy-policy" />
+        
+        <meta property="og:title" content="Privacy Policy - Several Sustain" />
+        <meta property="og:description" content="Learn how Several Sustain handles your data and protects your privacy." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/privacy-policy" />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">

@@ -7,6 +7,7 @@ import { Globe, CheckCircle, Smartphone, Search, Palette, Zap, Lightbulb, Pencil
 import { useState } from "react";
 import webImage1 from "@assets/stock_images/professional_web_des_9796e36b.jpg";
 import webImage2 from "@assets/stock_images/professional_web_des_960414d2.jpg";
+import { Helmet } from "react-helmet-async";
 
 const WebDesign = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -36,6 +37,20 @@ const WebDesign = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Web Design Services - Several Sustain | Custom Responsive Websites</title>
+        <meta name="description" content="Professional web design and development services in Bihar, India. Custom, responsive, SEO-optimized websites that transform your online presence. Mobile-first design with CMS integration." />
+        <link rel="canonical" href="https://severalsustain.in/services/design/web-design" />
+        
+        <meta property="og:title" content="Web Design Services - Several Sustain" />
+        <meta property="og:description" content="Custom, responsive, SEO-optimized websites that drive business growth. Professional web design tailored to your needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/services/design/web-design" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Web Design Services - Several Sustain" />
+        <meta name="twitter:description" content="Professional web design services with responsive, SEO-optimized websites." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
@@ -423,11 +438,6 @@ const WebDesign = () => {
               <Link href="/contact">
                 <Button size="lg" className="gradient-hero text-white hover:opacity-90 transition-opacity" data-testid="button-web-contact">
                   Get Free Consultation
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-portfolio">
-                  View Full Portfolio
                 </Button>
               </Link>
             </div>

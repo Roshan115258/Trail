@@ -7,6 +7,7 @@ import { Code, CheckCircle, Terminal, Shield, Cog, Lightbulb, Pencil, Wrench, Te
 import { useState } from "react";
 import firmwareImage1 from "@assets/stock_images/software_engineer_co_e48f8e0b.jpg";
 import firmwareImage2 from "@assets/stock_images/software_engineer_co_b31f5c8b.jpg";
+import { Helmet } from "react-helmet-async";
 
 const FirmwareProgramming = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -36,6 +37,20 @@ const FirmwareProgramming = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Firmware Programming Services - Several Sustain | Low-Level Embedded Development</title>
+        <meta name="description" content="Professional firmware programming services in Bihar, India. Low-level development for embedded systems with RTOS, C/C++, and safety-critical applications. Expert firmware solutions from Several Sustain." />
+        <link rel="canonical" href="https://severalsustain.in/services/development/firmware" />
+        
+        <meta property="og:title" content="Firmware Programming Services - Several Sustain" />
+        <meta property="og:description" content="Low-level firmware development for optimal performance and reliability in embedded systems with RTOS support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/services/development/firmware" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Firmware Programming Services - Several Sustain" />
+        <meta name="twitter:description" content="Professional firmware development with RTOS, C/C++, and safety-critical application support." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
@@ -357,11 +372,6 @@ const FirmwareProgramming = () => {
               <Link href="/contact">
                 <Button size="lg" className="gradient-purple text-white hover:opacity-90 transition-opacity" data-testid="button-firmware-contact">
                   Get Free Consultation
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-case-studies">
-                  View Case Studies
                 </Button>
               </Link>
             </div>

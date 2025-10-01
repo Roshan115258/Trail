@@ -8,6 +8,7 @@ import { useState } from "react";
 import dairyImage1 from "@assets/stock_images/dairy_farm_milk_coll_423d52cf.jpg";
 import dairyImage2 from "@assets/stock_images/dairy_farm_milk_coll_f66b6350.jpg";
 import dairyImage3 from "@assets/stock_images/dairy_farm_milk_coll_1204a2c2.jpg";
+import { Helmet } from "react-helmet-async";
 
 const DPUAMCUSystems = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -37,6 +38,20 @@ const DPUAMCUSystems = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>DPU & AMCU Systems - Several Sustain | Automated Milk Collection Solutions</title>
+        <meta name="description" content="Automated milk collection and processing systems for dairy farms in India. DPU Basic ₹18L, AMCU Standard ₹35L, AMCU Premium ₹55L. Complete weighing, testing, and payment automation." />
+        <link rel="canonical" href="https://severalsustain.in/solutions/dpu-amcu-systems" />
+        
+        <meta property="og:title" content="DPU & AMCU Systems - Several Sustain | Automated Milk Collection" />
+        <meta property="og:description" content="Automated milk collection units with integrated testing, weighing, and payment systems. From ₹18 lakh to ₹55 lakh." />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content="https://severalsustain.in/solutions/dpu-amcu-systems" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="DPU & AMCU Systems - Several Sustain" />
+        <meta name="twitter:description" content="Complete automated milk collection solutions with integrated testing and payment systems." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">

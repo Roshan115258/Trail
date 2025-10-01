@@ -7,6 +7,7 @@ import { Smartphone, CheckCircle, Globe, Monitor, Wifi, Lightbulb, Pencil, Code,
 import { useState } from "react";
 import appImage1 from "@assets/stock_images/mobile_app_developme_2ad31b4c.jpg";
 import appImage2 from "@assets/stock_images/mobile_app_developme_d0a03ac7.jpg";
+import { Helmet } from "react-helmet-async";
 
 const AppDevelopment = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -36,6 +37,20 @@ const AppDevelopment = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>App Development Services - Several Sustain | Mobile & IoT Applications</title>
+        <meta name="description" content="Mobile and web app development in Bihar, India. iOS, Android, cross-platform apps with IoT device integration. Professional app development for data visualization and device control." />
+        <link rel="canonical" href="https://severalsustain.in/services/development/app-development" />
+        
+        <meta property="og:title" content="App Development Services - Several Sustain" />
+        <meta property="og:description" content="Mobile and web applications for IoT device control and data visualization platforms with offline capabilities." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/services/development/app-development" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="App Development Services - Several Sustain" />
+        <meta name="twitter:description" content="Professional mobile and web app development with IoT integration and data visualization." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
@@ -365,11 +380,6 @@ const AppDevelopment = () => {
               <Link href="/contact">
                 <Button size="lg" className="gradient-secondary text-white hover:opacity-90 transition-opacity" data-testid="button-app-contact">
                   Get Free Consultation
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-app-portfolio">
-                  View App Portfolio
                 </Button>
               </Link>
             </div>

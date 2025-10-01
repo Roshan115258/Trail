@@ -4,10 +4,25 @@ import { GlassCard } from "@/components/ui/glass-card";
 import ContactForm from "@/components/forms/ContactForm";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 import contactImage from "@assets/stock_images/engineering_team_col_b8595299.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Contact Us - Several Sustain | Get Expert Engineering Solutions</title>
+        <meta name="description" content="Contact Several Sustain for PCB design, hardware development, firmware programming, and dairy technology solutions. Located in Bihar, India. Phone: 06202428157, Email: info@severalsustain.in" />
+        <link rel="canonical" href="https://severalsustain.in/contact" />
+        
+        <meta property="og:title" content="Contact Us - Several Sustain | Get Expert Engineering Solutions" />
+        <meta property="og:description" content="Get in touch with Several Sustain for expert PCB design, embedded systems, and dairy technology solutions. We're here to help bring your ideas to life." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/contact" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact Us - Several Sustain" />
+        <meta name="twitter:description" content="Get in touch with Several Sustain for expert engineering solutions. Phone: 06202428157, Email: info@severalsustain.in" />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">

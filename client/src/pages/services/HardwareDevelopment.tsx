@@ -7,6 +7,7 @@ import { Cpu, CheckCircle, Microchip, Settings, Zap, Lightbulb, Pencil, Wrench, 
 import { useState } from "react";
 import hardwareImage1 from "@assets/stock_images/hardware_development_71859658.jpg";
 import hardwareImage2 from "@assets/stock_images/hardware_development_1d1d7cab.jpg";
+import { Helmet } from "react-helmet-async";
 
 const HardwareDevelopment = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -36,6 +37,20 @@ const HardwareDevelopment = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Hardware Development Services - Several Sustain | Embedded Systems Design</title>
+        <meta name="description" content="Complete embedded systems design in Bihar, India. Microcontroller programming, FPGA development, IoT solutions for industrial applications. Expert hardware development from Several Sustain." />
+        <link rel="canonical" href="https://severalsustain.in/services/development/hardware" />
+        
+        <meta property="og:title" content="Hardware Development Services - Several Sustain" />
+        <meta property="og:description" content="Complete embedded systems design with microcontroller programming and FPGA development for IoT and industrial applications." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.in/services/development/hardware" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Hardware Development Services - Several Sustain" />
+        <meta name="twitter:description" content="Professional embedded systems design with microcontrollers, FPGA, and IoT solutions." />
+      </Helmet>
       <Header />
       
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
@@ -353,11 +368,6 @@ const HardwareDevelopment = () => {
               <Link href="/contact">
                 <Button size="lg" className="gradient-blue text-white hover:opacity-90 transition-opacity" data-testid="button-hardware-contact">
                   Get Free Consultation
-                </Button>
-              </Link>
-              <Link href="/case-studies">
-                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-projects">
-                  View Our Projects
                 </Button>
               </Link>
             </div>
