@@ -587,7 +587,7 @@ const Home = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+1 (555) SUSTAIN</p>
+                      <p className="text-muted-foreground">+91 6202428157</p>
                       <p className="text-muted-foreground">Mon-Fri 9AM-6PM EST</p>
                     </div>
                   </div>
