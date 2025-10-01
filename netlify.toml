@@ -1,8 +1,8 @@
 # Netlify Configuration for SPA
 
 [build]
-  # Build command (builds frontend only)
-  command = "npm run build"
+  # Build command (builds frontend only - no backend needed)
+  command = "npm install && npx vite build"
   
   # Publish directory (where Vite outputs the build)
   publish = "dist/public"
@@ -12,11 +12,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Optional: API Proxy to Backend (UPDATE WITH YOUR BACKEND URL)
-# Uncomment when you deploy your backend separately:
-# [[redirects]]
-#   from = "/api/*"
-#   to = "https://your-backend-api.onrender.com/api/:splat"
-#   status = 200
-#   force = true
