@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, CircuitBoard, Code, Cpu, Beaker, Droplets, ShoppingCart } from "lucide-react";
+import { Menu, X, CircuitBoard, Code, Cpu, Beaker, Droplets, ShoppingCart, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useCartContext } from "@/lib/CartContext";
@@ -99,6 +99,19 @@ const Header = () => {
                 </div>
               </div>
             ))}
+
+            <Link 
+              href="/products" 
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors flex items-center gap-2 ${
+                location.startsWith('/products') 
+                  ? 'text-primary bg-primary/10' 
+                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+              }`}
+              data-testid="link-products"
+            >
+              <Package className="w-4 h-4" />
+              <span>Products</span>
+            </Link>
 
             <Link 
               href="/about" 
@@ -224,6 +237,19 @@ const Header = () => {
                     ))}
 
                     <div className="pt-4 border-t border-border/50 space-y-2">
+                      <Link 
+                        href="/products" 
+                        className={`block p-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${
+                          location.startsWith('/products') 
+                            ? 'text-primary bg-primary/10' 
+                            : 'text-foreground hover:bg-muted'
+                        }`}
+                        onClick={() => setIsOpen(false)} 
+                        data-testid="mobile-link-products"
+                      >
+                        <Package className="w-4 h-4" />
+                        <span>Products</span>
+                      </Link>
                       <Link 
                         href="/about" 
                         className={`block p-3 rounded-lg font-medium transition-colors ${
