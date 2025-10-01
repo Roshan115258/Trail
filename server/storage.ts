@@ -40,26 +40,71 @@ export class MemStorage implements IStorage {
         id: "milk-opindo-combo",
         slug: "opindo-combo-milk-analyser",
         title: "OPINDO COMBO Milk Analyser",
-        shortDesc: "Rapid, comprehensive milk analysis — fat, protein, lactose, SNF, density, added water, freezing point, salts.",
-        longDesc: "OPINDO COMBO is a fast, accurate milk analyser for dairy farms, milk collection centers and labs. Rapid analysis (~30s) and USB/RS232 data output make it ideal for field and lab use. Built-in ultrasonic stirrer and easy-to-read display simplify operation.",
+        shortDesc: "Fast, accurate & reliable milk analysis in just 30 seconds with comprehensive measurements.",
+        longDesc: "OPINDO COMBO Milk Analyser revolutionizes dairy quality control with cutting-edge technology for rapid, comprehensive milk analysis. Designed for dairy farms, milk collection centers, and laboratories, it delivers precise measurements of fat, protein, lactose, SNF, density, added water, freezing point, and salts in just 30 seconds.",
         specs: {
-          measurementTime: "≈ 30 seconds per sample",
-          sampleVolume: "15–20 ml",
-          powerSupply: "12.8 V 6.8Ah (with 15V 1A charger)",
-          dimensions: "190 x 170 x 140 mm",
-          weight: "≈ 4–5 kg",
-          measuredParameters: {
-            fat: "0.01% - 15% (±0.1%)",
-            protein: "2% - 7% (±0.10%)",
-            lactose: "0.01% - 6% (±0.10%)",
-            SNF: "3% - 12% (±0.15%)",
-            density: "1015 - 1040 kg/m³ (±0.3 kg/m³)",
-            addedWater: "0% - 70% (±3%)",
-            freezingPoint: "-0.4 to -0.7°C (±0.01°C)",
-            salts: "0.4% - 1.5% (±0.05%)"
+          "General Specifications": {
+            "Measurement Time": "~30 seconds per sample",
+            "Sample Volume": "15-20 ml",
+            "Power Supply": "12.8 V 6.8Ah (with 15V 1A charger)",
+            "Dimensions": "190 x 170 x 140 mm",
+            "Weight": "~ 4-5 kg"
           },
-          connectivity: ["USB", "RS232"],
-          features: ["Ultrasonic stirrer", "LCD display", "Field-ready"]
+          "Measured Parameters": {
+            "Fat": "0.01% - 15% (±0.1% accuracy)",
+            "Protein": "2% - 7% (±0.10% accuracy)",
+            "Lactose": "0.01% - 6% (±0.10% accuracy)",
+            "SNF": "3% - 12% (±0.15% accuracy)",
+            "Density": "1015 - 1040 kg/m³ (±0.3 kg/m³ accuracy)",
+            "Added Water": "0% - 70% (±3% accuracy)",
+            "Freezing Point": "-0.4 to -0.7°C (±0.01°C accuracy)",
+            "Salts": "0.4% - 1.5% (±0.05% accuracy)"
+          },
+          "Connectivity": {
+            "Data Transfer": "USB and RS232",
+            "Built-in Features": "Ultrasonic stirrer, LCD screen"
+          },
+          "keyFeatures": [
+            {
+              "title": "Rapid Analysis",
+              "description": "Get results in just 30 seconds per sample"
+            },
+            {
+              "title": "Comprehensive Measurements",
+              "description": "Analyze fat, protein, lactose, SNF, density, added water, salts, and freezing point"
+            },
+            {
+              "title": "High Accuracy",
+              "description": "Reliable and precise measurements for all parameters"
+            },
+            {
+              "title": "User-Friendly Interface",
+              "description": "Easy-to-read LCD screen with intuitive controls"
+            },
+            {
+              "title": "Built-In Ultrasonic Stirrer",
+              "description": "Ensures thorough sample mixing for accurate results"
+            },
+            {
+              "title": "Data Management",
+              "description": "USB and RS232 connectivity for seamless data transfer"
+            }
+          ],
+          "benefits": [
+            "Efficiency: Save time with quick and accurate measurements",
+            "Reliability: Trusted by dairy professionals across PAN India",
+            "Support: Comprehensive customer support and service"
+          ],
+          "applications": [
+            "Dairy Farms: Ensure the quality and composition of milk directly on-site",
+            "Milk Collection Centers: Rapid analysis for large volumes of milk",
+            "Laboratories: Detailed analysis for research and quality control"
+          ],
+          "whyChoose": [
+            "Innovative Technology: Cutting-edge solutions for milk quality control",
+            "User-Centric Design: Easy to use with minimal training required",
+            "Cost-Effective: High-quality analysis at a competitive price"
+          ]
         },
         datasheetUrl: null,
         images: [
