@@ -1,0 +1,8 @@
+# Netlify SPA Redirect Rules
+
+# API proxy - redirect API calls to your backend (UPDATE THE URL!)
+# Uncomment and set your backend URL when ready:
+# /api/*  https://your-backend-api.onrender.com/api/:splat  200
+
+# SPA fallback - serve index.html for all routes (MUST BE LAST!)
+/*    /index.html   200
