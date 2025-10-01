@@ -13,16 +13,38 @@ Several Sustain (Several Sustain Pvt. Ltd.) is a professional engineering compan
 
 ## Recent Changes
 
+### Product Catalog & E-Commerce Implementation (October 2, 2025)
+- **E-Commerce Features**: Complete product catalog with 7 dairy equipment products
+  - Client-side shopping cart with localStorage persistence
+  - Cart badge, quantity management, mobile-responsive cart layout
+  - Sticky Add to Cart button on product detail pages with backdrop blur
+  - Formspree checkout integration (no payment processing)
+  - All pricing in INR (₹) with Indian localization
+- **Product Pages**: Enhanced product detail pages with tabbed interface (Features, Specifications, Benefits, Applications)
+  - Colorful gradients and enhanced padding
+  - Trust badges (Quality Assured, Free Shipping, Expert Support)
+  - Enhanced CTA section with "Limited Time Offer" badge
+- **Checkout Localization**: Indian-specific form placeholders (Patna, Bihar, India, +91 phone format, PIN code)
+- **Currency Formatting**: Standardized ₹ symbol with .toLocaleString('en-IN') across Products, Cart, Checkout pages
+- **Products**: OPINDO COMBO (₹42,000), OPINDO (₹28,500), EXPERT PRO PLUS (₹32,000), OPTEK DPU (₹15,000), Maxtron Scale (₹7,500), Ultrasonic Stirrer (₹3,000), Remote Display (₹10,000)
+
+### Sitemap Update (October 2, 2025)
+- **XML Sitemap**: Updated sitemap.xml with 21 total pages (previously 12)
+  - Added /products catalog page
+  - Added 7 individual product detail pages with proper slugs
+  - Added /cart page
+  - Updated lastmod dates to 2025-10-02 for new pages
+  - Proper priority and changefreq settings maintained
+  - Verified all links match active routes (no broken links)
+- **Accessibility**: sitemap.xml and robots.txt accessible via HTTP
+
 ### Sitemap & SEO Optimization (October 1, 2025)
-- **XML Sitemap**: Created comprehensive sitemap.xml with all 12 public pages
+- **XML Sitemap**: Created comprehensive sitemap.xml with all service and solution pages
   - Updated domain to severalsustain.in
-  - Removed deprecated case studies page
   - Added new hierarchical service routes (design/pcb-design, design/web-design, development/firmware, development/hardware, development/app-development)
   - Included solution pages (milk-analyzer, dpu-amcu-systems)
-  - Updated lastmod dates to 2025-10-01
   - Proper priority and changefreq settings for each page type
 - **robots.txt**: Updated to reference correct sitemap URL (https://severalsustain.in/sitemap.xml)
-- **Accessibility**: Both files accessible via HTTP at /sitemap.xml and /robots.txt
 
 ### Company Information Update & Logo Refresh (October 1, 2025)
 - **Logo Refresh**: Updated to new Several Sustain logo (circular design with water droplet and green/blue sustainability theme)
