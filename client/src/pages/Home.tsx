@@ -6,6 +6,7 @@ import { GlassCard } from "@/components/ui/glass-card";
 import ContactForm from "@/components/forms/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [counts, setCounts] = useState({ years: 0, projects: 0, clients: 0, accuracy: 0 });
@@ -37,6 +38,49 @@ const Home = () => {
   
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Several Sustain | Premier Electronics Development & PCB Design Services</title>
+        <meta name="description" content="Expert PCB design, hardware development, firmware programming, and specialized dairy technology solutions. Transform your electronic concepts into market-ready products with 14+ years of engineering expertise." />
+        <link rel="canonical" href="https://severalsustain.com/" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Several Sustain | Premier Electronics Development & PCB Design Services" />
+        <meta property="og:description" content="Expert PCB design, hardware development, firmware programming, and specialized dairy technology solutions. Transform your electronic concepts into market-ready products." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://severalsustain.com/" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Several Sustain | Premier Electronics Development & PCB Design Services" />
+        <meta name="twitter:description" content="Expert PCB design, hardware development, firmware programming, and specialized dairy technology solutions." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" />
+        
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Several Sustain",
+            "url": "https://severalsustain.com",
+            "logo": "https://severalsustain.com/logo.png",
+            "description": "Premier electronics development company specializing in PCB design, hardware development, firmware programming, and dairy technology solutions.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Sales",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://linkedin.com/company/severalsustain",
+              "https://twitter.com/severalsustain"
+            ]
+          })}
+        </script>
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
