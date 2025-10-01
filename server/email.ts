@@ -17,6 +17,11 @@ class EmailService {
   private transporter: nodemailer.Transporter | null = null;
 
   constructor() {
+    console.log('Email service initialization:');
+    console.log('EMAIL_USER:', process.env.EMAIL_USER ? 'configured' : 'not set');
+    console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'configured' : 'not set');
+    console.log('EMAIL_SERVICE:', process.env.EMAIL_SERVICE || 'zoho (default)');
+
     // Only initialize transporter if email credentials are configured
     if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
       // Configure based on EMAIL_SERVICE environment variable or default to zoho
@@ -33,6 +38,7 @@ class EmailService {
             pass: process.env.EMAIL_PASS, // your Zoho password or app password
           },
         });
+        console.log('Zoho SMTP transporter configured');
       } else if (emailService === 'custom') {
         // For custom SMTP servers
         this.transporter = nodemailer.createTransport({
@@ -44,6 +50,7 @@ class EmailService {
             pass: process.env.EMAIL_PASS,
           },
         });
+        console.log('Custom SMTP transporter configured');
       } else {
         // For predefined services (gmail, hotmail, yahoo, etc.)
         this.transporter = nodemailer.createTransport({
@@ -53,9 +60,14 @@ class EmailService {
             pass: process.env.EMAIL_PASS,
           },
         });
+        console.log(`${emailService} transporter configured`);
       }
     } else {
       console.log('Email service not configured - EMAIL_USER and EMAIL_PASS not set');
+      console.log('To enable emails, set these environment variables:');
+      console.log('- EMAIL_USER: your email address');
+      console.log('- EMAIL_PASS: your email password or app password');
+      console.log('- EMAIL_SERVICE: gmail, zoho, custom, etc. (optional, defaults to zoho)');
     }
   }
 
