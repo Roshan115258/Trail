@@ -31,6 +31,23 @@
   --glass-border: hsla(0 0% 100% / 0.2);
   --glass-card-bg: hsla(0 0% 100% / 0.05);
   --glass-card-border: hsla(0 0% 100% / 0.1);
+  
+  /* Extended color palette for modern UI */
+  --blue-accent: hsl(217 91% 60%);
+  --blue-light: hsl(217 91% 95%);
+  --purple-accent: hsl(262 83% 58%);
+  --purple-light: hsl(262 83% 95%);
+  --orange-accent: hsl(27 96% 61%);
+  --orange-light: hsl(27 96% 95%);
+  --teal-accent: hsl(174 72% 56%);
+  --teal-light: hsl(174 72% 95%);
+  
+  /* Gradient variables */
+  --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(157 65% 45%) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(37 91% 55%) 0%, hsl(27 96% 61%) 100%);
+  --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(235 83% 65%) 100%);
+  --gradient-purple: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 80% 65%) 100%);
+  --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(174 72% 56%) 100%);
 }
 
 .dark {
@@ -87,6 +104,14 @@
   .animate-slide-up {
     animation: slideUp 0.8s ease-out;
   }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 
   @keyframes fadeIn {
     from { opacity: 0; }
@@ -102,6 +127,79 @@
       opacity: 1; 
       transform: translateY(0); 
     }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Modern gradient backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-blue {
+    background: var(--gradient-blue);
+  }
+  
+  .gradient-purple {
+    background: var(--gradient-purple);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+  
+  /* Image overlay effects */
+  .image-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-overlay:hover::after {
+    opacity: 0.5;
   }
 }
 

@@ -116,26 +116,26 @@ const Home = () => {
 
             {/* Hero CTA Cards */}
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12 animate-slide-up">
-              <GlassCard className="p-6 group">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-primary/20 transition-colors">
-                  <Zap className="w-6 h-6 text-primary" />
+              <GlassCard className="p-6 group hover-lift border-l-4 border-primary">
+                <div className="w-14 h-14 gradient-primary rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Zap className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">Quick Quote</h3>
                 <p className="text-muted-foreground text-sm mb-4">Get a detailed quote for your project in 24 hours</p>
                 <Link href="/contact">
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-start-project">
+                  <Button className="w-full gradient-primary text-white hover:opacity-90 transition-opacity" data-testid="button-start-project">
                     Start Project
                   </Button>
                 </Link>
               </GlassCard>
-              <GlassCard className="p-6 group">
-                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-secondary/20 transition-colors">
-                  <Calendar className="w-6 h-6 text-secondary" />
+              <GlassCard className="p-6 group hover-lift border-l-4 border-secondary">
+                <div className="w-14 h-14 gradient-secondary rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <Calendar className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">Free Consultation</h3>
                 <p className="text-muted-foreground text-sm mb-4">Discuss your requirements with our experts</p>
                 <Link href="/contact">
-                  <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90" data-testid="button-book-call">
+                  <Button className="w-full gradient-secondary text-white hover:opacity-90 transition-opacity" data-testid="button-book-call">
                     Book Call
                   </Button>
                 </Link>
@@ -178,46 +178,46 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <GlassCard className="p-6 group">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <CircuitBoard className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 group hover-lift border-t-4 border-primary">
+              <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CircuitBoard className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">PCB Design</h3>
               <p className="text-muted-foreground mb-6">Expert circuit board layout with HDI, RF, and high-speed design capabilities for complex applications.</p>
-              <Link href="/services/design/pcb-design" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-pcb-design">
+              <Link href="/services/design/pcb-design" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all group-hover:text-primary/80" data-testid="link-pcb-design">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
 
-            <GlassCard className="p-6 group">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <Cpu className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 group hover-lift border-t-4 border-[hsl(217,91%,60%)]">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Hardware Development</h3>
               <p className="text-muted-foreground mb-6">Complete embedded systems design including microcontroller programming and FPGA development.</p>
-              <Link href="/services/development/hardware" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-hardware-development">
+              <Link href="/services/development/hardware" className="inline-flex items-center gap-2 font-medium hover:gap-3 transition-all" style={{color: 'hsl(217, 91%, 60%)'}} data-testid="link-hardware-development">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
 
-            <GlassCard className="p-6 group">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <Code className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 group hover-lift border-t-4 border-[hsl(262,83%,58%)]">
+              <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Code className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Firmware Programming</h3>
               <p className="text-muted-foreground mb-6">Low-level firmware development for optimal performance and reliability in embedded systems.</p>
-              <Link href="/services/development/firmware" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-firmware-programming">
+              <Link href="/services/development/firmware" className="inline-flex items-center gap-2 font-medium hover:gap-3 transition-all" style={{color: 'hsl(262, 83%, 58%)'}} data-testid="link-firmware-programming">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
 
-            <GlassCard className="p-6 group">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <Smartphone className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 group hover-lift border-t-4 border-secondary">
+              <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Smartphone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">App Development</h3>
               <p className="text-muted-foreground mb-6">Mobile and web applications for IoT device control and data visualization platforms.</p>
-              <Link href="/services/development/app-development" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all" data-testid="link-app-development">
+              <Link href="/services/development/app-development" className="inline-flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all group-hover:text-secondary/80" data-testid="link-app-development">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </GlassCard>
@@ -238,44 +238,44 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <TrendingUp className="w-8 h-8 text-primary" />
+            <GlassCard className="p-8 text-center group hover-lift border-l-4 border-primary">
+              <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-years">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-[hsl(174,72%,56%)] bg-clip-text text-transparent mb-2" data-testid="stat-years">
                 {counts.years}+
               </div>
-              <div className="text-muted-foreground">Years of Excellence</div>
+              <div className="text-muted-foreground font-medium">Years of Excellence</div>
             </GlassCard>
             
-            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <Rocket className="w-8 h-8 text-primary" />
+            <GlassCard className="p-8 text-center group hover-lift border-l-4 border-[hsl(217,91%,60%)]">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <Rocket className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-projects">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[hsl(217,91%,60%)] to-[hsl(235,83%,65%)] bg-clip-text text-transparent mb-2" data-testid="stat-projects">
                 {counts.projects}+
               </div>
-              <div className="text-muted-foreground">Projects Delivered</div>
+              <div className="text-muted-foreground font-medium">Projects Delivered</div>
             </GlassCard>
             
-            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <Users className="w-8 h-8 text-primary" />
+            <GlassCard className="p-8 text-center group hover-lift border-l-4 border-[hsl(262,83%,58%)]">
+              <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-clients">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[hsl(262,83%,58%)] to-[hsl(280,80%,65%)] bg-clip-text text-transparent mb-2" data-testid="stat-clients">
                 {counts.clients}+
               </div>
-              <div className="text-muted-foreground">Happy Clients</div>
+              <div className="text-muted-foreground font-medium">Happy Clients</div>
             </GlassCard>
             
-            <GlassCard className="p-8 text-center group hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <Target className="w-8 h-8 text-primary" />
+            <GlassCard className="p-8 text-center group hover-lift border-l-4 border-secondary">
+              <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform">
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl lg:text-5xl font-bold text-foreground mb-2" data-testid="stat-accuracy">
+              <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-secondary to-[hsl(27,96%,61%)] bg-clip-text text-transparent mb-2" data-testid="stat-accuracy">
                 {counts.accuracy}%
               </div>
-              <div className="text-muted-foreground">Success Rate</div>
+              <div className="text-muted-foreground font-medium">Success Rate</div>
             </GlassCard>
           </div>
         </div>
@@ -528,9 +528,13 @@ const Home = () => {
       </section>
 
       {/* Mid-page CTA */}
-      <section className="py-20 bg-primary/10">
-        <div className="container mx-auto px-4 lg:px-8">
-          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 gradient-hero opacity-10"></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto border-2 border-primary/30 hover-lift">
+            <div className="w-20 h-20 gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-6 animate-float">
+              <Rocket className="w-10 h-10 text-white" />
+            </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Ready to Transform Your Ideas into Reality?
             </h2>
@@ -539,12 +543,12 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-cta-get-quote">
+                <Button size="lg" className="gradient-primary text-white hover:opacity-90 transition-opacity px-8" data-testid="button-cta-get-quote">
                   Get Free Quote
                 </Button>
               </Link>
               <Link href="/services/design/pcb-design">
-                <Button size="lg" variant="outline" data-testid="button-cta-explore">
+                <Button size="lg" variant="outline" className="border-2 border-primary hover:bg-primary/10 transition-colors px-8" data-testid="button-cta-explore">
                   Explore Services
                 </Button>
               </Link>
@@ -587,7 +591,7 @@ const Home = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Phone</h4>
                       <p className="text-muted-foreground">+91 6202428157</p>
-                      <p className="text-muted-foreground">Mon-Fri 9AM-6PM EST</p>
+                      <p className="text-muted-foreground">Mon-Fri 9AM-6PM IST</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -621,19 +625,24 @@ const Home = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Several Sustain",
-            "url": "https://severalsustain.com",
-            "logo": "https://severalsustain.com/logo.png",
-            "description": "Expert PCB design, hardware development, firmware programming, and specialized dairy technology solutions.",
+            "name": "Several Sustain Pvt. Ltd.",
+            "alternateName": "Several Sustain",
+            "url": "https://severalsustain.in",
+            "logo": "https://severalsustain.in/logo.png",
+            "description": "Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions. Engineering, Embedded Systems, IoT Product Design, Web & App Development, and Analytical Instruments.",
             "address": {
               "@type": "PostalAddress",
-              "addressCountry": "US"
+              "streetAddress": "Village Walidad, Post Balidad, P.S. Balidad Panchayat",
+              "addressLocality": "Mahendia",
+              "addressRegion": "Bihar",
+              "postalCode": "804402",
+              "addressCountry": "IN"
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+1-555-SUSTAIN",
+              "telephone": "06202428157",
               "contactType": "customer service",
-              "email": "contact@severalsustain.com"
+              "email": "info@severalsustain.in"
             },
             "sameAs": [
               "https://linkedin.com/company/severalsustain",
