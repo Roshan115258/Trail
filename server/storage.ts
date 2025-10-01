@@ -120,26 +120,71 @@ export class MemStorage implements IStorage {
         id: "milk-opindo-standard",
         slug: "opindo-milk-analyser",
         title: "OPINDO Milk Analyser",
-        shortDesc: "Fast milk analysis with user-friendly interface and ultrasonic stirrer — for farms, collection centers and labs.",
-        longDesc: "OPINDO Milk Analyser provides rapid measurements with a compact form factor and optional battery power. Accurate readings and data management via USB/RS232.",
+        shortDesc: "Fast, accurate & reliable milk analysis with user-friendly interface and ultrasonic stirrer.",
+        longDesc: "OPINDO Milk Analyser provides innovative technology for milk quality control with rapid measurements in just 30 seconds. Designed with a compact form factor and optional battery power, it delivers accurate readings and seamless data management via USB/RS232 for farms, collection centers, and laboratories.",
         specs: {
-          measurementTime: "≈ 30 seconds per sample",
-          sampleVolume: "15–20 ml",
-          powerSupply: "12V DC 5A adaptor (battery available)",
-          dimensions: "190 x 170 x 140 mm",
-          weight: "≈ 2–3 kg",
-          measuredParameters: {
-            fat: "0.01% - 15% (±0.1%)",
-            protein: "2% - 7% (±0.10%)",
-            lactose: "0.01% - 6% (±0.10%)",
-            SNF: "3% - 12% (±0.15%)",
-            density: "1015 - 1040 kg/m³ (±0.3 kg/m³)",
-            addedWater: "0% - 70% (±3%)",
-            freezingPoint: "-0.4 to -0.7°C (±0.01°C)",
-            salts: "0.4% - 1.5% (±0.05%)"
+          "General Specifications": {
+            "Measurement Time": "~30 seconds per sample",
+            "Sample Volume": "15-20 ml",
+            "Power Supply": "12V DC 5A adaptor (battery available)",
+            "Dimensions": "190 x 170 x 140 mm",
+            "Weight": "~ 2-3 kg"
           },
-          connectivity: ["USB", "RS232"],
-          features: ["Ultrasonic stirrer", "LCD display", "Battery option"]
+          "Measured Parameters": {
+            "Fat": "0.01% - 15% (±0.1% accuracy)",
+            "Protein": "2% - 7% (±0.10% accuracy)",
+            "Lactose": "0.01% - 6% (±0.10% accuracy)",
+            "SNF": "3% - 12% (±0.15% accuracy)",
+            "Density": "1015 - 1040 kg/m³ (±0.3 kg/m³ accuracy)",
+            "Added Water": "0% - 70% (±3% accuracy)",
+            "Freezing Point": "-0.4 to -0.7°C (±0.01°C accuracy)",
+            "Salts": "0.4% - 1.5% (±0.05% accuracy)"
+          },
+          "Connectivity": {
+            "Data Transfer": "USB and RS232",
+            "Built-in Features": "Ultrasonic stirrer, LCD screen, Battery option"
+          },
+          "keyFeatures": [
+            {
+              "title": "Rapid Analysis",
+              "description": "Get results in just 30 seconds per sample"
+            },
+            {
+              "title": "Comprehensive Measurements",
+              "description": "Analyze fat, protein, lactose, SNF, density, added water, salts, and freezing point"
+            },
+            {
+              "title": "High Accuracy",
+              "description": "Reliable and precise measurements for all parameters"
+            },
+            {
+              "title": "User-Friendly Interface",
+              "description": "Easy-to-read LCD screen with intuitive controls"
+            },
+            {
+              "title": "Built-In Ultrasonic Stirrer",
+              "description": "Ensures thorough sample mixing for accurate results"
+            },
+            {
+              "title": "Battery Option",
+              "description": "Portable operation with optional battery power for field use"
+            }
+          ],
+          "benefits": [
+            "Efficiency: Save time with quick and accurate measurements",
+            "Reliability: Trusted by dairy professionals across PAN India",
+            "Support: Comprehensive customer support and service"
+          ],
+          "applications": [
+            "Dairy Farms: Ensure the quality and composition of milk directly on-site",
+            "Milk Collection Centers: Rapid analysis for large volumes of milk",
+            "Laboratories: Detailed analysis for research and quality control"
+          ],
+          "whyChoose": [
+            "Innovative Technology: Cutting-edge solutions for milk quality control",
+            "User-Centric Design: Easy to use with minimal training required",
+            "Cost-Effective: High-quality analysis at a competitive price"
+          ]
         },
         datasheetUrl: null,
         images: [
@@ -155,26 +200,71 @@ export class MemStorage implements IStorage {
         id: "milk-expert-pro-plus",
         slug: "expert-pro-plus-milk-analyser",
         title: "EXPERT PRO PLUS Milk Analyser",
-        shortDesc: "High-speed milk analyzer with ~17 seconds measurement time and comprehensive parameters.",
-        longDesc: "EXPERT PRO PLUS offers ultra-fast measurements (~17s per sample) with the same broad parameter coverage as other analyzers — designed for high throughput environments.",
+        shortDesc: "Ultra-fast milk analyzer with industry-leading 17 seconds measurement time for high-throughput environments.",
+        longDesc: "EXPERT PRO PLUS Milk Analyser delivers cutting-edge technology for milk quality control with the fastest measurement time in the industry - just 17 seconds per sample. Designed for high-throughput environments, it provides comprehensive parameter analysis with the same accuracy and reliability as our other analyzers, making it perfect for busy collection centers and laboratories.",
         specs: {
-          measurementTime: "≈ 17 seconds per sample",
-          sampleVolume: "15–20 ml",
-          powerSupply: "12V DC 5A adaptor (battery available)",
-          dimensions: "190 x 110 x 140 mm",
-          weight: "≈ 2–3 kg",
-          measuredParameters: {
-            fat: "0.01% - 15% (±0.1%)",
-            protein: "2% - 7% (±0.10%)",
-            lactose: "0.01% - 6% (±0.10%)",
-            SNF: "3% - 12% (±0.15%)",
-            density: "1015 - 1040 kg/m³ (±0.3 kg/m³)",
-            addedWater: "0% - 70% (±3%)",
-            freezingPoint: "-0.4 to -0.7°C (±0.01°C)",
-            salts: "0.4% - 1.5% (±0.05%)"
+          "General Specifications": {
+            "Measurement Time": "~17 seconds per sample",
+            "Sample Volume": "15-20 ml",
+            "Power Supply": "12V DC 5A adaptor (battery available)",
+            "Dimensions": "190 x 110 x 140 mm",
+            "Weight": "~ 2-3 kg"
           },
-          connectivity: ["USB", "RS232"],
-          features: ["Ultrasonic stirrer", "LCD display", "High throughput"]
+          "Measured Parameters": {
+            "Fat": "0.01% - 15% (±0.1% accuracy)",
+            "Protein": "2% - 7% (±0.10% accuracy)",
+            "Lactose": "0.01% - 6% (±0.10% accuracy)",
+            "SNF": "3% - 12% (±0.15% accuracy)",
+            "Density": "1015 - 1040 kg/m³ (±0.3 kg/m³ accuracy)",
+            "Added Water": "0% - 70% (±3% accuracy)",
+            "Freezing Point": "-0.4 to -0.7°C (±0.01°C accuracy)",
+            "Salts": "0.4% - 1.5% (±0.05% accuracy)"
+          },
+          "Connectivity": {
+            "Data Transfer": "USB and RS232",
+            "Built-in Features": "Ultrasonic stirrer, LCD screen"
+          },
+          "keyFeatures": [
+            {
+              "title": "Ultra-Fast Analysis",
+              "description": "Industry-leading measurement time of just 17 seconds per sample"
+            },
+            {
+              "title": "Comprehensive Measurements",
+              "description": "Analyze fat, protein, lactose, SNF, density, added water, salts, and freezing point"
+            },
+            {
+              "title": "High Throughput",
+              "description": "Designed for busy collection centers with high sample volumes"
+            },
+            {
+              "title": "High Accuracy",
+              "description": "Maintains precise measurements despite faster analysis time"
+            },
+            {
+              "title": "User-Friendly Interface",
+              "description": "Easy-to-read LCD screen with intuitive controls"
+            },
+            {
+              "title": "Built-In Ultrasonic Stirrer",
+              "description": "Ensures thorough sample mixing for accurate results"
+            }
+          ],
+          "benefits": [
+            "Efficiency: Maximum productivity with the fastest analysis time in the industry",
+            "Reliability: Trusted by high-volume dairy professionals across PAN India",
+            "Support: Comprehensive customer support and service"
+          ],
+          "applications": [
+            "High-Volume Collection Centers: Process large numbers of samples quickly",
+            "Laboratories: Accelerate research and quality control workflows",
+            "Dairy Cooperatives: Handle peak collection times efficiently"
+          ],
+          "whyChoose": [
+            "Innovative Technology: Fastest milk quality control solution available",
+            "User-Centric Design: Easy to use with minimal training required",
+            "Cost-Effective: Increase throughput without compromising quality"
+          ]
         },
         datasheetUrl: null,
         images: [
@@ -190,17 +280,82 @@ export class MemStorage implements IStorage {
         id: "optek-dpu-printer",
         slug: "optek-dpu-dot-matrix-printer",
         title: "OPTEK DPU (Dot Matrix Printer Unit)",
-        shortDesc: "Robust dot-matrix printer unit for industrial/commercial environments — multiple connectivity options and durable build.",
-        longDesc: "OPTEK Dot Matrix Printer Unit is built for high-reliability printing in industrial settings. Supports multiple interfaces, wide paper handling, and long-life components for reduced downtime.",
+        shortDesc: "Reliable printing solutions for industrial and commercial applications with high-speed output.",
+        longDesc: "OPTEK Dot Matrix Printer Unit is designed to meet the rigorous demands of industrial and commercial environments. With robust construction and advanced features, it ensures reliable and efficient printing for dairy collection centers, laboratories, and industrial applications.",
         specs: {
-          printingMethod: "Dot Matrix Impact",
-          printSpeed: "Up to 4 lines per second",
-          printWidth: "42–48 columns (model dependent)",
-          dotDensity: "80 dots per line",
-          paperSupport: "58 mm or 76 mm roll paper",
-          interfaces: ["Serial RS-232C", "Parallel (Centronics)", "USB", "optional Ethernet"],
-          powerSupply: "100–240 V AC",
-          physical: "≈160 x 248 x 143 mm; weight 1.5–2.5 kg"
+          "Printing Specifications": {
+            "Printing Method": "Dot Matrix Impact",
+            "Print Speed": "Up to 4 lines per second",
+            "Character Set": "Alphanumeric, symbols, special characters",
+            "Print Width": "42-48 columns (depends on model)",
+            "Dot Density": "80 dots per line"
+          },
+          "Paper Handling": {
+            "Paper Type": "Roll paper (thermal or plain)",
+            "Paper Width": "58 mm or 76 mm",
+            "Paper Thickness": "0.06 - 0.085 mm",
+            "Roll Diameter": "Up to 83 mm"
+          },
+          "Interfaces and Connectivity": {
+            "Interfaces": "Serial RS-232C, USB",
+            "Baud Rate": "Selectable (9600, 1200, 4800)",
+            "Buffer Memory": "2 KB or more"
+          },
+          "Power Supply": {
+            "Input Voltage": "100-240 V AC, 50/60 Hz",
+            "Power Consumption": "Printing: ~2.0 W, Standby: <0.5 W"
+          },
+          "Physical Dimensions": {
+            "Dimensions": "~160 x 248 x 143 mm",
+            "Weight": "~1.5 - 2.5 kg"
+          },
+          "Reliability and Durability": {
+            "MTBF": "~10,000 hours",
+            "MCBF": "~50 million lines",
+            "Print Head Life": "~150 million characters"
+          },
+          "keyFeatures": [
+          {
+            "title": "High-Speed Printing",
+            "description": "Prints up to 4 lines per second for quick output"
+          },
+          {
+            "title": "Versatile Paper Handling",
+            "description": "Supports 58 mm or 76 mm wide roll paper"
+          },
+          {
+            "title": "Durable Design",
+            "description": "Built to withstand harsh environments with high MTBF and MCBF ratings"
+          },
+          {
+            "title": "Multiple Connectivity Options",
+            "description": "Serial RS-232C, Parallel, USB, and optional Ethernet"
+          },
+          {
+            "title": "User-Friendly Interface",
+            "description": "Easy setup and operation with intuitive controls"
+          },
+          {
+            "title": "Low Power Consumption",
+            "description": "Energy-efficient operation with low standby power usage"
+          }
+        ],
+        "benefits": [
+          "Efficiency: Fast and reliable printing for high-demand environments",
+          "Durability: Long-lasting components reduce downtime and maintenance costs",
+          "Flexibility: Multiple connectivity options for seamless integration",
+          "Cost-Effective: Energy-efficient design lowers operational costs"
+        ],
+        "applications": [
+          "Dairy Collection Centers: Print receipts and collection reports",
+          "Laboratories: Document test results and quality control data",
+          "Industrial Applications: Generate production logs and records"
+        ],
+        "whyChoose": [
+          "Robust Construction: Designed for demanding industrial environments",
+          "Proven Reliability: High MTBF ensures continuous operation",
+          "Easy Integration: Compatible with existing dairy management systems"
+        ]
         },
         datasheetUrl: null,
         images: [
