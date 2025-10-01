@@ -19,6 +19,33 @@ const newsletterSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // SMTP test endpoint
+  app.post("/api/test-smtp", async (req, res) => {
+    try {
+      const { email } = req.body;
+      if (!email) {
+        return res.status(400).json({ 
+          success: false, 
+          message: "Email address is required" 
+        });
+      }
+
+      // Test email sending
+      await emailService.sendConfirmationEmail(email, "Test User");
+      
+      res.json({ 
+        success: true, 
+        message: "Test email sent successfully!" 
+      });
+    } catch (error) {
+      console.error("SMTP test failed:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "SMTP test failed: " + (error as Error).message 
+      });
+    }
+  });
+
   // Contact form endpoint
   app.post("/api/contact", async (req, res) => {
     try {
