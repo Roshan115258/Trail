@@ -188,9 +188,9 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
+          "/attached_assets/stock_images/opindo_combo_milk_analyzer.jpg",
           "/attached_assets/stock_images/milk_analyzer_labora_cde72be9.jpg",
-          "/attached_assets/stock_images/milk_analyzer_labora_d5efe602.jpg",
-          "/attached_assets/stock_images/dairy_farm_milk_coll_1204a2c2.jpg"
+          "/attached_assets/stock_images/milk_analyzer_labora_d5efe602.jpg"
         ],
         price: "28500",
         category: "Milk Analyzer",
