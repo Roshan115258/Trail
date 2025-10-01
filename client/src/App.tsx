@@ -15,6 +15,7 @@ import Contact from "@/pages/Contact";
 import Products from "@/pages/Products";
 import ProductDetail from "@/pages/ProductDetail";
 import Cart from "@/pages/Cart";
+import Checkout from "@/pages/Checkout";
 import PCBDesign from "@/pages/services/PCBDesign";
 import WebDesign from "@/pages/services/WebDesign";
 import HardwareDevelopment from "@/pages/services/HardwareDevelopment";
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/products" component={Products} />
       <Route path="/products/:slug" component={ProductDetail} />
       <Route path="/cart" component={Cart} />
+      <Route path="/checkout" component={Checkout} />
       
       {/* Design Services */}
       <Route path="/services/design/pcb-design" component={PCBDesign} />
