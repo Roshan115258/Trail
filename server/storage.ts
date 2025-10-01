@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type Contact, type InsertContact, type NewsletterSubscription, type InsertNewsletterSubscription } from "@shared/schema";
+import { type User, type InsertUser, type Contact, type InsertContact, type NewsletterSubscription, type InsertNewsletterSubscription, type Product, type InsertProduct } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 // modify the interface with any CRUD methods
@@ -12,17 +12,25 @@ export interface IStorage {
   createNewsletterSubscription(subscription: InsertNewsletterSubscription): Promise<NewsletterSubscription>;
   getContacts(): Promise<Contact[]>;
   getNewsletterSubscriptions(): Promise<NewsletterSubscription[]>;
+  
+  // Product methods
+  getProducts(): Promise<Product[]>;
+  getProductById(id: string): Promise<Product | undefined>;
+  getProductBySlug(slug: string): Promise<Product | undefined>;
+  createProduct(product: InsertProduct): Promise<Product>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
   private contacts: Map<string, Contact>;
   private newsletterSubscriptions: Map<string, NewsletterSubscription>;
+  private products: Map<string, Product>;
 
   constructor() {
     this.users = new Map();
     this.contacts = new Map();
     this.newsletterSubscriptions = new Map();
+    this.products = new Map();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -45,7 +53,8 @@ export class MemStorage implements IStorage {
   async createContact(insertContact: InsertContact): Promise<Contact> {
     const id = randomUUID();
     const contact: Contact = { 
-      ...insertContact, 
+      ...insertContact,
+      company: insertContact.company ?? null,
       id,
       createdAt: new Date()
     };
@@ -83,6 +92,31 @@ export class MemStorage implements IStorage {
     return Array.from(this.newsletterSubscriptions.values()).sort(
       (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
     );
+  }
+
+  async getProducts(): Promise<Product[]> {
+    return Array.from(this.products.values());
+  }
+
+  async getProductById(id: string): Promise<Product | undefined> {
+    return this.products.get(id);
+  }
+
+  async getProductBySlug(slug: string): Promise<Product | undefined> {
+    return Array.from(this.products.values()).find(
+      (product) => product.slug === slug
+    );
+  }
+
+  async createProduct(insertProduct: InsertProduct): Promise<Product> {
+    const product: Product = {
+      ...insertProduct,
+      datasheetUrl: insertProduct.datasheetUrl ?? null,
+      price: insertProduct.price ?? null,
+      images: insertProduct.images ?? [],
+    };
+    this.products.set(product.id, product);
+    return product;
   }
 }
 
