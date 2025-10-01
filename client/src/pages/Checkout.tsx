@@ -145,14 +145,14 @@ ORDER ITEMS
 ${orderItems.map((item, idx) => `
 ${idx + 1}. ${item.productTitle}
    Quantity: ${item.quantity}
-   Unit Price: $${item.unitPrice.toFixed(2)}
-   Total: $${item.total.toFixed(2)}
+   Unit Price: ₹${item.unitPrice.toLocaleString('en-IN')}
+   Total: ₹${item.total.toLocaleString('en-IN')}
 `).join("")}
 
 ORDER SUMMARY
 =============
 Total Items: ${totalItems}
-Total Amount: $${totalPrice.toFixed(2)}
+Total Amount: ₹${totalPrice.toLocaleString('en-IN')}
 
 ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
       `.trim(),
@@ -256,7 +256,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                           <FormItem>
                             <FormLabel>Full Name *</FormLabel>
                             <FormControl>
-                              <Input placeholder="John Doe" {...field} data-testid="input-name" />
+                              <Input placeholder="Rajesh Kumar" {...field} data-testid="input-name" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -286,7 +286,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                           <FormItem>
                             <FormLabel>Phone Number *</FormLabel>
                             <FormControl>
-                              <Input placeholder="+1 234 567 8900" {...field} data-testid="input-phone" />
+                              <Input placeholder="+91 98765 43210" {...field} data-testid="input-phone" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -315,7 +315,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                         <FormItem>
                           <FormLabel>Address *</FormLabel>
                           <FormControl>
-                            <Input placeholder="123 Main Street, Apt 4B" {...field} data-testid="input-address" />
+                            <Input placeholder="123 MG Road, Sector 5" {...field} data-testid="input-address" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -330,7 +330,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                           <FormItem>
                             <FormLabel>City *</FormLabel>
                             <FormControl>
-                              <Input placeholder="New York" {...field} data-testid="input-city" />
+                              <Input placeholder="Patna" {...field} data-testid="input-city" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -344,7 +344,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                           <FormItem>
                             <FormLabel>State/Province *</FormLabel>
                             <FormControl>
-                              <Input placeholder="NY" {...field} data-testid="input-state" />
+                              <Input placeholder="Bihar" {...field} data-testid="input-state" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -358,9 +358,9 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                         name="zip"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>ZIP/Postal Code *</FormLabel>
+                            <FormLabel>PIN Code *</FormLabel>
                             <FormControl>
-                              <Input placeholder="10001" {...field} data-testid="input-zip" />
+                              <Input placeholder="800001" {...field} data-testid="input-zip" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -374,7 +374,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                           <FormItem>
                             <FormLabel>Country *</FormLabel>
                             <FormControl>
-                              <Input placeholder="United States" {...field} data-testid="input-country" />
+                              <Input placeholder="India" {...field} data-testid="input-country" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -456,7 +456,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                           </p>
                         </div>
                         <p className="font-semibold text-foreground" data-testid={`summary-total-${item.product.id}`}>
-                          {price > 0 ? `$${itemTotal.toFixed(2)}` : "Contact"}
+                          {price > 0 ? `₹${itemTotal.toLocaleString('en-IN')}` : "Contact"}
                         </p>
                       </div>
                     );
@@ -466,13 +466,13 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
                   <div className="flex justify-between items-center">
                     <span className="text-muted-foreground" data-testid="summary-items-label">Items ({totalItems})</span>
                     <span className="font-semibold text-foreground" data-testid="summary-items-value">
-                      ${totalPrice.toFixed(2)}
+                      ₹{totalPrice.toLocaleString('en-IN')}
                     </span>
                   </div>
                   <div className="flex justify-between items-center text-xl font-bold">
                     <span className="text-foreground" data-testid="summary-total-label">Total</span>
                     <span className="text-primary" data-testid="summary-total-value">
-                      ${totalPrice.toFixed(2)}
+                      ₹{totalPrice.toLocaleString('en-IN')}
                     </span>
                   </div>
                 </div>
