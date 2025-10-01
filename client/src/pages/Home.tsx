@@ -12,7 +12,7 @@ import hardwareImage from "@assets/stock_images/hardware_development_71859658.jp
 import firmwareImage from "@assets/stock_images/software_engineer_co_e48f8e0b.jpg";
 import appDevImage from "@assets/stock_images/mobile_app_developme_2ad31b4c.jpg";
 import teamImage from "@assets/stock_images/engineering_team_col_a3be8406.jpg";
-import milkAnalyzerImage from "@assets/stock_images/milk_analyzer_labora_81f7f86d.jpg";
+import milkAnalyzerImage from "@assets/stock_images/laboratory_scientist_9bff7a20.jpg";
 import dairySystemImage from "@assets/stock_images/dairy_farm_automated_d54a7149.jpg";
 
 const Home = () => {
