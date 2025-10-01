@@ -1,0 +1,377 @@
+PROMPT — Finish 8 pages → Build, polish & deploy a modern Several Sustain site on Replit
+
+Context / starting point
+
+Owner / brand: Several Sustain (I will attach logo files: SVG + PNG).
+
+Starting files (attached):
+index_complete_responsive.html
+web-design-enhanced-ui.html
+pcb-design-final.html
+firmware-development.html
+hardware-development.html
+app-development-services-best-ui.html
+dpu-amcu-milk-collection-system (1).html
+milk-analyzers.html
+(Developer: use these files as the canonical content source — do not delete; refactor into components/pages.)
+
+
+Primary objective
+
+Convert the 8 static HTML pages into a single componentized, maintainable site and bring them to 100% production quality, then create the additional pages and features listed below. Deliver a modern, premium, accessible, SEO-friendly site fully deployed on Replit with a small CMS for content edits.
+
+
+
+---
+
+Tech stack (recommended — developer may propose alternates with reasons)
+
+Framework: Next.js (React) + TypeScript — for componentization + SEO prerendering. If team prefers lighter, React + Vite + TS is acceptable.
+
+Styling: Tailwind CSS (with design tokens) + one global styles.css for critical overrides. Provide a Tailwind config with color tokens.
+
+Icons: lucide-react or Heroicons (consistent icon set).
+
+Images: Optimize to WebP/AVIF; serve responsive srcset.
+
+CMS: Lightweight headless or Git-based CMS. Prefer Sanity / Netlify CMS / TinaCMS depending on Replit compatibility. If client prefers pure Git edits, enable Markdown-based content editing.
+
+Forms: Serverless form handler (Replit backend), or integrate with Google Sheets via API / sendgrid for email, plus anti-spam (honeypot + optional reCAPTCHA).
+
+Testing / CI: Git-based repo in Replit (or GitHub mirror). Run linting (ESLint + Prettier), TypeScript type checks.
+
+Deployment: Deploy on Replit (provide run command). Provide DNS instructions for severalsustain.in.
+
+
+> NOTE: If the team proposes a different stack (e.g., Eleventy/Static or Next.js + Vercel), include a short justification and an updated handover plan.
+
+
+
+
+---
+
+Overall UX & visual design direction (must be applied site-wide)
+
+Visual feel: polished, modern, trustable — clean grids, generous whitespace, subtle depth (soft shadows), minimal color palette with an accent --primary (use existing green as accent). Use monochrome greys for body copy and a single accent for CTAs.
+
+Typography: Inter for UI with clear scale (H1 48–56px desktop, H2 32–40px, body 16px). Use variable fonts where possible and font-display: swap. Preload key font.
+
+Spacing system: 4/8/16 baseline grid. Implement spacing tokens in Tailwind config.
+
+Microinteractions: subtle hover states, animated CTA underlines, soft entrance transitions for hero & CTA (no flashy animations).
+
+Imagery: professional product photos, contextual shots (device in lab/field), and device UI screenshots. Use consistent color grading and crop style. Provide placeholders if assets missing.
+
+Dark/light variants: ensure components look good in both (optional).
+
+Accessible contrast: all actionable colors must pass WCAG AA.
+
+
+
+---
+
+Component & code requirements
+
+Create a design system folder (/components/ui) with:
+
+Header (shared component)
+
+Footer (shared component)
+
+Button (primary/secondary/ghost)
+
+Card (product/case study)
+
+Form components (Input, Select, Textarea, FileUpload, Checkbox)
+
+Hero block, CTA block, Feature grid, FAQ accordion (accessible), Modal, Toast.
+
+
+Use one header and one footer component across all pages. Header should include desktop nav + mobile drawer with focus trap. Footer includes sitemap, contact, social, legal links, and newsletter signup.
+
+Components must be well-documented (JSDoc or README within /components) and reusable.
+
+Global state minimal — prefer props and local state. For forms, use React Hook Form + Zod for schema validation.
+
+
+
+---
+
+Specific tasks — finish & polish the 8 existing pages
+
+For each of the 8 provided HTML files, do the following as priority work:
+
+1. Refactor: Convert raw HTML into Next.js pages (or equivalent) and replace duplicated header/footer markup by the shared components. Keep original page copy & schema; port into componentized JSX/TSX with semantic HTML.
+
+
+2. Global CSS: Remove per-page :root duplication; consolidate variables into Tailwind theme tokens + :root fallback.
+
+
+3. Responsive fixes: Audit and fix all mobile breakpoints (320, 375, 414, 768, 1024, 1366, 1920). Ensure no overflow.
+
+
+4. Mobile menu: implement accessible mobile menu with keyboard support and aria attributes.
+
+
+5. Footer: unify and include contact, quick links, social icons, newsletter, small site map, and privacy/terms links.
+
+
+6. Forms: Replace any inline contact forms with unified Contact & Quote forms (shared component) with client-side validation & graceful server submission handling (show toast success/failure).
+
+
+7. Images: convert images to responsive srcset, serve WebP if supported, add descriptive alt text, and lazy load non-hero images.
+
+
+8. SEO/OG: Ensure each page has unique title, descriptive meta description, canonical URL, and Open Graph image. Ensure existing JSON-LD markup is valid and not duplicated across pages.
+
+
+9. Schema: Validate Product schema on milk-analyzers and dpu-amcu pages; ensure Organization schema present on all pages.
+
+
+10. Accessibility: run axe or lighthouse accessibility checks and fix high/critical issues (forms labeled, landmarks present, color contrast ok, keyboard focus states visible).
+
+
+11. Performance: remove unused CSS, split JS where needed, optimize images and fonts. Aim for a high Lighthouse score (see acceptance criteria).
+
+
+12. QA: Add unit test or snapshot tests for critical components (Header, Footer, Form). Provide visual diffs or screenshots for key breakpoints.
+
+
+
+
+---
+
+New pages to create (after finishing the 8)
+
+Create the following pages as full, styled pages consistent with existing brand and design system. Include content outlines (populate with placeholder copy where needed).
+
+1. Design Services Overview — landing that links to PCB Design and Web Design.
+
+
+2. Development Services Overview — links to Firmware, Hardware, App.
+
+
+3. Solutions Overview — links to DPU & AMCU and Milk Analyzer.
+
+
+4. About Us — use provided About copy (short + long). Add Team section (3–6 cores), timeline, mission, and CTA.
+
+
+5. Contact Us — map, contact form, address, phone, and FAQs.
+
+
+6. Case Studies / Projects — list of 6 case studies with CTA to read full case study. Each case study as its own page with problem, approach, results, images.
+
+
+7. Downloads / Datasheets — guarded downloads: datasheet PDFs for Milk Analyzer and DPU/AMCU, user manuals, calibration certificates.
+
+
+8. Support / Documentation — simple documentation hub with firmware downloads, release notes, and troubleshooting guides.
+
+
+9. Blog / News — static blog listing and single post template (Markdown-driven).
+
+
+10. Careers / Join Us — open roles + apply form.
+
+
+11. Privacy Policy & Terms of Service pages.
+
+
+12. 404 & Maintenance pages.
+
+
+13. Sitemap.xml and robots.txt generation.
+
+
+
+
+---
+
+Content & assets needed (attach with the ticket)
+
+Please attach these supplies (highest impact first). If not available, developer should use well-designed placeholders and flag missing items.
+
+Logo: severalsustain-logo.svg, severalsustain-logo-dark.png. (You said you’ll attach.)
+
+Brand color hexes and preferred font names or files. (If not provided, continue with Inter + suggested color tokens.)
+
+Hero & product photos (at least 6 high-res images).
+
+Datasheets (PDF) for Milk Analyzer and DPU/AMCU, or spec bullets (parameters, accuracy, ports, power).
+
+3–6 case study content items (title, summary, result bullets, 1 image each).
+
+2–4 testimonials (name, title, short quote, company).
+
+Contact/lead destination: email address or Google Sheet / HubSpot / CRM details (developer needs endpoint or API key).
+
+Social links (LinkedIn, Twitter, YouTube).
+
+Optional: Google Analytics / GTM ID, Facebook pixel, Hotjar snippet (if you want installed).
+
+
+
+---
+
+Integrations & features to implement
+
+Contact & Quote forms → deliver to designated email/Google Sheet/CRM. Provide sample test submission steps and sample data.
+
+Newsletter signup → integrate with Mailchimp or provide CSV export of subscribers.
+
+Optional: Stripe product listing if you want online payments (discuss separately).
+
+Google Analytics / GTM and sitemap submission instructions.
+
+Optional: Setup basic server endpoint on Replit to handle file uploads for quotes (if requested).
+
+
+
+---
+
+QA, Testing & acceptance criteria (must be met before handover)
+
+Functional acceptance
+
+Header & footer are the single source-of-truth components used across all pages (no duplicated static markup).
+
+Contact and Quote forms submit successfully to the provided destination and show appropriate success/error messages.
+
+All pages follow the specified navigation structure and include breadcrumbs for service/product pages.
+
+All inline data (product claims) remain unchanged unless client asks; developer must flag any questionable claims for owner review.
+
+
+Quality metrics
+
+Lighthouse (target): Performance ≥ 80, Accessibility ≥ 90, Best Practices ≥ 90, SEO ≥ 90. If a metric falls below threshold, provide a remediation plan.
+
+Mobile rendering: site fully usable on standard mobile widths; no horizontal scroll.
+
+Accessibility: WCAG AA pass for key pages. Run and attach automated axe/lighthouse report.
+
+SEO: Unique meta title & description for every page, valid JSON-LD (Organization/Product/FAQ) where applicable, canonical tags present.
+
+
+Code quality
+
+TypeScript types where applicable; ESLint + Prettier rules enforced.
+
+Small component unit tests (Header, Footer, Form) and at least one end-to-end smoke test (optional: Playwright).
+
+No console errors in production build.
+
+
+Deliverables for handover
+
+Git repo or Replit project with branch main ready for deployment.
+
+README.md: run & build instructions, how to edit content (CMS steps or Markdown), how to update header/footer and how to add a product datasheet.
+
+/docs/ QA report: screenshots (desktop/mobile), lighthouse report, schema validation screenshots, a sample successful form submission.
+
+List of remaining TODOs (if any) and suggestions for future improvements.
+
+One short video (2–4 minutes) or a sequence of annotated screenshots showing how to edit core content (hero, about, datasheet upload) — optional but highly recommended.
+
+
+
+---
+
+Repo structure (suggested)
+
+/ (root)
+├─ package.json
+├─ tsconfig.json
+├─ tailwind.config.js
+├─ next.config.js
+├─ public/
+│  ├─ images/
+│  └─ assets/
+├─ src/
+│  ├─ pages/
+│  │  ├─ index.tsx
+│  │  ├─ about.tsx
+│  │  ├─ contact.tsx
+│  │  └─ services/
+│  ├─ components/
+│  │  ├─ ui/
+│  │  ├─ layout/
+│  └─ lib/
+│     └─ api.ts
+├─ content/   (markdown or cms sync)
+└─ README.md
+
+
+---
+
+Code review & acceptance workflow
+
+Developer opens a PR with issues fixed and new pages added. PR includes: change summary, screenshots, list of pages changed/added, and any configuration changes.
+
+Client tests staging link on Replit preview. Client will provide 1 consolidated round of feedback. Developer then does one round of polish and merges. (If more rounds are needed, quote separately.)
+
+
+
+---
+
+Small UI / microcopy guidelines (to be enforced)
+
+CTAs: use clear, action-oriented text: “Request a Demo”, “Download Datasheet”, “Request Quote”.
+
+Form microcopy: helpful field placeholders and privacy note: “We’ll use your email only to reply — see privacy policy.”
+
+Error states: inline and descriptive.
+
+Buttons: primary green accent, secondary neutral outline.
+
+
+
+---
+
+Non-functional requirements
+
+Cross-browser support for modern browsers (latest Chrome, Firefox, Safari). No need for IE11 support.
+
+Use semantic HTML5 (header, main, nav, footer).
+
+Ensure images have descriptive alt.
+
+Keep total main-thread JS minimal on home & product landing pages.
+
+
+
+---
+
+Deliverable checklist (what I expect in final PR)
+
+[ ] All 8 pages converted to componentized pages with shared header/footer.
+
+[ ] All new pages created, content scaffolds added and linked.
+
+[ ] Design system components implemented.
+
+[ ] Forms live and wired to destination (test evidence).
+
+[ ] Images optimized & lazy loaded.
+
+[ ] JSON-LD & OG images validated.
+
+[ ] Accessibility and Lighthouse reports attached.
+
+[ ] README and admin-edit docs included.
+
+[ ] Deployed to Replit preview with DNS instructions.
+
+
+
+---
+
+Final notes to developer
+
+Preserve all original wording from the attached HTML pages unless the client requests copy edits. If you find product claims that require technical accuracy, flag them to the client.
+
+If any required assets are missing, implement visually consistent placeholders and clearly list missing items in the PR.
+
+Keep commits small and descriptive. Use feature branches for each major task (e.g., feature/header-refactor, feature/milk-analyzer-datasheet).

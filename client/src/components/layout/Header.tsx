@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoImage from "@assets/cropped-1000113581-removebg-preview_1759222236071.png";
+import logoImage from "@assets/WhatsApp_Image_2025-10-01_at_1.27.41_PM-removebg-preview_1759322801060.png";
 
 const Header = () => {
   const [location] = useLocation();
