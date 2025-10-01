@@ -13,6 +13,17 @@ Several Sustain (Several Sustain Pvt. Ltd.) is a professional engineering compan
 
 ## Recent Changes
 
+### Sitemap & SEO Optimization (October 1, 2025)
+- **XML Sitemap**: Created comprehensive sitemap.xml with all 12 public pages
+  - Updated domain to severalsustain.in
+  - Removed deprecated case studies page
+  - Added new hierarchical service routes (design/pcb-design, design/web-design, development/firmware, development/hardware, development/app-development)
+  - Included solution pages (milk-analyzer, dpu-amcu-systems)
+  - Updated lastmod dates to 2025-10-01
+  - Proper priority and changefreq settings for each page type
+- **robots.txt**: Updated to reference correct sitemap URL (https://severalsustain.in/sitemap.xml)
+- **Accessibility**: Both files accessible via HTTP at /sitemap.xml and /robots.txt
+
 ### Company Information Update & Logo Refresh (October 1, 2025)
 - **Logo Refresh**: Updated to new Several Sustain logo (circular design with water droplet and green/blue sustainability theme)
 - **Applied to**: Header and Footer components site-wide

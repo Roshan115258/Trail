@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://severalsustain.com/</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://severalsustain.in/</loc>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://severalsustain.com/about</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://severalsustain.in/about</loc>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://severalsustain.com/contact</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://severalsustain.in/contact</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://severalsustain.in/services/design/pcb-design</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://severalsustain.in/services/design/web-design</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://severalsustain.in/services/development/firmware</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://severalsustain.in/services/development/hardware</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://severalsustain.in/services/development/app-development</loc>
+    <lastmod>2025-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://severalsustain.in/solutions/milk-analyzer</loc>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://severalsustain.com/services/pcb-design</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://severalsustain.in/solutions/dpu-amcu-systems</loc>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://severalsustain.com/services/hardware-development</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://severalsustain.com/services/firmware-programming</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://severalsustain.com/services/app-development</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://severalsustain.com/solutions/milk-analyzer</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://severalsustain.com/solutions/dpu-amcu-systems</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://severalsustain.com/case-studies</loc>
-    <lastmod>2024-01-01</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://severalsustain.com/privacy-policy</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://severalsustain.in/privacy-policy</loc>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://severalsustain.com/terms-of-service</loc>
-    <lastmod>2024-01-01</lastmod>
+    <loc>https://severalsustain.in/terms-of-service</loc>
+    <lastmod>2025-10-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
