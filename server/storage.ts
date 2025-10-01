@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/OPINDO COMBO Milk Analyser_1759349703008.png"
+          "/attached_assets/opindo-combo-milk-analyser.png"
         ],
         price: "42000",
         category: "Milk Analyzer",
@@ -186,7 +186,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/OPINDO Milk Analyser_1759349702975.png"
+          "/attached_assets/opindo-milk-analyser.png"
         ],
         price: "28500",
         category: "Milk Analyzer",
@@ -264,7 +264,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/EXPERT PRO PLUS Milk Analyser_1759349702946.png"
+          "/attached_assets/expert-pro-plus-milk-analyser.png"
         ],
         price: "32000",
         category: "Milk Analyzer",
@@ -353,7 +353,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/OPTEK DPU (Dot Matrix Printer Unit)_1759349702896.png"
+          "/attached_assets/optek-dpu-printer.png"
         ],
         price: "15000",
         category: "Peripherals / DPU",
@@ -380,7 +380,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/Maxtron Weighing Scale_1759349702860.png"
+          "/attached_assets/maxtron-weighing-scale.png"
         ],
         price: "7500",
         category: "Scales",
@@ -404,7 +404,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/Ultrasonic Milk Vibrator (Milk Stirrer)_1759349702823.png"
+          "/attached_assets/ultrasonic-milk-stirrer.png"
         ],
         price: "3000",
         category: "Accessories",
@@ -425,7 +425,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/Remote Display for Milk Collection_1759349702762.png"
+          "/attached_assets/remote-display.png"
         ],
         price: "10000",
         category: "Peripherals / Displays",
