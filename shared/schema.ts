@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, boolean, jsonb, numeric } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -26,6 +26,20 @@ export const newsletterSubscriptions = pgTable("newsletter_subscriptions", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
+export const products = pgTable("products", {
+  id: varchar("id").primaryKey(),
+  slug: text("slug").notNull().unique(),
+  title: text("title").notNull(),
+  shortDesc: text("short_desc").notNull(),
+  longDesc: text("long_desc").notNull(),
+  specs: jsonb("specs").notNull(),
+  datasheetUrl: text("datasheet_url"),
+  images: text("images").array().notNull().default(sql`ARRAY[]::text[]`),
+  price: numeric("price", { precision: 10, scale: 2 }),
+  category: text("category").notNull(),
+  source: text("source").notNull(),
+});
+
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
   password: true,
@@ -41,9 +55,13 @@ export const insertNewsletterSubscriptionSchema = createInsertSchema(newsletterS
   createdAt: true,
 });
 
+export const insertProductSchema = createInsertSchema(products);
+
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertContact = z.infer<typeof insertContactSchema>;
 export type Contact = typeof contacts.$inferSelect;
 export type InsertNewsletterSubscription = z.infer<typeof insertNewsletterSubscriptionSchema>;
 export type NewsletterSubscription = typeof newsletterSubscriptions.$inferSelect;
+export type InsertProduct = z.infer<typeof insertProductSchema>;
+export type Product = typeof products.$inferSelect;
