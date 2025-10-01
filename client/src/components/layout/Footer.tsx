@@ -23,8 +23,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Transforming electronic concepts into market-ready products with expert PCB design, 
-              hardware development, and specialized dairy technology solutions.
+              Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions. 
+              Expert PCB design, hardware development, firmware, web & app development, and specialized analytical instruments.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center hover:bg-primary/20 transition-colors" data-testid="social-linkedin">
@@ -89,7 +89,7 @@ const Footer = () => {
         <div className="border-t border-border/50 pt-8 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 Several Sustain. All rights reserved.
+              © 2024 Several Sustain Pvt. Ltd. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
               <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-privacy">Privacy Policy</Link>

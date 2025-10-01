@@ -41,13 +41,13 @@ const Home = () => {
       <Helmet>
         <title>Several Sustain | Premier Electronics Development & PCB Design Services</title>
         <meta name="description" content="Expert PCB design, hardware development, firmware programming, and specialized dairy technology solutions. Transform your electronic concepts into market-ready products with 14+ years of engineering expertise." />
-        <link rel="canonical" href="https://severalsustain.com/" />
+        <link rel="canonical" href="https://severalsustain.in/" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Several Sustain | Premier Electronics Development & PCB Design Services" />
         <meta property="og:description" content="Expert PCB design, hardware development, firmware programming, and specialized dairy technology solutions. Transform your electronic concepts into market-ready products." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://severalsustain.com/" />
+        <meta property="og:url" content="https://severalsustain.in/" />
         <meta property="og:image" content="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630" />
         
         {/* Twitter Card */}
@@ -61,16 +61,23 @@ const Home = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Several Sustain",
-            "url": "https://severalsustain.com",
-            "logo": "https://severalsustain.com/logo.png",
-            "description": "Premier electronics development company specializing in PCB design, hardware development, firmware programming, and dairy technology solutions.",
+            "name": "Several Sustain Pvt. Ltd.",
+            "alternateName": "Several Sustain",
+            "url": "https://severalsustain.in",
+            "logo": "https://severalsustain.in/logo.png",
+            "description": "Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions. Engineering, Embedded Systems, IoT Product Design, Web & App Development, and Analytical Instruments.",
             "address": {
               "@type": "PostalAddress",
+              "streetAddress": "Village Walidad, Post Balidad, P.S. Balidad Panchayat",
+              "addressLocality": "Mahendia",
+              "addressRegion": "Bihar",
+              "postalCode": "804402",
               "addressCountry": "IN"
             },
             "contactPoint": {
               "@type": "ContactPoint",
+              "telephone": "06202428157",
+              "email": "info@severalsustain.in",
               "contactType": "Sales",
               "availableLanguage": "English"
             },

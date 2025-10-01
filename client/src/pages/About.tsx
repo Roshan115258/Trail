@@ -15,7 +15,7 @@ const About = () => {
               About Several Sustain
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              14+ years of engineering excellence in electronics development and specialized dairy technology solutions.
+              Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions
             </p>
           </div>
 
@@ -26,8 +26,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground">
-                To transform innovative electronic concepts into market-ready products that drive technological advancement 
-                and improve lives through reliable, sustainable solutions.
+                Innovative engineering solutions tailored to your needs, offering end-to-end services from PCB Design 
+                to advanced Firmware Development, transforming ideas into sustainable solutions.
               </p>
             </GlassCard>
 
@@ -58,21 +58,21 @@ const About = () => {
             <h2 className="text-3xl font-bold text-foreground mb-8">Our Story</h2>
             <div className="max-w-4xl mx-auto text-lg text-muted-foreground space-y-6">
               <p>
-                Founded in 2010, Several Sustain began as a vision to bridge the gap between innovative electronic 
-                concepts and practical, market-ready solutions. Our founders, experienced engineers with backgrounds 
-                in PCB design and embedded systems, recognized the need for comprehensive development services that 
-                could take projects from initial concept through to production.
+                Located in Bihar, India, Several Sustain (Several Sustain Pvt. Ltd.) specializes in Engineering, 
+                Embedded Systems, IoT Product Design, Web & App Development, and Analytical Instruments. 
+                Our team of experienced engineers with backgrounds in PCB design and embedded systems provides 
+                comprehensive development services that take projects from initial concept through to production.
               </p>
               <p>
-                Over the years, we've expanded our expertise to include specialized dairy technology solutions, 
-                developing industry-leading milk analyzers and collection systems that have revolutionized dairy 
-                operations worldwide. Our commitment to quality and innovation has earned us certifications in 
-                IPC standards and ISO 9001, ensuring our clients receive the highest level of service and reliability.
+                We offer end-to-end engineering solutions including PCB Design, Hardware Development, Firmware 
+                Development, Web Development, and App Development. Our specialized solutions include industry-leading 
+                Milk Analyzers and DPU & AMCU systems that have revolutionized dairy operations. Our commitment 
+                to quality and innovation ensures our clients receive the highest level of service and reliability.
               </p>
               <p>
                 Today, Several Sustain continues to grow, serving clients across multiple industries while maintaining 
-                our core values of excellence, integrity, and sustainability. We're proud to have delivered over 500 
-                successful projects and look forward to helping shape the future of electronic innovation.
+                our core values of excellence, integrity, and sustainability. We're proud to transform innovative 
+                ideas into sustainable solutions and look forward to helping shape the future of electronic innovation.
               </p>
             </div>
           </div>

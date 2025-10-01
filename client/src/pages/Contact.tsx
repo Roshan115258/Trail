@@ -31,8 +31,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">contact@severalsustain.com</p>
-                    <p className="text-muted-foreground">quotes@severalsustain.com</p>
+                    <p className="text-muted-foreground">info@severalsustain.in</p>
                   </div>
                 </div>
                 
@@ -42,8 +41,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) SUSTAIN</p>
-                    <p className="text-muted-foreground">Mon-Fri 9AM-6PM EST</p>
+                    <p className="text-muted-foreground">06202428157</p>
+                    <p className="text-muted-foreground">Mon-Fri 9AM-6PM IST</p>
                   </div>
                 </div>
                 
@@ -64,8 +63,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                    <p className="text-muted-foreground">Serving clients worldwide</p>
-                    <p className="text-muted-foreground">Remote consultation available</p>
+                    <p className="text-muted-foreground">Village Walidad, Post Balidad,</p>
+                    <p className="text-muted-foreground">P.S. Balidad Panchayat, Mahendia,</p>
+                    <p className="text-muted-foreground">Bihar – 804402, India</p>
                   </div>
                 </div>
               </div>
@@ -74,11 +74,11 @@ const Contact = () => {
               <GlassCard className="p-6 mt-8">
                 <h3 className="text-lg font-semibold text-foreground mb-4">Why Choose Several Sustain?</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• 14+ years of industry experience</li>
-                  <li>• IPC certified and ISO 9001 compliant</li>
-                  <li>• 500+ successful projects delivered</li>
-                  <li>• End-to-end development services</li>
-                  <li>• Specialized dairy technology expertise</li>
+                  <li>• Expert PCB Design & Hardware Development</li>
+                  <li>• Firmware & Software Solutions</li>
+                  <li>• Web & App Development Services</li>
+                  <li>• End-to-end IoT Product Design</li>
+                  <li>• Specialized Analytical Instruments</li>
                 </ul>
               </GlassCard>
             </div>

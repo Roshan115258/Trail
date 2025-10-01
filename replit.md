@@ -2,15 +2,31 @@
 
 ## Overview
 
-Several Sustain is a professional electronics development and dairy technology company website built as a full-stack web application. The platform showcases the company's services including PCB design, hardware development, firmware programming, and specialized dairy technology solutions (milk analyzers and DPU/AMCU systems). The application features a modern, responsive design with contact forms, newsletter subscriptions, service pages, and case studies to attract and engage potential clients.
+Several Sustain (Several Sustain Pvt. Ltd.) is a professional engineering company specializing in Embedded Systems, IoT Product Design, Web & App Development, and Analytical Instruments. Located in Bihar, India, the company provides end-to-end engineering solutions including PCB Design, Hardware Development, Firmware Development, Web Development, and App Development. The platform showcases specialized solutions like Milk Analyzers and DPU & AMCU systems. The application features a modern, responsive design with contact forms, newsletter subscriptions, service pages, and case studies.
+
+**Company Information:**
+- **Tagline:** Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions
+- **Address:** Village Walidad, Post Balidad, P.S. Balidad Panchayat, Mahendia, Bihar – 804402, India
+- **Phone:** 06202428157
+- **Email:** info@severalsustain.in
+- **Website:** severalsustain.in
 
 ## Recent Changes
 
-### Logo Update & Prompt Alignment (October 1, 2025)
+### Company Information Update & Logo Refresh (October 1, 2025)
 - **Logo Refresh**: Updated to new Several Sustain logo (circular design with water droplet and green/blue sustainability theme)
 - **Applied to**: Header and Footer components site-wide
 - **File**: `attached_assets/WhatsApp_Image_2025-10-01_at_1.27.41_PM-removebg-preview_1759322801060.png`
-- **Prompt Alignment**: Working to match comprehensive production requirements including missing pages, enhanced SEO, accessibility improvements, and complete documentation
+- **Company Information Updates**:
+  - Updated legal name to Several Sustain Pvt. Ltd.
+  - New tagline: "Innovating for a Smarter Future: Transforming Ideas into Sustainable Solutions"
+  - Updated mission statement across About page
+  - Updated contact information (email: info@severalsustain.in, phone: 06202428157)
+  - Updated address to Bihar, India location
+  - Updated website domain to severalsustain.in
+  - Refreshed service descriptions to emphasize IoT, Web & App Development, and Analytical Instruments
+- **SEO Implementation**: Added react-helmet-async for dynamic meta tags, OG tags, and JSON-LD structured data on Home page with complete company information
+- **Prompt Alignment**: Working to match comprehensive production requirements including enhanced SEO, accessibility improvements, and complete documentation
 
 ### Comprehensive Page Enhancements (September 30, 2025)
 
