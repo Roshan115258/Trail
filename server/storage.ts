@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/opindo-combo-milk-analyser.png"
+          "/images/opindo-combo-milk-analyser.png"
         ],
         price: "42000",
         category: "Milk Analyzer",
@@ -186,7 +186,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/opindo-milk-analyser.png"
+          "/images/opindo-milk-analyser.png"
         ],
         price: "28500",
         category: "Milk Analyzer",
@@ -264,7 +264,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/expert-pro-plus-milk-analyser.png"
+          "/images/expert-pro-plus-milk-analyser.png"
         ],
         price: "32000",
         category: "Milk Analyzer",
@@ -353,7 +353,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/optek-dpu-printer.png"
+          "/images/optek-dpu-printer.png"
         ],
         price: "15000",
         category: "Peripherals / DPU",
@@ -380,7 +380,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/maxtron-weighing-scale.png"
+          "/images/maxtron-weighing-scale.png"
         ],
         price: "7500",
         category: "Scales",
@@ -404,7 +404,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/ultrasonic-milk-stirrer.png"
+          "/images/ultrasonic-milk-stirrer.png"
         ],
         price: "3000",
         category: "Accessories",
@@ -425,7 +425,7 @@ export class MemStorage implements IStorage {
         },
         datasheetUrl: null,
         images: [
-          "/attached_assets/remote-display.png"
+          "/images/remote-display.png"
         ],
         price: "10000",
         category: "Peripherals / Displays",
