@@ -577,7 +577,7 @@ const Home = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                      <p className="text-muted-foreground">contact@severalsustain.com</p>
+                      <p className="text-muted-foreground">info@severalsustain.in</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

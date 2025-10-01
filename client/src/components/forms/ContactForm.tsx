@@ -190,10 +190,7 @@ const ContactForm = () => {
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-sm">
-                  I agree to receive communications from Several Sustain regarding my inquiry.{" "}
-                  <a href="/privacy-policy" className="text-primary hover:underline">
-                    Privacy Policy
-                  </a>
+                  I agree to receive communications from Several Sustain regarding my inquiry.
                 </FormLabel>
                 <FormMessage />
               </div>
