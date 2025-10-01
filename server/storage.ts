@@ -112,7 +112,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/milk_analyzer_labora_7c542620.jpg",
           "/attached_assets/stock_images/milk_analyzer_labora_81f7f86d.jpg"
         ],
-        price: null,
+        price: "42000",
         category: "Milk Analyzer",
         source: "Brochure"
       },
@@ -192,7 +192,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/milk_analyzer_labora_d5efe602.jpg",
           "/attached_assets/stock_images/dairy_farm_milk_coll_1204a2c2.jpg"
         ],
-        price: null,
+        price: "28500",
         category: "Milk Analyzer",
         source: "Brochure"
       },
@@ -272,7 +272,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/dairy_farm_milk_coll_f66b6350.jpg",
           "/attached_assets/stock_images/laboratory_scientist_0182c891.jpg"
         ],
-        price: null,
+        price: "32000",
         category: "Milk Analyzer",
         source: "Brochure"
       },
@@ -363,7 +363,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/hardware_development_71859658.jpg",
           "/attached_assets/stock_images/modern_circuit_board_1fd01e5d.jpg"
         ],
-        price: null,
+        price: "15000",
         category: "Peripherals / DPU",
         source: "Brochure"
       },
@@ -392,7 +392,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/dairy_farm_automated_fe9be52d.jpg",
           "/attached_assets/stock_images/laboratory_scientist_9212d7ce.jpg"
         ],
-        price: null,
+        price: "7500",
         category: "Scales",
         source: "Brochure"
       },
@@ -418,7 +418,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/modern_circuit_board_31891aa3.jpg",
           "/attached_assets/stock_images/engineering_team_col_a3be8406.jpg"
         ],
-        price: null,
+        price: "3000",
         category: "Accessories",
         source: "Brochure"
       },
@@ -441,7 +441,7 @@ export class MemStorage implements IStorage {
           "/attached_assets/stock_images/software_engineer_co_b31f5c8b.jpg",
           "/attached_assets/stock_images/software_engineer_co_e48f8e0b.jpg"
         ],
-        price: null,
+        price: "10000",
         category: "Peripherals / Displays",
         source: "Brochure"
       }

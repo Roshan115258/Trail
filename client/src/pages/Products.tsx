@@ -158,7 +158,7 @@ const Products = () => {
                   <div className="mb-4">
                     {product.price && Number.isFinite(parseFloat(product.price)) ? (
                       <p className="text-2xl font-bold text-primary" data-testid={`product-price-${product.id}`}>
-                        ${parseFloat(product.price).toFixed(2)}
+                        ₹{parseFloat(product.price).toLocaleString('en-IN')}
                       </p>
                     ) : (
                       <p className="text-lg text-muted-foreground italic" data-testid={`product-price-${product.id}`}>
