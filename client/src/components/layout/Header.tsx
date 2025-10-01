@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, CircuitBoard, Code, Cpu, Beaker, Droplets } from "lucide-react";
+import { Menu, X, CircuitBoard, Code, Cpu, Beaker, Droplets, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useCartContext } from "@/lib/CartContext";
 import logoImage from "@assets/WhatsApp_Image_2025-10-01_at_1.27.41_PM-removebg-preview_1759322801060.png";
 
 const Header = () => {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const { totalItems } = useCartContext();
 
   const serviceCategories = [
     {
@@ -122,22 +124,49 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link href="/contact">
-              <Button className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-lg" data-testid="button-get-quote">
+          {/* Cart and CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Button variant="outline" size="icon" className="relative" asChild data-testid="button-cart">
+              <Link href="/cart">
+                <ShoppingCart className="w-5 h-5" />
+                {totalItems > 0 && (
+                  <span 
+                    className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center justify-center"
+                    data-testid="cart-badge"
+                  >
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
+            </Button>
+            <Button className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-lg" asChild data-testid="button-get-quote">
+              <Link href="/contact">
                 Get Quote
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="lg:hidden" data-testid="button-mobile-menu">
-                <Menu className="w-6 h-6" />
-              </Button>
-            </SheetTrigger>
+          {/* Mobile Cart and Menu Buttons */}
+          <div className="lg:hidden flex items-center gap-2">
+            <Button variant="outline" size="icon" className="relative" asChild data-testid="button-cart-mobile">
+              <Link href="/cart">
+                <ShoppingCart className="w-5 h-5" />
+                {totalItems > 0 && (
+                  <span 
+                    className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center justify-center"
+                    data-testid="cart-badge-mobile"
+                  >
+                    {totalItems}
+                  </span>
+                )}
+              </Link>
+            </Button>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" data-testid="button-mobile-menu">
+                  <Menu className="w-6 h-6" />
+                </Button>
+              </SheetTrigger>
             <SheetContent side="right" className="glass-card w-full sm:w-[400px] p-0">
               <div className="flex flex-col h-full">
                 {/* Mobile Header */}
@@ -233,7 +262,8 @@ const Header = () => {
                 </div>
               </div>
             </SheetContent>
-          </Sheet>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
