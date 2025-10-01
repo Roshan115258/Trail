@@ -232,7 +232,7 @@ const Home = () => {
                   <h3 className="text-2xl font-bold mb-2">PCB Design Excellence</h3>
                   <p className="text-white/90 mb-3">From prototype to production-ready multilayer boards</p>
                   <Link href="/services/design/pcb-design">
-                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary transition-colors">
+                    <Button className="bg-white text-primary hover:bg-white/90 transition-colors font-semibold">
                       Explore PCB Services <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
@@ -252,7 +252,7 @@ const Home = () => {
                   <h3 className="text-2xl font-bold mb-2">Hardware Development</h3>
                   <p className="text-white/90 mb-3">Complete embedded systems and IoT product design</p>
                   <Link href="/services/development/hardware">
-                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary transition-colors">
+                    <Button className="bg-white text-primary hover:bg-white/90 transition-colors font-semibold">
                       Explore Hardware Services <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
