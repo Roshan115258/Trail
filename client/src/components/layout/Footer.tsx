@@ -75,10 +75,7 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               © 2024 Several Sustain Pvt. Ltd. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm">
-              <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-privacy">Privacy Policy</Link>
-              <Link href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors" data-testid="footer-link-terms">Terms of Service</Link>
-            </div>
+            
           </div>
         </div>
       </div>
