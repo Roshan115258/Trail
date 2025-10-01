@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Cpu, CheckCircle, Microchip, Settings, Zap, Lightbulb, Pencil, Wrench, TestTube, Rocket, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import hardwareImage1 from "@assets/stock_images/hardware_development_71859658.jpg";
+import hardwareImage2 from "@assets/stock_images/hardware_development_1d1d7cab.jpg";
 
 const HardwareDevelopment = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -39,87 +41,96 @@ const HardwareDevelopment = () => {
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Cpu className="w-10 h-10 text-primary" />
+            <div className="w-24 h-24 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="hero-icon">
+              <Cpu className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="hardware-development-title">
-              Hardware Development
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8" data-testid="hardware-development-title">
+              Hardware Development Services
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Complete embedded systems design including microcontroller programming and FPGA development.
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              Complete embedded systems design including microcontroller programming and FPGA development for cutting-edge IoT and industrial applications.
             </p>
+            <div className="max-w-5xl mx-auto mb-12">
+              <img 
+                src={hardwareImage1} 
+                alt="Advanced hardware development with embedded systems, microcontrollers, and circuit boards" 
+                className="w-full h-[400px] object-cover rounded-3xl shadow-2xl" 
+                data-testid="hero-image"
+              />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Embedded Systems Excellence</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">Embedded Systems Excellence</h2>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 Our hardware development services encompass the complete spectrum of embedded systems design, 
                 from microcontroller-based solutions to complex FPGA implementations. We deliver optimized 
-                hardware that meets your performance, power, and cost requirements.
+                hardware that meets your performance, power, and cost requirements with industry-leading expertise.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">ARM Cortex-M and RISC-V microcontrollers</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">ARM Cortex-M and RISC-V microcontrollers</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">FPGA design and implementation</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">FPGA design and implementation</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">IoT and wireless connectivity</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">IoT and wireless connectivity</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Power management optimization</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Power management optimization</span>
                 </div>
               </div>
               <Link href="/contact">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-get-quote">
+                <Button className="gradient-blue text-white hover:opacity-90 transition-opacity" size="lg" data-testid="button-get-quote">
                   Get Quote
                 </Button>
               </Link>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Hardware development and testing" 
+                src={hardwareImage2} 
+                alt="Professional hardware development workspace with embedded systems and testing equipment" 
                 className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+                data-testid="content-image"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Microchip className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-blue-500" data-testid="card-microcontroller">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Microchip className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Microcontroller Design</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Microcontroller Design</h3>
+              <p className="text-lg text-muted-foreground">
                 Custom microcontroller-based solutions with optimized firmware for real-time applications 
                 and low-power requirements.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Settings className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-cyan-500" data-testid="card-fpga">
+              <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Settings className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">FPGA Development</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">FPGA Development</h3>
+              <p className="text-lg text-muted-foreground">
                 High-performance FPGA solutions for signal processing, communication protocols, 
                 and custom digital logic implementations.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-purple-500" data-testid="card-power">
+              <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Power Management</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Power Management</h3>
+              <p className="text-lg text-muted-foreground">
                 Advanced power management circuits with battery optimization, energy harvesting, 
                 and ultra-low power design techniques.
               </p>
@@ -128,12 +139,12 @@ const HardwareDevelopment = () => {
 
           {/* Process Timeline */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our Development Process</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">Our Development Process</h2>
             <div className="space-y-8">
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-blue-500" data-testid="process-card-1">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -153,10 +164,10 @@ const HardwareDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-cyan-500" data-testid="process-card-2">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Pencil className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Pencil className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -176,10 +187,10 @@ const HardwareDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-purple-500" data-testid="process-card-3">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Wrench className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Wrench className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -199,10 +210,10 @@ const HardwareDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-orange-500" data-testid="process-card-4">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TestTube className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TestTube className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -222,10 +233,10 @@ const HardwareDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-teal-500" data-testid="process-card-5">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Rocket className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -247,8 +258,8 @@ const HardwareDevelopment = () => {
             </div>
           </div>
 
-          <GlassCard className="p-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Technologies We Work With</h2>
+          <GlassCard className="p-8 hover-lift" data-testid="technologies-card">
+            <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Technologies We Work With</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <h4 className="font-semibold text-foreground mb-2">Microcontrollers</h4>
@@ -295,17 +306,17 @@ const HardwareDevelopment = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our hardware development services
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <GlassCard key={index} className="overflow-hidden">
+              <GlassCard key={index} className="overflow-hidden hover-lift">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
@@ -328,22 +339,24 @@ const HardwareDevelopment = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary/10">
         <div className="container mx-auto px-4 lg:px-8">
-          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
-            <Cpu className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto hover-lift" data-testid="cta-card">
+            <div className="w-20 h-20 gradient-blue rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="cta-icon">
+              <Cpu className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to Build Your Hardware Solution?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              From concept to production, we deliver complete embedded systems solutions. Contact us for a consultation.
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              From concept to production, we deliver complete embedded systems solutions. Contact us for a free consultation and quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-hardware-contact">
+                <Button size="lg" className="gradient-blue text-white hover:opacity-90 transition-opacity" data-testid="button-hardware-contact">
                   Get Free Consultation
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" data-testid="button-view-projects">
+                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-projects">
                   View Our Projects
                 </Button>
               </Link>

@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Smartphone, CheckCircle, Globe, Monitor, Wifi, Lightbulb, Pencil, Code, TestTube, Rocket, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import appImage1 from "@assets/stock_images/mobile_app_developme_2ad31b4c.jpg";
+import appImage2 from "@assets/stock_images/mobile_app_developme_d0a03ac7.jpg";
 
 const AppDevelopment = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -39,87 +41,96 @@ const AppDevelopment = () => {
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Smartphone className="w-10 h-10 text-primary" />
+            <div className="w-24 h-24 gradient-secondary rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="hero-icon">
+              <Smartphone className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="app-development-title">
-              App Development
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8" data-testid="app-development-title">
+              App Development Services
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
               Mobile and web applications for IoT device control and data visualization platforms.
             </p>
+            <div className="max-w-5xl mx-auto mb-12">
+              <img 
+                src={appImage1} 
+                alt="Modern mobile app development with innovative user interface design and seamless user experience" 
+                className="w-full h-[400px] object-cover rounded-3xl shadow-2xl" 
+                data-testid="hero-image"
+              />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Connected Solutions</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">Connected Solutions</h2>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 Our app development services create seamless connections between your hardware and users. 
                 We build intuitive mobile and web applications that provide real-time monitoring, control, 
                 and data visualization for your IoT and embedded systems.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Cross-platform mobile apps</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Cross-platform mobile apps</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Real-time data visualization</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Real-time data visualization</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">IoT device management</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">IoT device management</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Cloud integration</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Cloud integration</span>
                 </div>
               </div>
               <Link href="/contact">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-get-quote">
+                <Button className="gradient-secondary text-white hover:opacity-90 transition-opacity" size="lg" data-testid="button-get-quote">
                   Get Quote
                 </Button>
               </Link>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Mobile app development" 
+                src={appImage2} 
+                alt="Professional mobile application development with advanced features and responsive design" 
                 className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+                data-testid="content-image"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-orange-500" data-testid="card-mobile">
+              <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Smartphone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Mobile Apps</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Mobile Apps</h3>
+              <p className="text-lg text-muted-foreground">
                 Native and cross-platform mobile applications for iOS and Android with 
                 intuitive user interfaces and real-time device connectivity.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Globe className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-amber-500" data-testid="card-web">
+              <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Web Applications</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Web Applications</h3>
+              <p className="text-lg text-muted-foreground">
                 Responsive web applications with modern frameworks for data visualization, 
                 device management, and system administration.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Monitor className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-yellow-500" data-testid="card-desktop">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Monitor className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Desktop Apps</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Desktop Apps</h3>
+              <p className="text-lg text-muted-foreground">
                 Desktop applications for industrial control systems, data analysis, 
                 and configuration tools with advanced functionality.
               </p>
@@ -128,12 +139,12 @@ const AppDevelopment = () => {
 
           {/* Process Timeline */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our App Development Process</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">Our App Development Process</h2>
             <div className="space-y-8">
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-orange-500" data-testid="process-card-1">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -153,10 +164,10 @@ const AppDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-amber-500" data-testid="process-card-2">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Pencil className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Pencil className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -176,10 +187,10 @@ const AppDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-yellow-500" data-testid="process-card-3">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Code className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Code className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -199,10 +210,10 @@ const AppDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-orange-600" data-testid="process-card-4">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TestTube className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TestTube className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -222,10 +233,10 @@ const AppDevelopment = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-amber-600" data-testid="process-card-5">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Rocket className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -248,7 +259,7 @@ const AppDevelopment = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            <GlassCard className="p-8">
+            <GlassCard className="p-8 hover-lift" data-testid="card-technologies">
               <h3 className="text-2xl font-bold text-foreground mb-6">Technologies We Use</h3>
               <div className="space-y-6">
                 <div>
@@ -270,7 +281,7 @@ const AppDevelopment = () => {
               </div>
             </GlassCard>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-8 hover-lift" data-testid="card-features">
               <h3 className="text-2xl font-bold text-foreground mb-6">Key Features</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -307,17 +318,17 @@ const AppDevelopment = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our app development services
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <GlassCard key={index} className="overflow-hidden">
+              <GlassCard key={index} className="overflow-hidden hover-lift">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
@@ -340,22 +351,24 @@ const AppDevelopment = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary/10">
         <div className="container mx-auto px-4 lg:px-8">
-          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
-            <Smartphone className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto hover-lift" data-testid="cta-card">
+            <div className="w-20 h-20 gradient-secondary rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="cta-icon">
+              <Smartphone className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to Build Your Connected App?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               From mobile to web to desktop, we create apps that connect seamlessly with your devices. Get started today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-app-contact">
+                <Button size="lg" className="gradient-secondary text-white hover:opacity-90 transition-opacity" data-testid="button-app-contact">
                   Get Free Consultation
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" data-testid="button-view-app-portfolio">
+                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-app-portfolio">
                   View App Portfolio
                 </Button>
               </Link>

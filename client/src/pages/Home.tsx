@@ -7,6 +7,11 @@ import ContactForm from "@/components/forms/ContactForm";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import pcbImage from "@assets/stock_images/modern_circuit_board_1fd01e5d.jpg";
+import hardwareImage from "@assets/stock_images/hardware_development_71859658.jpg";
+import firmwareImage from "@assets/stock_images/software_engineer_co_e48f8e0b.jpg";
+import appDevImage from "@assets/stock_images/mobile_app_developme_2ad31b4c.jpg";
+import teamImage from "@assets/stock_images/engineering_team_col_a3be8406.jpg";
 
 const Home = () => {
   const [counts, setCounts] = useState({ years: 0, projects: 0, clients: 0, accuracy: 0 });
@@ -91,13 +96,23 @@ const Home = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-muted/30 via-background to-accent/20 pt-16 lg:pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
+        {/* Hero Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img 
+            src={teamImage} 
+            alt="Engineering team collaboration" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-[hsl(174,72%,56%)]/80"></div>
+        </div>
+
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-10">
           <div 
             className="w-full h-full" 
             style={{
-              backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23059669"/><path d="M10 5v10M5 10h10" stroke="%23059669" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>')`,
+              backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff"/><path d="M10 5v10M5 10h10" stroke="%23ffffff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>')`,
               backgroundSize: '40px 40px'
             }}
           />
@@ -105,13 +120,13 @@ const Home = () => {
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="text-center max-w-5xl mx-auto animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight" data-testid="hero-title">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-title">
               Transform Your Electronic
-              <span className="text-primary block">Concepts Into Reality</span>
+              <span className="text-white/95 block">Concepts Into Reality</span>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="hero-subtitle">
+            <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow" data-testid="hero-subtitle">
               Expert PCB design, hardware development, and specialized dairy technology solutions. 
-              14+ years of engineering excellence delivering market-ready products.
+              Innovating for a Smarter Future with end-to-end engineering services.
             </p>
 
             {/* Hero CTA Cards */}
@@ -143,22 +158,22 @@ const Home = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70" data-testid="trust-indicators">
-              <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">IPC Certified</span>
+            <div className="flex flex-wrap justify-center items-center gap-8 text-white/90" data-testid="trust-indicators">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Award className="w-5 h-5" />
+                <span className="text-sm font-medium">Expert Engineering</span>
               </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">ISO 9001</span>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <ShieldCheck className="w-5 h-5" />
+                <span className="text-sm font-medium">Quality Assured</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">14+ Years</span>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Clock className="w-5 h-5" />
+                <span className="text-sm font-medium">Rapid Delivery</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="text-sm text-muted-foreground">500+ Projects</span>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Users className="w-5 h-5" />
+                <span className="text-sm font-medium">200+ Clients</span>
               </div>
             </div>
           </div>
@@ -166,18 +181,18 @@ const Home = () => {
       </section>
 
       {/* Services Overview Section */}
-      <section className="py-20 lg:py-32 bg-background" data-testid="services-section">
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-muted/30" data-testid="services-section">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               Comprehensive Electronics Development
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               From concept to production, we provide end-to-end solutions for your electronic product development needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <GlassCard className="p-6 group hover-lift border-t-4 border-primary">
               <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <CircuitBoard className="w-8 h-8 text-white" />
@@ -220,6 +235,49 @@ const Home = () => {
               <Link href="/services/development/app-development" className="inline-flex items-center gap-2 text-secondary font-medium hover:gap-3 transition-all group-hover:text-secondary/80" data-testid="link-app-development">
                 Learn More <ArrowRight className="w-4 h-4" />
               </Link>
+            </GlassCard>
+          </div>
+          
+          {/* Visual Services Showcase */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <GlassCard className="p-0 overflow-hidden hover-lift group">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={pcbImage} 
+                  alt="Professional PCB design services with advanced circuit board layouts" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">PCB Design Excellence</h3>
+                  <p className="text-white/90 mb-3">From prototype to production-ready multilayer boards</p>
+                  <Link href="/services/design/pcb-design">
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary transition-colors">
+                      Explore PCB Services <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </GlassCard>
+            
+            <GlassCard className="p-0 overflow-hidden hover-lift group">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={hardwareImage} 
+                  alt="Hardware development and embedded systems design services" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2">Hardware Development</h3>
+                  <p className="text-white/90 mb-3">Complete embedded systems and IoT product design</p>
+                  <Link href="/services/development/hardware">
+                    <Button variant="outline" className="text-white border-white hover:bg-white hover:text-primary transition-colors">
+                      Explore Hardware Services <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </GlassCard>
           </div>
         </div>

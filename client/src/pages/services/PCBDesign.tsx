@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { CircuitBoard, CheckCircle, Layers, Zap, Shield, FileSearch, Pencil, Layout, TestTube, FileText, Rocket, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import pcbImage1 from "@assets/stock_images/modern_circuit_board_1fd01e5d.jpg";
+import pcbImage2 from "@assets/stock_images/modern_circuit_board_31891aa3.jpg";
 
 const PCBDesign = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -39,87 +41,96 @@ const PCBDesign = () => {
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <CircuitBoard className="w-10 h-10 text-primary" />
+            <div className="w-24 h-24 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="hero-icon">
+              <CircuitBoard className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="pcb-design-title">
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8" data-testid="pcb-design-title">
               PCB Design Services
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
               Expert circuit board layout with HDI, RF, and high-speed design capabilities for complex applications.
             </p>
+            <div className="max-w-5xl mx-auto mb-12">
+              <img 
+                src={pcbImage1} 
+                alt="Advanced PCB circuit board design with modern technology and precision engineering" 
+                className="w-full h-[400px] object-cover rounded-3xl shadow-2xl" 
+                data-testid="hero-image"
+              />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Professional PCB Design</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">Professional PCB Design</h2>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 Our PCB design services combine cutting-edge technology with years of engineering expertise 
                 to deliver circuit boards that meet the most demanding requirements. From simple single-layer 
                 boards to complex multilayer HDI designs, we ensure optimal performance and manufacturability.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">High-density interconnect (HDI) design</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">High-density interconnect (HDI) design</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">RF and microwave circuit design</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">RF and microwave circuit design</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">High-speed digital signal integrity</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">High-speed digital signal integrity</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">EMI/EMC compliance design</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">EMI/EMC compliance design</span>
                 </div>
               </div>
               <Link href="/contact">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-get-quote">
+                <Button className="gradient-primary text-white hover:opacity-90 transition-opacity" size="lg" data-testid="button-get-quote">
                   Get Quote
                 </Button>
               </Link>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="PCB design and manufacturing" 
+                src={pcbImage2} 
+                alt="Professional PCB circuit board design and manufacturing with precision components" 
                 className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+                data-testid="content-image"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Layers className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-primary" data-testid="card-multilayer">
+              <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Layers className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Multilayer Design</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Multilayer Design</h3>
+              <p className="text-lg text-muted-foreground">
                 Complex multilayer PCB designs up to 32 layers with advanced stackup optimization 
                 for signal integrity and power distribution.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-blue-500" data-testid="card-highspeed">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">High-Speed Design</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">High-Speed Design</h3>
+              <p className="text-lg text-muted-foreground">
                 Specialized in high-speed digital design with DDR4/5 memory interfaces, 
                 SerDes, and gigabit ethernet implementations.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-purple-500" data-testid="card-compliance">
+              <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">EMI/EMC Compliance</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">EMI/EMC Compliance</h3>
+              <p className="text-lg text-muted-foreground">
                 Design for electromagnetic compatibility with proper grounding, shielding, 
                 and filtering techniques to meet international standards.
               </p>
@@ -128,12 +139,12 @@ const PCBDesign = () => {
 
           {/* Detailed Process Timeline */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our PCB Design Process</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">Our PCB Design Process</h2>
             <div className="space-y-8">
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-primary" data-testid="process-card-1">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <FileSearch className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FileSearch className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -153,10 +164,10 @@ const PCBDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-blue-500" data-testid="process-card-2">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Pencil className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Pencil className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -176,10 +187,10 @@ const PCBDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-purple-500" data-testid="process-card-3">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Layout className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Layout className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -199,10 +210,10 @@ const PCBDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-orange-500" data-testid="process-card-4">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TestTube className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TestTube className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -222,10 +233,10 @@ const PCBDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-teal-500" data-testid="process-card-5">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -253,16 +264,16 @@ const PCBDesign = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Featured PCB Projects
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Showcase of our recent PCB designs across various industries and applications
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <GlassCard className="overflow-hidden group">
+            <GlassCard className="overflow-hidden group hover-lift" data-testid="portfolio-card-1">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
@@ -284,7 +295,7 @@ const PCBDesign = () => {
               </div>
             </GlassCard>
 
-            <GlassCard className="overflow-hidden group">
+            <GlassCard className="overflow-hidden group hover-lift" data-testid="portfolio-card-2">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
@@ -306,7 +317,7 @@ const PCBDesign = () => {
               </div>
             </GlassCard>
 
-            <GlassCard className="overflow-hidden group">
+            <GlassCard className="overflow-hidden group hover-lift" data-testid="portfolio-card-3">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
@@ -335,17 +346,17 @@ const PCBDesign = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our PCB design services
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <GlassCard key={index} className="overflow-hidden">
+              <GlassCard key={index} className="overflow-hidden hover-lift">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
@@ -368,22 +379,24 @@ const PCBDesign = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary/10">
         <div className="container mx-auto px-4 lg:px-8">
-          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
-            <Rocket className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto hover-lift" data-testid="cta-card">
+            <div className="w-20 h-20 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="cta-icon">
+              <Rocket className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to Start Your PCB Design Project?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Get expert PCB design services with fast turnaround and competitive pricing. Contact us for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-pcb-contact">
+                <Button size="lg" className="gradient-primary text-white hover:opacity-90 transition-opacity" data-testid="button-pcb-contact">
                   Get Free Consultation
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" data-testid="button-view-case-studies">
+                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-case-studies">
                   View Case Studies
                 </Button>
               </Link>

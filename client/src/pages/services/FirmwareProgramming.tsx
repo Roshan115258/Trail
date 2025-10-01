@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Code, CheckCircle, Terminal, Shield, Cog, Lightbulb, Pencil, Wrench, TestTube, Rocket, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import firmwareImage1 from "@assets/stock_images/software_engineer_co_e48f8e0b.jpg";
+import firmwareImage2 from "@assets/stock_images/software_engineer_co_b31f5c8b.jpg";
 
 const FirmwareProgramming = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -39,87 +41,96 @@ const FirmwareProgramming = () => {
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Code className="w-10 h-10 text-primary" />
+            <div className="w-24 h-24 gradient-purple rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="hero-icon">
+              <Code className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="firmware-programming-title">
-              Firmware Programming
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8" data-testid="firmware-programming-title">
+              Firmware Programming Services
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
               Low-level firmware development for optimal performance and reliability in embedded systems.
             </p>
+            <div className="max-w-5xl mx-auto mb-12">
+              <img 
+                src={firmwareImage1} 
+                alt="Professional firmware programming with modern development tools and embedded systems engineering" 
+                className="w-full h-[400px] object-cover rounded-3xl shadow-2xl" 
+                data-testid="hero-image"
+              />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Optimized Embedded Software</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">Optimized Embedded Software</h2>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 Our firmware programming services deliver highly optimized, reliable code that maximizes 
                 hardware performance while ensuring robust operation. From bare-metal programming to 
                 RTOS-based applications, we create firmware that meets your exact requirements.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Real-time operating systems (RTOS)</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Real-time operating systems (RTOS)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Bare-metal programming</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Bare-metal programming</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Communication protocols</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Communication protocols</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Safety-critical applications</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Safety-critical applications</span>
                 </div>
               </div>
               <Link href="/contact">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-get-quote">
+                <Button className="gradient-purple text-white hover:opacity-90 transition-opacity" size="lg" data-testid="button-get-quote">
                   Get Quote
                 </Button>
               </Link>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Firmware development and debugging" 
+                src={firmwareImage2} 
+                alt="Expert firmware development and embedded systems programming with modern debugging tools" 
                 className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+                data-testid="content-image"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Terminal className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-purple-500" data-testid="card-rtos">
+              <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Terminal className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">RTOS Development</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">RTOS Development</h3>
+              <p className="text-lg text-muted-foreground">
                 Real-time operating system implementation with FreeRTOS, ThreadX, and custom RTOS 
                 solutions for time-critical applications.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-blue-500" data-testid="card-safety">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Safety Critical</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Safety Critical</h3>
+              <p className="text-lg text-muted-foreground">
                 Firmware for safety-critical systems with DO-178C, IEC 61508, and ISO 26262 
                 compliance for automotive and aerospace applications.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Cog className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-purple-600" data-testid="card-protocols">
+              <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Cog className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Protocol Stacks</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Protocol Stacks</h3>
+              <p className="text-lg text-muted-foreground">
                 Implementation of communication protocols including TCP/IP, Modbus, CAN, 
                 LoRaWAN, and custom proprietary protocols.
               </p>
@@ -128,12 +139,12 @@ const FirmwareProgramming = () => {
 
           {/* Process Timeline */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our Firmware Development Process</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">Our Firmware Development Process</h2>
             <div className="space-y-8">
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-purple-500" data-testid="process-card-1">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -153,10 +164,10 @@ const FirmwareProgramming = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-blue-500" data-testid="process-card-2">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Pencil className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Pencil className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -176,10 +187,10 @@ const FirmwareProgramming = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-purple-600" data-testid="process-card-3">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Wrench className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Wrench className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -199,10 +210,10 @@ const FirmwareProgramming = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-indigo-500" data-testid="process-card-4">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TestTube className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TestTube className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -222,10 +233,10 @@ const FirmwareProgramming = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-purple-500" data-testid="process-card-5">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Rocket className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -248,7 +259,7 @@ const FirmwareProgramming = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            <GlassCard className="p-8">
+            <GlassCard className="p-8 hover-lift" data-testid="card-languages">
               <h3 className="text-2xl font-bold text-foreground mb-6">Programming Languages</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -270,7 +281,7 @@ const FirmwareProgramming = () => {
               </div>
             </GlassCard>
 
-            <GlassCard className="p-8">
+            <GlassCard className="p-8 hover-lift" data-testid="card-tools">
               <h3 className="text-2xl font-bold text-foreground mb-6">Development Tools</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -299,17 +310,17 @@ const FirmwareProgramming = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our firmware development services
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <GlassCard key={index} className="overflow-hidden">
+              <GlassCard key={index} className="overflow-hidden hover-lift">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
@@ -332,23 +343,25 @@ const FirmwareProgramming = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary/10">
         <div className="container mx-auto px-4 lg:px-8">
-          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
-            <Code className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto hover-lift" data-testid="cta-card">
+            <div className="w-20 h-20 gradient-purple rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="cta-icon">
+              <Rocket className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to Build Reliable Firmware?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               From bare-metal to RTOS, we deliver optimized firmware solutions. Get in touch for expert firmware development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-firmware-contact">
+                <Button size="lg" className="gradient-purple text-white hover:opacity-90 transition-opacity" data-testid="button-firmware-contact">
                   Get Free Consultation
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" data-testid="button-view-firmware-projects">
-                  View Our Work
+                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-case-studies">
+                  View Case Studies
                 </Button>
               </Link>
             </div>

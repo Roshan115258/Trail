@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Globe, CheckCircle, Smartphone, Search, Palette, Zap, Lightbulb, Pencil, Code, TestTube2, Rocket, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import webImage1 from "@assets/stock_images/professional_web_des_9796e36b.jpg";
+import webImage2 from "@assets/stock_images/professional_web_des_960414d2.jpg";
 
 const WebDesign = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -39,101 +41,109 @@ const WebDesign = () => {
       <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Globe className="w-10 h-10 text-primary" />
+            <div className="w-24 h-24 gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="hero-icon">
+              <Globe className="w-12 h-12 text-white" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="web-design-title">
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-8" data-testid="web-design-title">
               Professional Web Design Services
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
               Custom, responsive, SEO-optimized websites that transform your online presence and drive business growth.
             </p>
+            <div className="max-w-5xl mx-auto mb-12">
+              <img 
+                src={webImage1} 
+                alt="Professional web design and development workspace showcasing modern UI/UX design on multiple devices" 
+                className="w-full h-[400px] object-cover rounded-3xl shadow-2xl" 
+                data-testid="hero-image"
+              />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Transform Your Digital Presence</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8">Transform Your Digital Presence</h2>
+              <p className="text-lg lg:text-xl text-muted-foreground mb-8">
                 We create stunning, user-friendly websites that not only look great but also deliver exceptional 
                 performance and convert visitors into customers. Our web design services combine modern aesthetics 
                 with cutting-edge technology to build websites that stand out in today's competitive digital landscape.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Mobile-first responsive design</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Mobile-first responsive design</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">SEO-optimized architecture</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">SEO-optimized architecture</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Fast loading speeds & performance</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Fast loading speeds & performance</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  <span className="text-foreground">Cross-browser compatibility</span>
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                  <span className="text-lg text-foreground">Cross-browser compatibility</span>
                 </div>
               </div>
               <Link href="/contact">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-get-quote">
+                <Button className="gradient-hero text-white hover:opacity-90 transition-opacity" size="lg" data-testid="button-get-quote">
                   Get Free Consultation
                 </Button>
               </Link>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Professional web design workspace" 
+                src={webImage2} 
+                alt="Modern responsive web design showcasing professional website development and user interface design" 
                 className="w-full h-96 object-cover rounded-2xl shadow-xl" 
+                data-testid="content-image"
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Smartphone className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-teal-500" data-testid="card-responsive">
+              <div className="w-16 h-16 gradient-hero rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Smartphone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Responsive Design</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Responsive Design</h3>
+              <p className="text-lg text-muted-foreground">
                 Mobile-first approach ensuring your website looks perfect and functions flawlessly 
                 on all devices, from smartphones to desktops.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Search className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-green-500" data-testid="card-seo">
+              <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Search className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">SEO Optimization</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">SEO Optimization</h3>
+              <p className="text-lg text-muted-foreground">
                 Built-in SEO best practices with optimized meta tags, structured data, 
                 and fast loading speeds to rank higher in search results.
               </p>
             </GlassCard>
 
-            <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Palette className="w-8 h-8 text-primary" />
+            <GlassCard className="p-6 text-center hover-lift border-t-4 border-teal-600" data-testid="card-uiux">
+              <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Palette className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Custom UI/UX</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Custom UI/UX</h3>
+              <p className="text-lg text-muted-foreground">
                 Unique, brand-focused designs with intuitive user experiences 
                 that engage visitors and drive conversions.
               </p>
             </GlassCard>
           </div>
 
-          {/* Detailed Process Timeline */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-12 text-center">Our Web Design Process</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">Our Web Design Process</h2>
             <div className="space-y-8">
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-teal-500" data-testid="process-card-1">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-hero rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -153,10 +163,10 @@ const WebDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-green-500" data-testid="process-card-2">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Pencil className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Pencil className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -176,10 +186,10 @@ const WebDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-teal-600" data-testid="process-card-3">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Code className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Code className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -199,10 +209,10 @@ const WebDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-green-600" data-testid="process-card-4">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TestTube2 className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-hero rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TestTube2 className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -222,10 +232,10 @@ const WebDesign = () => {
                 </div>
               </GlassCard>
 
-              <GlassCard className="p-8">
+              <GlassCard className="p-8 hover-lift border-l-4 border-teal-500" data-testid="process-card-5">
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Rocket className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 gradient-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Rocket className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
@@ -247,8 +257,8 @@ const WebDesign = () => {
             </div>
           </div>
 
-          <GlassCard className="p-8 mb-20">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Key Features</h2>
+          <GlassCard className="p-8 mb-20 hover-lift border-t-4 border-green-500" data-testid="features-card">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8 text-center">Key Features</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
                 <Zap className="w-6 h-6 text-primary mt-1" />
@@ -283,24 +293,23 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* Portfolio Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Recent Web Projects
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Explore our portfolio of stunning websites built for clients across various industries
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <GlassCard className="overflow-hidden group">
+            <GlassCard className="overflow-hidden group hover-lift" data-testid="portfolio-card-1">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                  alt="E-commerce website design" 
+                  alt="Modern e-commerce fashion store website design with responsive layout and seamless shopping experience" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
                 />
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
@@ -318,11 +327,11 @@ const WebDesign = () => {
               </div>
             </GlassCard>
 
-            <GlassCard className="overflow-hidden group">
+            <GlassCard className="overflow-hidden group hover-lift" data-testid="portfolio-card-2">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                  alt="Corporate website design" 
+                  alt="Professional corporate tech startup website with clean design and dynamic content management" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
                 />
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
@@ -340,11 +349,11 @@ const WebDesign = () => {
               </div>
             </GlassCard>
 
-            <GlassCard className="overflow-hidden group">
+            <GlassCard className="overflow-hidden group hover-lift" data-testid="portfolio-card-3">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                  alt="Restaurant website design" 
+                  alt="Beautiful restaurant website design with online reservation system and elegant menu showcase" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" 
                 />
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
@@ -365,21 +374,20 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Common questions about our web design services
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <GlassCard key={index} className="overflow-hidden">
+              <GlassCard key={index} className="overflow-hidden hover-lift">
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-muted/50 transition-colors"
@@ -399,25 +407,26 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-primary/10">
         <div className="container mx-auto px-4 lg:px-8">
-          <GlassCard className="p-12 text-center max-w-4xl mx-auto">
-            <Globe className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <GlassCard className="p-12 text-center max-w-4xl mx-auto hover-lift" data-testid="cta-card">
+            <div className="w-20 h-20 gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-8" data-testid="cta-icon">
+              <Globe className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Ready to Transform Your Online Presence?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let's create a stunning website that drives results. Get in touch for a free consultation and quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-web-contact">
+                <Button size="lg" className="gradient-hero text-white hover:opacity-90 transition-opacity" data-testid="button-web-contact">
                   Get Free Consultation
                 </Button>
               </Link>
               <Link href="/case-studies">
-                <Button size="lg" variant="outline" data-testid="button-view-portfolio">
+                <Button size="lg" variant="outline" className="hover:bg-muted/50 transition-colors" data-testid="button-view-portfolio">
                   View Full Portfolio
                 </Button>
               </Link>
