@@ -25,6 +25,7 @@ const Cart = () => {
       <Helmet>
         <title>Shopping Cart - Several Sustain</title>
         <meta name="description" content="Review your shopping cart and proceed to checkout" />
+        <meta name="robots" content="noindex,nofollow" />
         <link rel="canonical" href="https://severalsustain.in/cart" />
       </Helmet>
       <Header />

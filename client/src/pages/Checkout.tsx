@@ -190,6 +190,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
       <div className="min-h-screen">
         <Helmet>
           <title>Order Confirmed - Several Sustain</title>
+          <meta name="robots" content="noindex,nofollow" />
         </Helmet>
         <Header />
         <section className="pt-32 pb-20 bg-gradient-to-br from-muted/30 via-background to-accent/20">
@@ -222,6 +223,7 @@ ${data.notes ? `\nNOTES\n=====\n${data.notes}` : ""}
       <Helmet>
         <title>Checkout - Several Sustain</title>
         <meta name="description" content="Complete your order" />
+        <meta name="robots" content="noindex,nofollow" />
         <link rel="canonical" href="https://severalsustain.in/checkout" />
       </Helmet>
       <Header />

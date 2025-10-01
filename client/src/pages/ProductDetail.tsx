@@ -141,12 +141,16 @@ const ProductDetail = () => {
     );
   }
 
+  const productImageUrl = product.images[0]?.startsWith('http') 
+    ? product.images[0] 
+    : `https://severalsustain.in${product.images[0] || ''}`;
+
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": product.title,
     "description": product.longDesc,
-    "image": product.images[0] || "",
+    "image": productImageUrl,
     "brand": {
       "@type": "Brand",
       "name": "Several Sustain"
@@ -156,9 +160,15 @@ const ProductDetail = () => {
     ...(product.price && Number.isFinite(parseFloat(product.price)) ? {
       "offers": {
         "@type": "Offer",
+        "url": `https://severalsustain.in/products/${product.slug}`,
         "price": parseFloat(product.price),
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Several Sustain"
+        }
       }
     } : {})
   };
