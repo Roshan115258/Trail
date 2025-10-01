@@ -20,7 +20,6 @@ import DPUAMCUSystems from "@/pages/solutions/DPUAMCUSystems";
 import CaseStudies from "@/pages/CaseStudies";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
-import SMTPTest from "@/pages/SMTPTest";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -55,7 +54,6 @@ function Router() {
       <Route path="/case-studies" component={CaseStudies} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
-      <Route path="/smtp-test" component={SMTPTest} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -2,7 +2,6 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
-import { emailService } from "./email";
 
 // Validation schemas
 const contactSchema = z.object({
@@ -19,49 +18,13 @@ const newsletterSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // SMTP test endpoint
-  app.post("/api/test-smtp", async (req, res) => {
-    try {
-      const { email } = req.body;
-      if (!email) {
-        return res.status(400).json({ 
-          success: false, 
-          message: "Email address is required" 
-        });
-      }
-
-      // Test email sending
-      await emailService.sendConfirmationEmail(email, "Test User");
-      
-      res.json({ 
-        success: true, 
-        message: "Test email sent successfully!" 
-      });
-    } catch (error) {
-      console.error("SMTP test failed:", error);
-      res.status(500).json({ 
-        success: false, 
-        message: "SMTP test failed: " + (error as Error).message 
-      });
-    }
-  });
-
-  // Contact form endpoint
+  // Contact form endpoint (legacy - now using Formspree)
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = contactSchema.parse(req.body);
       
       // Store the contact submission
       const contact = await storage.createContact(validatedData);
-      
-      // Send email notification to team
-      try {
-        await emailService.sendContactFormNotification(validatedData);
-        await emailService.sendConfirmationEmail(validatedData.email, validatedData.name);
-      } catch (error) {
-        console.error('Email notification failed:', error);
-        // Continue processing even if email fails
-      }
       
       res.json({ 
         success: true, 
@@ -92,14 +55,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Store the newsletter subscription
       const subscription = await storage.createNewsletterSubscription(validatedData);
-      
-      // Send email notification to team
-      try {
-        await emailService.sendNewsletterNotification(validatedData);
-      } catch (error) {
-        console.error('Email notification failed:', error);
-        // Continue processing even if email fails
-      }
       
       res.json({ 
         success: true, 
