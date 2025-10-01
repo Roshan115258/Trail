@@ -96,37 +96,15 @@ const Home = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
-        {/* Hero Background Image with Overlay */}
-        <div className="absolute inset-0">
-          <img 
-            src={teamImage} 
-            alt="Engineering team collaboration" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-[hsl(174,72%,56%)]/80"></div>
-        </div>
-
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div 
-            className="w-full h-full" 
-            style={{
-              backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff"/><path d="M10 5v10M5 10h10" stroke="%23ffffff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>')`,
-              backgroundSize: '40px 40px'
-            }}
-          />
-        </div>
-
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20 bg-gradient-to-br from-background via-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-5xl mx-auto animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg" data-testid="hero-title">
-              Transform Your Electronic
-              <span className="text-white/95 block">Concepts Into Reality</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight" data-testid="hero-title">
+              Innovating for a Smarter Future:
+              <span className="bg-gradient-to-r from-primary to-[hsl(174,72%,56%)] bg-clip-text text-transparent block">Transforming Ideas into Sustainable Solutions</span>
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed drop-shadow" data-testid="hero-subtitle">
-              Expert PCB design, hardware development, and specialized dairy technology solutions. 
-              Innovating for a Smarter Future with end-to-end engineering services.
+            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="hero-subtitle">
+              Expert end-to-end engineering services in Embedded Systems, IoT Product Design, Web & App Development, and Analytical Instruments.
             </p>
 
             {/* Hero CTA Cards */}
