@@ -10,7 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useCartContext } from "@/lib/CartContext";
 import { useToast } from "@/hooks/use-toast";
-import type { Product } from "@shared/schema";
+import type { Product } from "@/types/product";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");

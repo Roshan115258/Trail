@@ -1,11 +1,14 @@
-# Netlify Configuration for SPA
+# Netlify Configuration for Static Site (No Backend)
 
 [build]
-  # Build command (builds frontend only - no backend needed)
-  command = "npm install && npx vite build"
+  # Build command - frontend only (Netlify auto-installs deps)
+  command = "npx vite build"
   
   # Publish directory (where Vite outputs the build)
   publish = "dist/public"
+  
+  # Prevent Netlify from running package.json "build" script
+  ignore = "exit 0"
 
 # SPA Redirect Rule - serves index.html for all routes
 [[redirects]]

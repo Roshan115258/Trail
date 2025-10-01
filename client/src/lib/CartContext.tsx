@@ -1,7 +1,6 @@
 import { createContext, useContext, ReactNode } from "react";
 import { useCart } from "@/hooks/use-cart";
-import type { Product } from "@shared/schema";
-import type { CartItem } from "@/hooks/use-cart";
+import type { Product, CartItem } from "@/types/product";
 
 interface CartContextType {
   cartItems: CartItem[];
