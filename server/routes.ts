@@ -78,6 +78,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Product endpoints
+  app.get("/api/products", async (req, res) => {
+    try {
+      const products = await storage.getProducts();
+      res.json({ 
+        success: true, 
+        products 
+      });
+    } catch (error) {
+      console.error("Get products error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Internal server error" 
+      });
+    }
+  });
+
+  app.get("/api/products/:slug", async (req, res) => {
+    try {
+      const { slug } = req.params;
+      const product = await storage.getProductBySlug(slug);
+      
+      if (!product) {
+        res.status(404).json({ 
+          success: false, 
+          message: "Product not found" 
+        });
+        return;
+      }
+      
+      res.json({ 
+        success: true, 
+        product 
+      });
+    } catch (error) {
+      console.error("Get product error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Internal server error" 
+      });
+    }
+  });
+
   // Health check endpoint
   app.get("/api/health", (req, res) => {
     res.json({ 
