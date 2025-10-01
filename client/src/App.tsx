@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
+import { CartProvider } from "./lib/CartContext";
 
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -67,10 +68,12 @@ function App() {
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <CartProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </CartProvider>
       </QueryClientProvider>
     </HelmetProvider>
   );
