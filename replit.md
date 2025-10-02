@@ -34,21 +34,30 @@ Preferred communication style: Simple, everyday language.
 
 ### Backend Architecture
 **Technology Stack:**
-- **Runtime:** Node.js with Express.js
-- **Language:** TypeScript with ES modules
-- **ORM:** Drizzle ORM
-- **Database:** PostgreSQL (via Neon serverless driver)
-- **Session Management:** Configured for connect-pg-simple
-- **Validation:** Zod schemas shared between client and server
+- **Runtime:** Node.js with Express.js (serverless via Netlify Functions)
+- **Language:** JavaScript (CommonJS) for serverless functions
+- **Serverless Adapter:** serverless-http for Express → Lambda conversion
+- **Middleware:** CORS, express.json()
+- **Validation:** Custom validation helpers (migrated from Zod)
 
 **API Design:**
-- RESTful endpoints under `/api/*` prefix for contact and newsletter.
-- JSON request/response format.
-- Centralized error handling.
+- RESTful endpoints under `/api/*` prefix
+- JSON request/response format
+- Centralized error handling
+- Available endpoints:
+  - `GET /api/health` - Health check
+  - `GET /api/products` - List all products
+  - `GET /api/products/:slug` - Get product by slug
+  - `POST /api/contact` - Contact form submission
+  - `POST /api/newsletter` - Newsletter subscription
 
-**Development vs Production:**
-- Development: Vite middleware integration for HMR.
-- Production: Static site deployment on Netlify; backend functionalities replaced by Formspree and static JSON for products.
+**Deployment Architecture (Hybrid):**
+- **Development:** Express server running on port 5000 via `npm run dev`
+- **Production (Netlify):**
+  - Static frontend served from `dist/public` via Netlify CDN
+  - API routes handled by Netlify Functions (serverless Express)
+  - Rewrites: `/api/*` → `/.netlify/functions/server/:splat`
+  - Products data bundled with serverless function (`src/products.json`)
 
 ### Data Storage Solutions
 **Database Schema (PostgreSQL):**
@@ -62,7 +71,23 @@ Preferred communication style: Simple, everyday language.
 - Shared schema types between client and server for type safety.
 
 ### System Design Choices
-- **JAMstack Architecture:** Converted to static JAMstack for Netlify deployment, utilizing static JSON for product data and Formspree for form submissions.
+- **Hybrid Architecture:** Static frontend (JAMstack) + Serverless Express API via Netlify Functions
+  - Frontend: Vite builds to `dist/public`, served by Netlify CDN
+  - Backend: Express app in `src/app.js`, wrapped by `netlify/functions/server.js` using serverless-http
+  - Routing: API requests (`/api/*`) rewritten to `/.netlify/functions/server/:splat`
+  - SPA routing: All non-API routes serve `index.html` (status 200 rewrite)
+- **Project Structure:**
+  ```
+  ├── src/
+  │   ├── app.js              # Express API routes (serverless-ready)
+  │   └── products.json       # Products data bundled with function
+  ├── netlify/
+  │   └── functions/
+  │       └── server.js       # Serverless wrapper (serverless-http)
+  ├── client/                 # React frontend (Vite build)
+  ├── dist/public/            # Build output (static files)
+  └── netlify.toml            # Netlify configuration
+  ```
 - **Sitemap & SEO:** Comprehensive `sitemap.xml` and `robots.txt` for improved crawlability, `react-helmet-async` for dynamic meta tags and structured data.
 - **Navigation:** Hierarchical navigation with dropdowns for services, and redirect routes for backward compatibility.
 

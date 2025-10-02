@@ -52,7 +52,7 @@ const validateNewsletterData = (data) => {
 // API Routes
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'ok', 
     timestamp: new Date().toISOString(),
@@ -61,7 +61,7 @@ app.get('/health', (req, res) => {
 });
 
 // Contact form endpoint
-app.post('/contact', async (req, res) => {
+app.post('/api/contact', async (req, res) => {
   try {
     const errors = validateContactData(req.body);
     
@@ -92,7 +92,7 @@ app.post('/contact', async (req, res) => {
 });
 
 // Newsletter subscription endpoint
-app.post('/newsletter', async (req, res) => {
+app.post('/api/newsletter', async (req, res) => {
   try {
     const errors = validateNewsletterData(req.body);
     
@@ -122,7 +122,7 @@ app.post('/newsletter', async (req, res) => {
 });
 
 // Product endpoints
-app.get('/products', async (req, res) => {
+app.get('/api/products', async (req, res) => {
   try {
     res.json({ 
       success: true, 
@@ -137,7 +137,7 @@ app.get('/products', async (req, res) => {
   }
 });
 
-app.get('/products/:slug', async (req, res) => {
+app.get('/api/products/:slug', async (req, res) => {
   try {
     const { slug } = req.params;
     const product = productsData.find(p => p.slug === slug);
