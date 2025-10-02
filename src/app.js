@@ -1,7 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
-const fs = require('fs');
 
 const app = express();
 
@@ -10,15 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Load products data
-const productsPath = path.join(__dirname, '../client/public/products.json');
-let productsData = [];
-
-try {
-  const data = fs.readFileSync(productsPath, 'utf8');
-  productsData = JSON.parse(data);
-} catch (error) {
-  console.error('Error loading products:', error);
-}
+const productsData = require('./products.json');
 
 // Validation helper
 const validateContactData = (data) => {
