@@ -6,3 +6,9 @@
   
   # Publish directory (where Vite outputs the build)
   publish = "dist/public"
+
+# SPA redirect - serves index.html for all routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
