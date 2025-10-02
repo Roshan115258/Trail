@@ -10,7 +10,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useCartContext } from "@/lib/CartContext";
 import { useToast } from "@/hooks/use-toast";
-import type { Product } from "@shared/schema";
+import type { Product } from "@/types/product";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -20,11 +20,11 @@ const ProductDetail = () => {
   const { addToCart } = useCartContext();
   const { toast } = useToast();
 
-  const { data, isLoading } = useQuery<{ success: boolean; product: Product }>({
-    queryKey: ["/api/products", slug],
+  const { data: allProducts, isLoading } = useQuery<Product[]>({
+    queryKey: ["/products.json"],
   });
 
-  const product = data?.product;
+  const product = allProducts?.find((p) => p.slug === slug);
 
   const handleAddToCart = () => {
     if (product) {

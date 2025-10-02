@@ -10,18 +10,16 @@ import { useQuery } from "@tanstack/react-query";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useCartContext } from "@/lib/CartContext";
 import { useToast } from "@/hooks/use-toast";
-import type { Product } from "@shared/schema";
+import type { Product } from "@/types/product";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const { addToCart } = useCartContext();
   const { toast } = useToast();
 
-  const { data, isLoading } = useQuery<{ success: boolean; products: Product[] }>({
-    queryKey: ["/api/products"],
+  const { data: products = [], isLoading } = useQuery<Product[]>({
+    queryKey: ["/products.json"],
   });
-
-  const products = data?.products || [];
 
   const categories = ["all", ...Array.from(new Set(products.map((p) => p.category)))];
 

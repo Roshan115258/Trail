@@ -1,0 +1,25 @@
+# Netlify Configuration for Hybrid Architecture
+# Static frontend + Serverless Express API
+
+[build]
+  # Build command - frontend only
+  command = "npx vite build"
+  
+  # Publish directory (where Vite outputs the build)
+  publish = "dist/public"
+  
+  # Functions directory
+  functions = "netlify/functions"
+
+# Forward all /api/* requests to the serverless Express function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200
+  force = true
+
+# SPA redirect - serves index.html for all other routes (after API redirect)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import type { Product } from "@shared/schema";
-
-export interface CartItem {
-  product: Product;
-  quantity: number;
-}
+import type { Product, CartItem } from "@/types/product";
 
 const CART_STORAGE_KEY = "several-sustain-cart";
 
